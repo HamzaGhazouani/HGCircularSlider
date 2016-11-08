@@ -1,0 +1,16 @@
+PODS:
+  - HGCircularSlider (0.1.0)
+
+DEPENDENCIES:
+  - HGCircularSlider (from `../`)
+
+EXTERNAL SOURCES:
+  HGCircularSlider:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HGCircularSlider: 6e1102b5beb35049162fde593b4c70bf26b338ec
+
+PODFILE CHECKSUM: 7cb4c64ce59896052589f93ba9b0ea50a207f738
+
+COCOAPODS: 1.0.0

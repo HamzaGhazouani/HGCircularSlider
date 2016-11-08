@@ -1,0 +1,22 @@
+{
+  "name": "HGCircularSlider",
+  "version": "0.1.0",
+  "summary": "A short description of HGCircularSlider.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/HGCircularSlider",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Hamza GHAZOUANI": "hamza.ghazouani@onmobile.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/HGCircularSlider.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HGCircularSlider/Classes/**/*"
+}

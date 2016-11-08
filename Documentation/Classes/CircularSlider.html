@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CircularSlider Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CircularSlider" class="dashAnchor"></a>
+    <a title="CircularSlider Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HGCircularSlider Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HGCircularSlider Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CircularSlider Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CircularSlider.html">CircularSlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MidPointCircularSlider.html">MidPointCircularSlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RangeCircularSlider.html">RangeCircularSlider</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CircularSlider</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CircularSlider</span><span class="p">:</span> <span class="kt">UIControl</span></code></pre>
+
+                </div>
+              </div>
+            <p>A visual control used to select a single value from a continuous range of values.
+Can also be used like a circular progress view
+CircularSlider use the target-action mechanism to report changes made during the course of editing:
+ValueChanged, EditingDidBegin and EditingDidEnd</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Changing%20the%20Slider%E2%80%99s%20Appearance"></a>
+                <a name="//apple_ref/swift/Section/Changing the Slider’s Appearance" class="dashAnchor"></a>
+                <a href="#/Changing%20the%20Slider%E2%80%99s%20Appearance">
+                  <h3 class="section-name">Changing the Slider’s Appearance</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider13diskFillColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/diskFillColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider13diskFillColorCSo7UIColor">diskFillColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color shown for the portion of the disk of slider that is filled. (between start and end values)
+The default value is a transparent color.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">diskFillColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">clearColor</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider9diskColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/diskColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider9diskColorCSo7UIColor">diskColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color shown for the portion of the disk of slider that is unfilled. (outside start and end values)
+The default value of this property is the black color with alpha = 0.3.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">diskColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">grayColor</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider14trackFillColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/trackFillColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider14trackFillColorCSo7UIColor">trackFillColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color shown for the portion of the slider that is filled. (between start and end values)
+The default value of this property is the tint color.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">trackFillColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">clearColor</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider10trackColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/trackColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider10trackColorCSo7UIColor">trackColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color shown for the portion of the slider that is unfilled. (outside start and end values)
+The default value of this property is the white color.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">trackColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">whiteColor</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider9lineWidthV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/lineWidth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider9lineWidthV12CoreGraphics7CGFloat">lineWidth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The width of the circular line</p>
+
+<p>The default value of this property is 5.0.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lineWidth</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">5.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider14thumbLineWidthV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/thumbLineWidth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider14thumbLineWidthV12CoreGraphics7CGFloat">thumbLineWidth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The width of the thumb stroke line</p>
+
+<p>The default value of this property is 4.0.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">thumbLineWidth</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">4.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider11thumbRadiusV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/thumbRadius" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider11thumbRadiusV12CoreGraphics7CGFloat">thumbRadius</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The radius of thumb</p>
+
+<p>The default value of this property is 13.0.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">thumbRadius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">13.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider17endThumbTintColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/endThumbTintColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider17endThumbTintColorCSo7UIColor">endThumbTintColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color used to tint thumb
+ Ignored if the endThumbImage != nil</p>
+
+<p>The default value of this property is the groupTableViewBackgroundColor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endThumbTintColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">groupTableViewBackgroundColor</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider30endThumbStrokeHighlightedColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/endThumbStrokeHighlightedColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider30endThumbStrokeHighlightedColorCSo7UIColor">endThumbStrokeHighlightedColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The stroke highlighted color of end thumb
+The default value of this property is blue color</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endThumbStrokeHighlightedColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">blueColor</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider19endThumbStrokeColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/endThumbStrokeColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider19endThumbStrokeColorCSo7UIColor">endThumbStrokeColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color used to tint the stroke of the end thumb
+ Ignored if the endThumbImage != nil</p>
+
+<p>The default value of this property is the red color.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endThumbStrokeColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">redColor</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider13endThumbImageGSqCSo7UIImage_"></a>
+                    <a name="//apple_ref/swift/Property/endThumbImage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider13endThumbImageGSqCSo7UIImage_">endThumbImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The image of the end thumb
+ Clears any custom color you may have provided for end thumb.</p>
+
+<p>The default value of this property is nil</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endThumbImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Accessing%20the%20Slider%E2%80%99s%20Value%20Limits"></a>
+                <a name="//apple_ref/swift/Section/Accessing the Slider’s Value Limits" class="dashAnchor"></a>
+                <a href="#/Accessing%20the%20Slider%E2%80%99s%20Value%20Limits">
+                  <h3 class="section-name">Accessing the Slider’s Value Limits</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider12minimumValueV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/minimumValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider12minimumValueV12CoreGraphics7CGFloat">minimumValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The minimum value of the receiver.</p>
+
+<p>If you change the value of this property, and the end value of the receiver is below the new minimum, the end point value is adjusted to match the new minimum value automatically.
+ The default value of this property is 0.0.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">minimumValue</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider12maximumValueV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/maximumValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider12maximumValueV12CoreGraphics7CGFloat">maximumValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum value of the receiver.</p>
+
+<p>If you change the value of this property, and the end value of the receiver is above the new maximum, the end value is adjusted to match the new maximum value automatically.
+ The default value of this property is 1.0.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">maximumValue</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider13endPointValueV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/endPointValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider13endPointValueV12CoreGraphics7CGFloat">endPointValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The value of the endThumb (changed when the user change the position of the end thumb)</p>
+
+<p>If you try to set a value that is above the maximum value, the maximum value is set instead.
+ If you try to set a value that is below the minimum value, the minimum value is set instead.</p>
+
+<p>The default value of this property is 0.5</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endPointValue</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.5</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC16HGCircularSlider14CircularSlider11highlightedSb"></a>
+                    <a name="//apple_ref/swift/Property/highlighted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC16HGCircularSlider14CircularSlider11highlightedSb">highlighted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See superclass documentation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">highlighted</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/init%20methods"></a>
+                <a name="//apple_ref/swift/Section/init methods" class="dashAnchor"></a>
+                <a href="#/init%20methods">
+                  <h3 class="section-name">init methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC16HGCircularSlider14CircularSlidercFT5coderCSo7NSCoder_GSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC16HGCircularSlider14CircularSlidercFT5coderCSo7NSCoder_GSqS0__">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See superclass documentation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">required</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Drawing%20methods"></a>
+                <a name="//apple_ref/swift/Section/Drawing methods" class="dashAnchor"></a>
+                <a href="#/Drawing%20methods">
+                  <h3 class="section-name">Drawing methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC16HGCircularSlider14CircularSlider8drawRectFVSC6CGRectT_"></a>
+                    <a name="//apple_ref/swift/Method/drawRect(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC16HGCircularSlider14CircularSlider8drawRectFVSC6CGRectT_">drawRect(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See superclass documentation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">drawRect</span><span class="p">(</span><span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/user%20interaction%20methods"></a>
+                <a name="//apple_ref/swift/Section/user interaction methods" class="dashAnchor"></a>
+                <a href="#/user%20interaction%20methods">
+                  <h3 class="section-name">user interaction methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC16HGCircularSlider14CircularSlider22beginTrackingWithTouchFTCSo7UITouch9withEventGSqCSo7UIEvent__Sb"></a>
+                    <a name="//apple_ref/swift/Method/beginTrackingWithTouch(_:withEvent:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC16HGCircularSlider14CircularSlider22beginTrackingWithTouchFTCSo7UITouch9withEventGSqCSo7UIEvent__Sb">beginTrackingWithTouch(_:withEvent:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See superclass documentation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">beginTrackingWithTouch</span><span class="p">(</span><span class="nv">touch</span><span class="p">:</span> <span class="kt">UITouch</span><span class="p">,</span> <span class="n">withEvent</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC16HGCircularSlider14CircularSlider25continueTrackingWithTouchFTCSo7UITouch9withEventGSqCSo7UIEvent__Sb"></a>
+                    <a name="//apple_ref/swift/Method/continueTrackingWithTouch(_:withEvent:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC16HGCircularSlider14CircularSlider25continueTrackingWithTouchFTCSo7UITouch9withEventGSqCSo7UIEvent__Sb">continueTrackingWithTouch(_:withEvent:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See superclass documentation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">continueTrackingWithTouch</span><span class="p">(</span><span class="nv">touch</span><span class="p">:</span> <span class="kt">UITouch</span><span class="p">,</span> <span class="n">withEvent</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC16HGCircularSlider14CircularSlider20endTrackingWithTouchFTGSqCSo7UITouch_9withEventGSqCSo7UIEvent__T_"></a>
+                    <a name="//apple_ref/swift/Method/endTrackingWithTouch(_:withEvent:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC16HGCircularSlider14CircularSlider20endTrackingWithTouchFTGSqCSo7UITouch_9withEventGSqCSo7UIEvent__T_">endTrackingWithTouch(_:withEvent:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See superclass documentation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">endTrackingWithTouch</span><span class="p">(</span><span class="nv">touch</span><span class="p">:</span> <span class="kt">UITouch</span><span class="p">?,</span> <span class="n">withEvent</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/HamzaGhazouani/HGCircularSlider" target="_blank" rel="external">Hamza Ghazouani</a>. All rights reserved. (Last updated: 2016-11-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
