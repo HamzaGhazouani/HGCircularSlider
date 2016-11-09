@@ -69,7 +69,7 @@ public class MidPointCircularSlider: RangeCircularSlider {
         }
         set {
             let value = newValue
-            print("\(newValue)")
+
             let interval = (endPointValue - startPointValue) / 2
             startPointValue = value - interval
             endPointValue = value + interval

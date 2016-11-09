@@ -143,9 +143,7 @@ public class RangeCircularSlider: CircularSlider {
      * The default value of this property is 0.5
      */
     override public var endPointValue: CGFloat {
-        didSet {
-            print("endPointValue \(endPointValue)")
-            
+        didSet {            
             if oldValue == endPointValue && distance <= 0 {
                 return
             }
