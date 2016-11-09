@@ -326,13 +326,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="April" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfm-Db-wi2">
                                 <rect key="frame" x="85" y="140.5" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="LDb-AT-qTm">
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </constraint>
+                                    <constraint firstAttribute="width" constant="150" id="LDb-AT-qTm"/>
                                     <constraint firstAttribute="width" secondItem="Cfm-Db-wi2" secondAttribute="height" id="sh3-2g-Wm9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
