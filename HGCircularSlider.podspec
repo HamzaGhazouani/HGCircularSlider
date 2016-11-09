@@ -31,6 +31,5 @@ s.social_media_url = 'https://twitter.com/GhazouaniHamza'
 s.ios.deployment_target = '8.0'
 
 s.source_files = 'HGCircularSlider/Classes/**/*'
-s.public_header_files = 'Pod/Classes/**/*.h'
-
+  
 end
