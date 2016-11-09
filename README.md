@@ -8,6 +8,9 @@
 
 ## Example
 
+![](/Screenshots/Clock.gif) ![](/Screenshots/Player.gif) ![](/Screenshots/OClock.gif)  ![](/Screenshots/BasicExample.gif)
+
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
