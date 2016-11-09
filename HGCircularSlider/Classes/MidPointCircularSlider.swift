@@ -87,6 +87,10 @@ public class MidPointCircularSlider: RangeCircularSlider {
         distance = 0.2
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     /**
      See superclass documentation
      */

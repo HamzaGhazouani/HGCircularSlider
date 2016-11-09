@@ -2,7 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ic_wake.pdf"
+      "filename" : "second.pdf",
+      "scale" : "1x"
     }
   ],
   "info" : {
