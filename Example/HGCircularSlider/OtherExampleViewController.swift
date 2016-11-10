@@ -11,11 +11,11 @@ import UIKit
 extension CALayer {
     
     func borderUIColor() -> UIColor? {
-        return borderColor != nil ? UIColor(CGColor: borderColor!) : nil
+        return borderColor != nil ? UIColor(cgColor: borderColor!) : nil
     }
     
-    func setBorderUIColor(color: UIColor) {
-        borderColor = color.CGColor
+    func setBorderUIColor(_ color: UIColor) {
+        borderColor = color.cgColor
     }
 }
 

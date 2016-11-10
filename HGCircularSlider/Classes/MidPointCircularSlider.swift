@@ -11,7 +11,7 @@
  MidPointCircularSlider use the target-action mechanism to report changes made during the course of editing:
  ValueChanged, EditingDidBegin and EditingDidEnd
  */
-public class MidPointCircularSlider: RangeCircularSlider {
+open class MidPointCircularSlider: RangeCircularSlider {
     
     // MARK: properties 
     
@@ -22,14 +22,14 @@ public class MidPointCircularSlider: RangeCircularSlider {
      * The default value of this property is the groupTableViewBackgroundColor.
      */
     @IBInspectable
-    public var midThumbTintColor: UIColor = UIColor.groupTableViewBackgroundColor()
+    open var midThumbTintColor: UIColor = UIColor.groupTableViewBackground
     
     /**
      * The stroke highlighted color of end thumb
      * The default value of this property is blue color
      */
     @IBInspectable
-    public var midThumbStrokeHighlightedColor: UIColor = UIColor.blueColor()
+    open var midThumbStrokeHighlightedColor: UIColor = UIColor.blue
     
     /**
      * The color used to tint the stroke of the mid thumb
@@ -38,7 +38,7 @@ public class MidPointCircularSlider: RangeCircularSlider {
      * The default value of this property is the red color.
      */
     @IBInspectable
-    public var midThumbStrokeColor: UIColor = UIColor.redColor()
+    open var midThumbStrokeColor: UIColor = UIColor.red
     
     
     /**
@@ -47,7 +47,7 @@ public class MidPointCircularSlider: RangeCircularSlider {
      *
      * The default value of this property is nil
      */
-    public var midThumbImage: UIImage?
+    open var midThumbImage: UIImage?
     
     
     /**
@@ -56,14 +56,14 @@ public class MidPointCircularSlider: RangeCircularSlider {
      * The value of this property should be >= 0
      * The default value of this property is 0.2
      */
-    override public var distance: CGFloat {
+    override open var distance: CGFloat {
         didSet {
             assert(distance >= 0, "The CustomCircularSlider works only with fixed distance between start and end points, so distance property should be > 0")
         }
     }
     
     /// The value of the mid point (between the start and end points)
-    private var midPointValue: CGFloat  {
+    fileprivate var midPointValue: CGFloat  {
         get {
             return (endPointValue + startPointValue) / 2
         }
@@ -94,7 +94,7 @@ public class MidPointCircularSlider: RangeCircularSlider {
     /**
      See superclass documentation
      */
-    override public func drawRect(rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
         drawCircularSlider(inContext: context)
@@ -112,7 +112,7 @@ public class MidPointCircularSlider: RangeCircularSlider {
         
         // draw mid thumb
         midThumbTintColor.setFill()
-        (highlighted == true) ? midThumbStrokeHighlightedColor.setStroke() : midThumbStrokeColor.setStroke()
+        (isHighlighted == true) ? midThumbStrokeHighlightedColor.setStroke() : midThumbStrokeColor.setStroke()
         
         guard let image = midThumbImage else {
             drawThumb(withAngle: midAngle, inContext: context)
@@ -126,8 +126,8 @@ public class MidPointCircularSlider: RangeCircularSlider {
     /**
      See superclass documentation
      */
-    override public func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        sendActionsForControlEvents(.EditingDidBegin)
+    override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        sendActions(for: .editingDidBegin)
        
         return true
     }
@@ -135,10 +135,10 @@ public class MidPointCircularSlider: RangeCircularSlider {
     /**
      See superclass documentation
      */
-    override public func continueTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        let touchPosition = touch.locationInView(self)
+    override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        let touchPosition = touch.location(in: self)
 
-        let center = CGPointMake(bounds.midX, bounds.midY)
+        let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let startPoint = CGPoint(x: center.x, y: 0)
         let angle = CircularSliderHelper.angle(betweenFirstPoint: startPoint, secondPoint: touchPosition, inCircleWithCenter: center)
         
@@ -147,7 +147,7 @@ public class MidPointCircularSlider: RangeCircularSlider {
         
 
         midPointValue = newValue
-        sendActionsForControlEvents(.ValueChanged)
+        sendActions(for: .valueChanged)
         
         return true
     }

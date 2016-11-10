@@ -20,18 +20,19 @@ extension CircularSlider {
      - parameter context:       the context
      
      */
-    internal static func drawArc(withArc arc: Arc, lineWidth: CGFloat = 2, mode: CGPathDrawingMode = .FillStroke, inContext context: CGContextRef) {
+    internal static func drawArc(withArc arc: Arc, lineWidth: CGFloat = 2, mode: CGPathDrawingMode = .fillStroke, inContext context: CGContext) {
         
         let circle = arc.circle
         let origin = circle.origin
         
         UIGraphicsPushContext(context)
-        CGContextBeginPath(context)
+        context.beginPath()
         
-        CGContextSetLineWidth(context, lineWidth)
-        CGContextAddArc(context, origin.x, origin.y, circle.radius, arc.startAngle, arc.endAngle, 0)
-        CGContextMoveToPoint(context, origin.x, origin.y)
-        CGContextDrawPath(context, mode)
+        context.setLineWidth(lineWidth)
+        context.addArc(center: origin, radius: circle.radius, startAngle: arc.startAngle, endAngle: arc.endAngle, clockwise: false)
+        context.move(to: CGPoint(x: origin.x, y: origin.y))
+        context.drawPath(using: mode)
+        
         UIGraphicsPopContext()
     }
     
@@ -41,25 +42,26 @@ extension CircularSlider {
      - parameter arc:     the arc coordinates (origin, radius, start angle, end angle)
      - parameter context: the context
      */
-    internal static func drawDisk(withArc arc: Arc, inContext context: CGContextRef) {
+    internal static func drawDisk(withArc arc: Arc, inContext context: CGContext) {
         
         let circle = arc.circle
         let origin = circle.origin
         
         UIGraphicsPushContext(context)
-        CGContextBeginPath(context)
+        context.beginPath()
         
-        CGContextSetLineWidth(context, 0)
-        CGContextAddArc(context, origin.x, origin.y, circle.radius, arc.startAngle, arc.endAngle, 0)
-        CGContextAddLineToPoint(context, origin.x, origin.y)
-        CGContextDrawPath(context, .Fill)
+        context.setLineWidth(0)
+        context.addArc(center: origin, radius: circle.radius, startAngle: arc.startAngle, endAngle: arc.endAngle, clockwise: false)
+        context.addLine(to: CGPoint(x: origin.x, y: origin.y))
+        context.drawPath(using: .fill)
+        
         UIGraphicsPopContext()
     }
     
     // MARK: drawing instance methods
     
     /// Draw the circular slider
-    internal func drawCircularSlider(inContext context: CGContextRef) {
+    internal func drawCircularSlider(inContext context: CGContext) {
         diskColor.setFill()
         trackColor.setStroke()
         
@@ -70,7 +72,7 @@ extension CircularSlider {
     }
     
     /// draw Filled arc between start an end angles
-    internal func drawFilledArc(fromAngle startAngle: CGFloat, toAngle endAngle: CGFloat, inContext context: CGContextRef) {
+    internal func drawFilledArc(fromAngle startAngle: CGFloat, toAngle endAngle: CGFloat, inContext context: CGContext) {
         diskFillColor.setFill()
         trackFillColor.setStroke()
         
@@ -80,7 +82,7 @@ extension CircularSlider {
         // fill Arc
         CircularSlider.drawDisk(withArc: arc, inContext: context)
         // stroke Arc
-        CircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .Stroke, inContext: context)
+        CircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .stroke, inContext: context)
     }
     
     
@@ -92,7 +94,7 @@ extension CircularSlider {
      
      - returns: return the origin point of the thumb
      */
-    internal func drawThumb(withAngle angle: CGFloat, inContext context: CGContextRef) -> CGPoint {
+    internal func drawThumb(withAngle angle: CGFloat, inContext context: CGContext) -> CGPoint {
         let circle = Circle(origin: bounds.center, radius: self.radius)
         let thumbOrigin = CircularSliderHelper.endPoint(fromCircle: circle, angle: angle)
         let thumbCircle = Circle(origin: thumbOrigin, radius: thumbRadius)
@@ -112,14 +114,14 @@ extension CircularSlider {
      
      - returns: return the origin point of the thumb
      */
-    internal func drawThumb(withImage image: UIImage, angle: CGFloat, inContext context: CGContextRef) -> CGPoint  {
+    internal func drawThumb(withImage image: UIImage, angle: CGFloat, inContext context: CGContext) -> CGPoint  {
         UIGraphicsPushContext(context)
-        CGContextBeginPath(context)
+        context.beginPath()
         let circle = Circle(origin: bounds.center, radius: self.radius)
         let thumbOrigin = CircularSliderHelper.endPoint(fromCircle: circle, angle: angle)
         let imageSize = image.size
-        let imageFrame = CGRectMake(thumbOrigin.x - (imageSize.width / 2), thumbOrigin.y - (imageSize.height / 2), imageSize.width, imageSize.height)
-        image.drawInRect(imageFrame)
+        let imageFrame = CGRect(x: thumbOrigin.x - (imageSize.width / 2), y: thumbOrigin.y - (imageSize.height / 2), width: imageSize.width, height: imageSize.height)
+        image.draw(in: imageFrame)
         UIGraphicsPopContext()
         
         return thumbOrigin

@@ -15,7 +15,7 @@ import UIKit
  * ValueChanged, EditingDidBegin and EditingDidEnd
  */
 @IBDesignable
-public class CircularSlider: UIControl {
+open class CircularSlider: UIControl {
     
     // MARK: Changing the Slider’s Appearance
     
@@ -24,28 +24,28 @@ public class CircularSlider: UIControl {
      * The default value is a transparent color.
      */
     @IBInspectable
-    public var diskFillColor: UIColor = UIColor.clearColor()
+    open var diskFillColor: UIColor = UIColor.clear
     
     /**
      * The color shown for the portion of the disk of slider that is unfilled. (outside start and end values)
      * The default value of this property is the black color with alpha = 0.3.
      */
     @IBInspectable
-    public var diskColor: UIColor = UIColor.grayColor()
+    open var diskColor: UIColor = UIColor.gray
     
     /**
      * The color shown for the portion of the slider that is filled. (between start and end values)
      * The default value of this property is the tint color.
      */
     @IBInspectable
-    public var trackFillColor: UIColor = UIColor.clearColor()
+    open var trackFillColor: UIColor = UIColor.clear
     
     /**
      * The color shown for the portion of the slider that is unfilled. (outside start and end values)
      * The default value of this property is the white color.
      */
     @IBInspectable
-    public var trackColor: UIColor = UIColor.whiteColor()
+    open var trackColor: UIColor = UIColor.white
     
     /**
      * The width of the circular line
@@ -53,7 +53,7 @@ public class CircularSlider: UIControl {
      * The default value of this property is 5.0.
      */
     @IBInspectable
-    public var lineWidth: CGFloat = 5.0
+    open var lineWidth: CGFloat = 5.0
     
     /**
      * The width of the thumb stroke line
@@ -61,7 +61,7 @@ public class CircularSlider: UIControl {
      * The default value of this property is 4.0.
      */
     @IBInspectable
-    public var thumbLineWidth: CGFloat = 4.0
+    open var thumbLineWidth: CGFloat = 4.0
     
     /**
      * The radius of thumb
@@ -69,7 +69,7 @@ public class CircularSlider: UIControl {
      * The default value of this property is 13.0.
      */
     @IBInspectable
-    public var thumbRadius: CGFloat = 13.0
+    open var thumbRadius: CGFloat = 13.0
     
     /**
      * The color used to tint thumb
@@ -78,14 +78,14 @@ public class CircularSlider: UIControl {
      * The default value of this property is the groupTableViewBackgroundColor.
      */
     @IBInspectable
-    public var endThumbTintColor: UIColor = UIColor.groupTableViewBackgroundColor()
+    open var endThumbTintColor: UIColor = UIColor.groupTableViewBackground
     
     /**
      * The stroke highlighted color of end thumb
      * The default value of this property is blue color
      */
     @IBInspectable
-    public var endThumbStrokeHighlightedColor: UIColor = UIColor.blueColor()
+    open var endThumbStrokeHighlightedColor: UIColor = UIColor.blue
     
     /**
      * The color used to tint the stroke of the end thumb
@@ -94,7 +94,7 @@ public class CircularSlider: UIControl {
      * The default value of this property is the red color.
      */
     @IBInspectable
-    public var endThumbStrokeColor: UIColor = UIColor.redColor()
+    open var endThumbStrokeColor: UIColor = UIColor.red
     
     /**
      * The image of the end thumb
@@ -102,7 +102,7 @@ public class CircularSlider: UIControl {
      *
      * The default value of this property is nil
      */
-    public var endThumbImage: UIImage?
+    open var endThumbImage: UIImage?
     
     // MARK: Accessing the Slider’s Value Limits
     
@@ -113,7 +113,7 @@ public class CircularSlider: UIControl {
      * The default value of this property is 0.0.
      */
     @IBInspectable
-    public var minimumValue: CGFloat = 0.0 {
+    open var minimumValue: CGFloat = 0.0 {
         didSet {
             if endPointValue < minimumValue {
                 endPointValue = minimumValue
@@ -128,7 +128,7 @@ public class CircularSlider: UIControl {
      * The default value of this property is 1.0.
      */
     @IBInspectable
-    public var maximumValue: CGFloat = 1.0 {
+    open var maximumValue: CGFloat = 1.0 {
         didSet {
             if endPointValue > maximumValue {
                 endPointValue = maximumValue
@@ -144,7 +144,7 @@ public class CircularSlider: UIControl {
      *
      * The default value of this property is 0.5
      */
-    public var endPointValue: CGFloat = 0.5 {
+    open var endPointValue: CGFloat = 0.5 {
         didSet {            
             if oldValue == endPointValue {
                 return
@@ -171,7 +171,7 @@ public class CircularSlider: UIControl {
     }
     
     ///  See superclass documentation
-    override public var highlighted: Bool {
+    override open var isHighlighted: Bool {
         didSet {
             setNeedsDisplay()
         }
@@ -206,7 +206,7 @@ public class CircularSlider: UIControl {
     /**
      See superclass documentation
      */
-    override public func drawRect(rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
         drawCircularSlider(inContext: context)
@@ -219,7 +219,7 @@ public class CircularSlider: UIControl {
         
         // draw end thumb
         endThumbTintColor.setFill()
-        (highlighted == true) ? endThumbStrokeHighlightedColor.setStroke() : endThumbStrokeColor.setStroke()
+        (isHighlighted == true) ? endThumbStrokeHighlightedColor.setStroke() : endThumbStrokeColor.setStroke()
         drawThumb(withAngle: endAngle, inContext: context)
         
         guard let image = endThumbImage else {
@@ -234,8 +234,8 @@ public class CircularSlider: UIControl {
     /**
      See superclass documentation
      */
-    override public func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        sendActionsForControlEvents(.EditingDidBegin)
+    override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        sendActions(for: .editingDidBegin)
         
         return true
     }
@@ -243,10 +243,10 @@ public class CircularSlider: UIControl {
     /**
      See superclass documentation
      */
-    override public func continueTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
+    override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         
         // the position of the pan gesture
-        let touchPosition = touch.locationInView(self)
+        let touchPosition = touch.location(in: self)
         
         let startPoint = CGPoint(x: bounds.center.x, y: 0)
         let angle = CircularSliderHelper.angle(betweenFirstPoint: startPoint, secondPoint: touchPosition, inCircleWithCenter: bounds.center)
@@ -255,7 +255,7 @@ public class CircularSlider: UIControl {
         let newValue = CircularSliderHelper.value(inInterval: interval, fromAngle: angle)
         
         endPointValue = newValue
-        sendActionsForControlEvents(.ValueChanged)
+        sendActions(for: .valueChanged)
         
         return true
     }
@@ -263,8 +263,8 @@ public class CircularSlider: UIControl {
     /**
      See superclass documentation
      */
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        sendActionsForControlEvents(.EditingDidEnd)
+    open override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        sendActions(for: .editingDidEnd)
     }
 
 }

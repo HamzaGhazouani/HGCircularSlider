@@ -9,7 +9,7 @@
 import UIKit
 import HGCircularSlider
 
-extension NSDate {
+extension Date {
     
 }
 
@@ -21,9 +21,9 @@ class ClockViewController: UIViewController {
     @IBOutlet weak var wakeLabel: UILabel!
     @IBOutlet weak var rangeCircularSlider: RangeCircularSlider!
     
-    lazy var dateFormatter: NSDateFormatter = {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
+    lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
         dateFormatter.dateFormat = "hh:mm a"
         return dateFormatter
     }()
@@ -50,19 +50,19 @@ class ClockViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func updateTexts(sender: AnyObject) {
-        let bedtime = NSTimeInterval(rangeCircularSlider.startPointValue)
-        let bedtimeDate = NSDate(timeIntervalSinceReferenceDate: bedtime)
-        bedtimeLabel.text = dateFormatter.stringFromDate(bedtimeDate)
+    @IBAction func updateTexts(_ sender: AnyObject) {
+        let bedtime = TimeInterval(rangeCircularSlider.startPointValue)
+        let bedtimeDate = Date(timeIntervalSinceReferenceDate: bedtime)
+        bedtimeLabel.text = dateFormatter.string(from: bedtimeDate)
         
-        let wake = NSTimeInterval(rangeCircularSlider.endPointValue)
-        let wakeDate = NSDate(timeIntervalSinceReferenceDate: wake)
-        wakeLabel.text = dateFormatter.stringFromDate(wakeDate)
+        let wake = TimeInterval(rangeCircularSlider.endPointValue)
+        let wakeDate = Date(timeIntervalSinceReferenceDate: wake)
+        wakeLabel.text = dateFormatter.string(from: wakeDate)
         
         let duration = wake - bedtime
-        let durationDate = NSDate(timeIntervalSinceReferenceDate: duration)
+        let durationDate = Date(timeIntervalSinceReferenceDate: duration)
         dateFormatter.dateFormat = "HH:mm"
-        durationLabel.text = dateFormatter.stringFromDate(durationDate)
+        durationLabel.text = dateFormatter.string(from: durationDate)
         dateFormatter.dateFormat = "hh:mm a"
     }
 }

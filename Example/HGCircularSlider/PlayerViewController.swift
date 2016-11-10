@@ -27,10 +27,10 @@ class PlayerViewController: UIViewController {
     let audioPlayer = AVPlayer()
     
     // date formatter user for timer label
-    let dateComponentsFormatter: NSDateComponentsFormatter = {
-            let formatter = NSDateComponentsFormatter()
-            formatter.zeroFormattingBehavior = .Pad
-            formatter.allowedUnits = [.Minute, .Second]
+    let dateComponentsFormatter: DateComponentsFormatter = {
+            let formatter = DateComponentsFormatter()
+            formatter.zeroFormattingBehavior = .pad
+            formatter.allowedUnits = [.minute, .second]
             
             return formatter
         }()
@@ -40,13 +40,13 @@ class PlayerViewController: UIViewController {
         
         setupAudioPlayer()
         
-        circularSlider.addTarget(self, action: #selector(pause), forControlEvents: .EditingDidBegin)
-        circularSlider.addTarget(self, action: #selector(play), forControlEvents: .EditingDidEnd)
-        circularSlider.addTarget(self, action: #selector(updateTimer), forControlEvents: .ValueChanged)
+        circularSlider.addTarget(self, action: #selector(pause), for: .editingDidBegin)
+        circularSlider.addTarget(self, action: #selector(play), for: .editingDidEnd)
+        circularSlider.addTarget(self, action: #selector(updateTimer), for: .valueChanged)
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
+        NotificationCenter.default.addObserver(self,
                                                          selector: #selector(playerItemDidReachEnd(_:)),
-                                                         name: AVPlayerItemDidPlayToEndTimeNotification,
+                                                         name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
                                                          object: audioPlayer.currentItem)
     }
 
@@ -55,12 +55,12 @@ class PlayerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func togglePlayer(sender: UISegmentedControl) {
+    @IBAction func togglePlayer(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             let currentTime = Float64(circularSlider.endPointValue)
             let newTime = CMTimeMakeWithSeconds(currentTime, 600)
-            audioPlayer.seekToTime(newTime, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
+            audioPlayer.seek(to: newTime, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
             audioPlayer.play()
         default:
             audioPlayer.pause()
@@ -83,16 +83,16 @@ class PlayerViewController: UIViewController {
      */
     func setupAudioPlayer() {
         // TODO: load the audio file asynchronously and observe player status
-        guard let audioFileURL = NSBundle.mainBundle().URLForResource("StrangeZero", withExtension: "mp3") else { return }
-        let asset = AVURLAsset(URL: audioFileURL, options: nil)
+        guard let audioFileURL = Bundle.main.url(forResource: "StrangeZero", withExtension: "mp3") else { return }
+        let asset = AVURLAsset(url: audioFileURL, options: nil)
         let playerItem = AVPlayerItem(asset: asset)
-        audioPlayer.replaceCurrentItemWithPlayerItem(playerItem)
-        audioPlayer.actionAtItemEnd = .Pause
+        audioPlayer.replaceCurrentItem(with: playerItem)
+        audioPlayer.actionAtItemEnd = .pause
         
         let durationInSeconds = CMTimeGetSeconds(asset.duration)
         circularSlider.maximumValue = CGFloat(durationInSeconds)
         let interval = CMTimeMake(1, 4)
-        audioPlayer.addPeriodicTimeObserverForInterval(interval, queue: dispatch_get_main_queue()) {
+        audioPlayer.addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main) {
             [weak self] time in
             let seconds = CMTimeGetSeconds(time)
             self?.updatePlayerUI(withCurrentTime: CGFloat(seconds))
@@ -105,22 +105,22 @@ class PlayerViewController: UIViewController {
     // update the slider position and the timer text
     func updatePlayerUI(withCurrentTime currentTime: CGFloat) {
         circularSlider.endPointValue = currentTime
-        let components = NSDateComponents()
+        var components = DateComponents()
         components.second = Int(currentTime)
-        timerLabel.text = dateComponentsFormatter.stringFromDateComponents(components)
+        timerLabel.text = dateComponentsFormatter.string(from: components)
     }
     
     func updateTimer() {
-        let components = NSDateComponents()
+        var components = DateComponents()
         components.second = Int(circularSlider.endPointValue)
-        timerLabel.text = dateComponentsFormatter.stringFromDateComponents(components)
+        timerLabel.text = dateComponentsFormatter.string(from: components)
     }
     
     // MARK: - Notification 
     
-    func playerItemDidReachEnd(notification: NSNotification) {
+    func playerItemDidReachEnd(_ notification: Notification) {
         if let playerItem: AVPlayerItem = notification.object as? AVPlayerItem {
-            playerItem.seekToTime(kCMTimeZero)
+            playerItem.seek(to: kCMTimeZero)
             playerSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
         }
     }

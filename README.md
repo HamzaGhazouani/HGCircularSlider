@@ -18,7 +18,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Requirements
 
 - iOS 7.1+
-- Xcode 7.3
+- Xcode 8.0
 
 ## Installation
 
@@ -26,8 +26,12 @@ HGCircularSlider is available through [CocoaPods](http://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ``` ruby
-# Swift 2.2 - Xcode 7.3.1
-pod 'HGCircularSlider', '~> 0.1.1'
+
+# Swift 3.0 - Xcode 8
+pod 'HGCircularSlider', '~> 1.0.0'
+
+# Swift 2.2 - Xcode 7.3.1 (Checkout Swift2_Xcode7.3 branche)
+pod 'HGCircularSlider', '~> 0.1.2'
 ```
 ## Usage
 
@@ -46,8 +50,8 @@ let circularSlider = RangeCircularSlider(frame: myFrame)
  let circularSlider = MidPointCircularSlider(frame: myFrame)
 ```
 ## Documentation
-You can  install documentation locally using [jazzy](https://github.com/realm/jazzy).
-<!-- Full API documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/HGCircularSlider/).<br/> -->
+Full documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/HGCircularSlider/).<br/> 
+You can also install documentation locally using [jazzy](https://github.com/realm/jazzy).
 
 ## References 
 The UI examples of the demo project inspired from [Dribbble](https://github.com/realm/jazzy).

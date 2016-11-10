@@ -34,13 +34,13 @@ class OClockViewController: UIViewController {
         hoursCircularSlider.minimumValue = 0
         hoursCircularSlider.maximumValue = 12
         hoursCircularSlider.endPointValue = 6
-        hoursCircularSlider.addTarget(self, action: #selector(updateHours), forControlEvents: .ValueChanged)
+        hoursCircularSlider.addTarget(self, action: #selector(updateHours), for: .valueChanged)
         
         // minutes
         minutesCircularSlider.minimumValue = 0
         minutesCircularSlider.maximumValue = 60
         minutesCircularSlider.endPointValue = 35
-        minutesCircularSlider.addTarget(self, action: #selector(updateMinutes), forControlEvents: .ValueChanged)
+        minutesCircularSlider.addTarget(self, action: #selector(updateMinutes), for: .valueChanged)
 
         
     }
@@ -69,7 +69,7 @@ class OClockViewController: UIViewController {
         updateHours()
     }
 
-    @IBAction func switchBetweenAMAndPM(sender: UISegmentedControl) {
+    @IBAction func switchBetweenAMAndPM(_ sender: UISegmentedControl) {
         AMPMLabel.text = sender.selectedSegmentIndex == 0 ? "AM" : "PM"
     }
     

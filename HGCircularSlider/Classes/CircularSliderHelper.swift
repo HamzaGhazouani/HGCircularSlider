@@ -22,7 +22,7 @@ internal struct Interval {
 }
 
 internal struct Circle {
-    var origin = CGPointZero
+    var origin = CGPoint.zero
     var radius: CGFloat = 0
     
     init(origin: CGPoint, radius: CGFloat) {
@@ -35,7 +35,7 @@ internal struct Circle {
 
 internal struct Arc {
     
-    var circle = Circle(origin: CGPointZero, radius: 0)
+    var circle = Circle(origin: CGPoint.zero, radius: 0)
     var startAngle: CGFloat = 0.0
     var endAngle: CGFloat = 0.0
     
@@ -63,12 +63,12 @@ extension CGVector {
         self.init(dx: dx, dy: dy)
     }
     
-    func dotProduct(v: CGVector) -> CGFloat {
+    func dotProduct(_ v: CGVector) -> CGFloat {
         let dotProduct = (dx * v.dx) + (dy * v.dy)
         return dotProduct
     }
     
-    func determinant(v: CGVector) -> CGFloat {
+    func determinant(_ v: CGVector) -> CGFloat {
         let determinant = (v.dx * dy) - (dx * v.dy)
         return determinant
     }
@@ -88,7 +88,7 @@ extension CGRect {
     // get the center of rect (bounds or frame)
     internal var center: CGPoint {
         get {
-            let center = CGPointMake(midX, midY)
+            let center = CGPoint(x: midX, y: midY)
             return center
         }
     }
@@ -154,7 +154,7 @@ class CircularSliderHelper {
         
         let x = circle.radius * cos(angle) + circle.origin.x // cos(α) = x / radius
         let y = circle.radius * sin(angle) + circle.origin.y // sin(α) = y / radius
-        let point = CGPointMake(x, y)
+        let point = CGPoint(x: x, y: y)
         
         return point
     }
@@ -171,7 +171,7 @@ class CircularSliderHelper {
      
      - returns: the value in the new interval
      */
-    internal static func scaleValue(value: CGFloat, fromInterval source: Interval, toInterval destination: Interval) -> CGFloat {
+    internal static func scaleValue(_ value: CGFloat, fromInterval source: Interval, toInterval destination: Interval) -> CGFloat {
         let sourceRange = source.max - source.min
         let destinationRange = destination.max - destination.min
         let newValue =  (((value - source.min) * destinationRange) / sourceRange) + destination.min
