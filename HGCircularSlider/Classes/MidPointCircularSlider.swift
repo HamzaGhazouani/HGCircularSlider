@@ -121,7 +121,7 @@ public class MidPointCircularSlider: RangeCircularSlider {
         drawThumb(withImage: image, angle: midAngle, inContext: context)
     }
     
-    // MARK: user interaction 
+    // MARK: User interaction methods
     
     /**
      See superclass documentation

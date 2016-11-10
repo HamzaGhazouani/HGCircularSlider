@@ -245,7 +245,7 @@ public class RangeCircularSlider: CircularSlider {
         }
     }
     
-    // MARK: user interaction methods
+    // MARK: User interaction methods
     
     /**
      See superclass documentation
