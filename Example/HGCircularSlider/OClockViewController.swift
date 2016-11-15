@@ -10,7 +10,7 @@ import UIKit
 import HGCircularSlider
 
 class OClockViewController: UIViewController {
-
+    
     @IBOutlet weak var minutesCircularSlider: CircularSlider!
     @IBOutlet weak var hoursCircularSlider: CircularSlider!
     
@@ -20,10 +20,10 @@ class OClockViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupSliders()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -35,52 +35,57 @@ class OClockViewController: UIViewController {
         hoursCircularSlider.maximumValue = 12
         hoursCircularSlider.endPointValue = 6
         hoursCircularSlider.addTarget(self, action: #selector(updateHours), for: .valueChanged)
+        hoursCircularSlider.addTarget(self, action: #selector(adjustHours), for: .editingDidEnd)
         
         // minutes
         minutesCircularSlider.minimumValue = 0
         minutesCircularSlider.maximumValue = 60
         minutesCircularSlider.endPointValue = 35
         minutesCircularSlider.addTarget(self, action: #selector(updateMinutes), for: .valueChanged)
-
-        
+        minutesCircularSlider.addTarget(self, action: #selector(adjustMinutes), for: .editingDidEnd)
     }
     
-    // MARK: user interaction methods 
+    // MARK: user interaction methods
     
-    // TODO: the thumb of hoursSlider should get only Int values (slide directly from 3 to 4, from 4 to 5, etc)
     func updateHours() {
-     var selectedHour = Int(hoursCircularSlider.endPointValue)
+        var selectedHour = Int(hoursCircularSlider.endPointValue)
         // TODO: use date formatter
-        selectedHour = selectedHour == 0 ? 12 : selectedHour
-        
-        // TODO: remove that 
-        if hoursCircularSlider.endPointValue > (CGFloat(selectedHour) + 0.5) && minutesCircularSlider.endPointValue > 30 {
-            selectedHour += 1
-        }
-        
-        hoursLabel.text = String(selectedHour)
+        selectedHour = (selectedHour == 0 ? 12 : selectedHour)
+        hoursLabel.text = String(format: "%02d", selectedHour)
+    }
+    
+    func adjustHours() {
+        let selectedHour = round(hoursCircularSlider.endPointValue)
+        hoursCircularSlider.endPointValue = selectedHour
+        updateHours()
     }
     
     func updateMinutes() {
-        let selectedMinute = Int(minutesCircularSlider.endPointValue)
+        var selectedMinute = Int(minutesCircularSlider.endPointValue)
+        // TODO: use date formatter
+        selectedMinute = (selectedMinute == 60 ? 0 : selectedMinute)
         minutesLabel.text = String(format: "%02d", selectedMinute)
-       
-        // TODO: remove that
-        updateHours()
     }
-
+    
+    func adjustMinutes() {
+        let selectedMinute = round(minutesCircularSlider.endPointValue)
+        minutesCircularSlider.endPointValue = selectedMinute
+        updateMinutes()
+    }
+    
     @IBAction func switchBetweenAMAndPM(_ sender: UISegmentedControl) {
         AMPMLabel.text = sender.selectedSegmentIndex == 0 ? "AM" : "PM"
     }
     
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

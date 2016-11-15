@@ -56,7 +56,7 @@ Full documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/HGCi
 You can also install documentation locally using [jazzy](https://github.com/realm/jazzy).
 
 ## References 
-The UI examples of the demo project inspired from [Dribbble](https://github.com/realm/jazzy).
+The UI examples of the demo project inspired from [Dribbble](https://dribbble.com).
 
  [Player](https://dribbble.com/shots/3062636-Countdown-Timer-Daily-UI-014)
  [BasicExample](https://dribbble.com/shots/2153963-Dompet-Wallet-App)
