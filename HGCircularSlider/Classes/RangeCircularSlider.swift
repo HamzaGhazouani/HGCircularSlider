@@ -64,7 +64,7 @@ open class RangeCircularSlider: CircularSlider {
      * The minimum value of the receiver.
      *
      * If you change the value of this property, and the start value of the receiver is below the new minimum, the start value is adjusted to match the new minimum value automatically.
-     * The end value is also adjusted to match (startPointValue + distance) automatically (see startPointValue)
+     * The end value is also adjusted to match (startPointValue + distance) automatically if the distance is different to -1 (SeeAlso: startPointValue, distance)
      * The default value of this property is 0.0.
      */
     override open var minimumValue: CGFloat {
@@ -79,7 +79,7 @@ open class RangeCircularSlider: CircularSlider {
      * The maximum value of the receiver.
      *
      * If you change the value of this property, and the end value of the receiver is above the new maximum, the end value is adjusted to match the new maximum value automatically.
-     * The start value is also adjusted to match (endPointValue - distance) automatically (see endPointValue)
+     * The start value is also adjusted to match (endPointValue - distance) automatically  if the distance is different to -1 (see endPointValue, distance)
      * The default value of this property is 1.0.
      */
     @IBInspectable

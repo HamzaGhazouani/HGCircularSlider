@@ -58,11 +58,11 @@ You can also install documentation locally using [jazzy](https://github.com/real
 ## References 
 The UI examples of the demo project inspired from [Dribbble](https://dribbble.com).
 
- [Player](https://dribbble.com/shots/3062636-Countdown-Timer-Daily-UI-014)
- [BasicExample](https://dribbble.com/shots/2153963-Dompet-Wallet-App)
- [OClock](https://dribbble.com/shots/2671286-Clock-Alarm-app)
+[Player](https://dribbble.com/shots/3062636-Countdown-Timer-Daily-UI-014) <br/> 
+[BasicExample](https://dribbble.com/shots/2153963-Dompet-Wallet-App)<br/> 
+[OClock](https://dribbble.com/shots/2671286-Clock-Alarm-app)<br/> 
 
-The project is Inspired from [UICircularSlider](https://github.com/Zedenem/UICircularSlider)
+The project is Inspired by [UICircularSlider](https://github.com/Zedenem/UICircularSlider)
 
 ## Author
 
