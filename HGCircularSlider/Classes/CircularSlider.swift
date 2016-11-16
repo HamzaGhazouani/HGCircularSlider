@@ -220,7 +220,6 @@ open class CircularSlider: UIControl {
         // draw end thumb
         endThumbTintColor.setFill()
         (isHighlighted == true) ? endThumbStrokeHighlightedColor.setStroke() : endThumbStrokeColor.setStroke()
-        drawThumb(withAngle: endAngle, inContext: context)
         
         guard let image = endThumbImage else {
             drawThumb(withAngle: endAngle, inContext: context)

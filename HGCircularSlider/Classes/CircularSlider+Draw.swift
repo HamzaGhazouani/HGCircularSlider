@@ -94,6 +94,7 @@ extension CircularSlider {
      
      - returns: return the origin point of the thumb
      */
+    @discardableResult
     internal func drawThumb(withAngle angle: CGFloat, inContext context: CGContext) -> CGPoint {
         let circle = Circle(origin: bounds.center, radius: self.radius)
         let thumbOrigin = CircularSliderHelper.endPoint(fromCircle: circle, angle: angle)
@@ -114,6 +115,7 @@ extension CircularSlider {
      
      - returns: return the origin point of the thumb
      */
+    @discardableResult
     internal func drawThumb(withImage image: UIImage, angle: CGFloat, inContext context: CGContext) -> CGPoint  {
         UIGraphicsPushContext(context)
         context.beginPath()
