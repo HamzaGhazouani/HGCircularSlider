@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HGCircularSlider
 
 extension CALayer {
     
@@ -21,10 +22,15 @@ extension CALayer {
 
 class OtherExampleViewController: UIViewController {
 
+    @IBOutlet weak var circularSlider: MidPointCircularSlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        circularSlider.minimumValue = 0.0
+        circularSlider.maximumValue = 10.0
+        circularSlider.distance = 1.0
+        circularSlider.midPointValue = 5.0
     }
 
     override func didReceiveMemoryWarning() {
