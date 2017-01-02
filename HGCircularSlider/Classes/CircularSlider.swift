@@ -11,7 +11,7 @@ import UIKit
 /**
  * A visual control used to select a single value from a continuous range of values.
  * Can also be used like a circular progress view
- * CircularSlider use the target-action mechanism to report changes made during the course of editing:
+ * CircularSlider uses the target-action mechanism to report changes made during the course of editing:
  * ValueChanged, EditingDidBegin and EditingDidEnd
  */
 @IBDesignable
@@ -20,28 +20,28 @@ open class CircularSlider: UIControl {
     // MARK: Changing the Slider’s Appearance
     
     /**
-     * The color shown for the portion of the disk of slider that is filled. (between start and end values)
+     * The color shown for the selected portion of the slider disk. (between start and end values)
      * The default value is a transparent color.
      */
     @IBInspectable
     open var diskFillColor: UIColor = UIColor.clear
     
     /**
-     * The color shown for the portion of the disk of slider that is unfilled. (outside start and end values)
+     * The color shown for the unselected portion of the slider disk. (outside start and end values)
      * The default value of this property is the black color with alpha = 0.3.
      */
     @IBInspectable
     open var diskColor: UIColor = UIColor.gray
     
     /**
-     * The color shown for the portion of the slider that is filled. (between start and end values)
+     * The color shown for the selected track portion. (between start and end values)
      * The default value of this property is the tint color.
      */
     @IBInspectable
     open var trackFillColor: UIColor = UIColor.clear
     
     /**
-     * The color shown for the portion of the slider that is unfilled. (outside start and end values)
+     * The color shown for the unselected track portion. (outside start and end values)
      * The default value of this property is the white color.
      */
     @IBInspectable
@@ -64,7 +64,7 @@ open class CircularSlider: UIControl {
     open var thumbLineWidth: CGFloat = 4.0
     
     /**
-     * The radius of thumb
+     * The radius of the thumb
      *
      * The default value of this property is 13.0.
      */
@@ -72,7 +72,7 @@ open class CircularSlider: UIControl {
     open var thumbRadius: CGFloat = 13.0
     
     /**
-     * The color used to tint thumb
+     * The color used to tint the thumb
      * Ignored if the endThumbImage != nil
      *
      * The default value of this property is the groupTableViewBackgroundColor.
@@ -81,8 +81,8 @@ open class CircularSlider: UIControl {
     open var endThumbTintColor: UIColor = UIColor.groupTableViewBackground
     
     /**
-     * The stroke highlighted color of end thumb
-     * The default value of this property is blue color
+     * The stroke highlighted color of the end thumb
+     * The default value of this property is blue
      */
     @IBInspectable
     open var endThumbStrokeHighlightedColor: UIColor = UIColor.blue
@@ -91,14 +91,14 @@ open class CircularSlider: UIControl {
      * The color used to tint the stroke of the end thumb
      * Ignored if the endThumbImage != nil
      *
-     * The default value of this property is the red color.
+     * The default value of this property is red.
      */
     @IBInspectable
     open var endThumbStrokeColor: UIColor = UIColor.red
     
     /**
      * The image of the end thumb
-     * Clears any custom color you may have provided for end thumb.
+     * Clears any custom color you may have provided for the end thumb.
      *
      * The default value of this property is nil
      */
@@ -139,8 +139,8 @@ open class CircularSlider: UIControl {
     /**
      * The value of the endThumb (changed when the user change the position of the end thumb)
      *
-     * If you try to set a value that is above the maximum value, the maximum value is set instead.
-     * If you try to set a value that is below the minimum value, the minimum value is set instead.
+     * If you try to set a value that is above the maximum value, the property automatically resets to the maximum value.
+     * And if you try to set a value that is below the minimum value, the property automatically resets  to the minimum value.
      *
      * The default value of this property is 0.5
      */
