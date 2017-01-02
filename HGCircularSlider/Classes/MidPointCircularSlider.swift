@@ -62,8 +62,10 @@ open class MidPointCircularSlider: RangeCircularSlider {
         }
     }
     
-    /// The value of the mid point (between the start and end points)
-    fileprivate var midPointValue: CGFloat  {
+    /**
+     * The value of the mid point (between the start and end points)
+     */
+    open var midPointValue: CGFloat  {
         get {
             return (endPointValue + startPointValue) / 2
         }
