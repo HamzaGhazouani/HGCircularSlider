@@ -253,7 +253,7 @@
         <!--Example-->
         <scene sceneID="stQ-nu-pyE">
             <objects>
-                <viewController id="Npo-RV-git" sceneMemberID="viewController">
+                <viewController id="Npo-RV-git" customClass="OtherExampleViewController" customModule="HGCircularSlider_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kg8-3T-le0"/>
                         <viewControllerLayoutGuide type="bottom" id="I5G-Jl-WfO"/>
@@ -332,6 +332,9 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Example" image="second" id="etG-Rt-332"/>
+                    <connections>
+                        <outlet property="circularSlider" destination="P7G-Iv-4Jm" id="tNc-8z-Gh2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11N-ZE-qqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

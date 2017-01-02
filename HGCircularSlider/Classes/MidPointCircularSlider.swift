@@ -58,12 +58,14 @@ open class MidPointCircularSlider: RangeCircularSlider {
      */
     override open var distance: CGFloat {
         didSet {
-            assert(distance >= 0, "The CustomCircularSlider works only with fixed distance between start and end points, so distance property should be > 0")
+            assert(distance >= 0, "The MidPointCircularSlider works only with fixed distance between start and end points, so distance property should be > 0")
         }
     }
     
-    /// The value of the mid point (between the start and end points)
-    fileprivate var midPointValue: CGFloat  {
+    /**
+     * The value of the mid point (between the start and end points)
+     */
+    open var midPointValue: CGFloat  {
         get {
             return (endPointValue + startPointValue) / 2
         }
