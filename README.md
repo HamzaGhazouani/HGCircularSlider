@@ -30,7 +30,7 @@ it, simply add the following line to your Podfile:
 ``` ruby
 
 # Swift 3.0 - Xcode 8
-pod 'HGCircularSlider', '~> 1.0.1'
+pod 'HGCircularSlider', '~> 1.0.3'
 
 # Swift 2.2 - Xcode 7.3.1 (Checkout Swift2_Xcode7.3 branche)
 pod 'HGCircularSlider', '~> 0.1.2'
@@ -42,14 +42,30 @@ pod 'HGCircularSlider', '~> 0.1.2'
 
 ```
 let circularSlider = CircularSlider(frame: myFrame)
- ``` 
- OR
+circularSlider.minimumValue = 0.0
+circularSlider.maximumValue = 1.0
+circularSlider.endPointValue = 0.2
+
+``` 
+OR
 ```
 let circularSlider = RangeCircularSlider(frame: myFrame)
- ``` 
- OR
+circularSlider.startThumbImage = UIImage(named: "Bedtime")
+circularSlider.endThumbImage = UIImage(named: "Wake")
+
+let dayInSeconds = 24 * 60 * 60
+circularSlider.maximumValue = CGFloat(dayInSeconds)
+
+circularSlider.startPointValue = 1 * 60 * 60
+circularSlider.endPointValue = 8 * 60 * 60
+``` 
+OR
 ```
- let circularSlider = MidPointCircularSlider(frame: myFrame)
+let circularSlider = MidPointCircularSlider(frame: myFrame)
+circularSlider.minimumValue = 0.0
+circularSlider.maximumValue = 10.0
+circularSlider.distance = 1.0
+circularSlider.midPointValue = 5.0
 ```
 ## Documentation
 Full documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/HGCircularSlider/).<br/> 
