@@ -1,22 +1,23 @@
 {
   "name": "HGCircularSlider",
-  "version": "0.1.0",
-  "summary": "A short description of HGCircularSlider.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/HGCircularSlider",
+  "version": "0.1.3",
+  "summary": "Multiple Circular Sliders used to select a value from a continuous range of values.",
+  "description": "Circular Sliders used to select a value from a continuous range of values.\n\nCircularSlider: simple circular slider\nRangeCircularSlider: slider with two points to select a range of values from a continuous range of values\nMidPointCircularSlider: slider with fixed range to select a range of values from a continuois range of values",
+  "homepage": "https://github.com/HamzaGhazouani/HGCircularSlider",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Hamza GHAZOUANI": "hamza.ghazouani@onmobile.com"
+    "Hamza Ghazouani": "hamza.ghazouani@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/HGCircularSlider.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/HamzaGhazouani/HGCircularSlider.git",
+    "tag": "0.1.3"
   },
+  "social_media_url": "https://twitter.com/GhazouaniHamza",
   "platforms": {
-    "ios": "8.0"
+    "ios": "7.0"
   },
   "source_files": "HGCircularSlider/Classes/**/*"
 }
