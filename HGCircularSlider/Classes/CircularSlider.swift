@@ -54,7 +54,16 @@ open class CircularSlider: UIControl {
      */
     @IBInspectable
     open var lineWidth: CGFloat = 5.0
-    
+
+    @IBInspectable
+    open var backtrackLineWidth: CGFloat = 5.0
+
+    @IBInspectable
+    open var trackShadowOffset: CGPoint = CGPoint.zero
+
+    @IBInspectable
+    open var trackShadowColor: UIColor = UIColor.gray
+
     /**
      * The width of the thumb stroke line
      *
