@@ -29,6 +29,7 @@ extension CircularSlider {
         context.beginPath()
         
         context.setLineWidth(lineWidth)
+        context.setLineCap(CGLineCap.round)
         context.addArc(center: origin, radius: circle.radius, startAngle: arc.startAngle, endAngle: arc.endAngle, clockwise: false)
         context.move(to: CGPoint(x: origin.x, y: origin.y))
         context.drawPath(using: mode)
@@ -68,7 +69,7 @@ extension CircularSlider {
         
         let circle = Circle(origin: bounds.center, radius: self.radius)
         let sliderArc = Arc(circle: circle, startAngle: CircularSliderHelper.circleMinValue, endAngle: CircularSliderHelper.circleMaxValue)
-        CircularSlider.drawArc(withArc: sliderArc, lineWidth: lineWidth, inContext: context)
+        CircularSlider.drawArc(withArc: sliderArc, lineWidth: backtrackLineWidth, inContext: context)
     }
     
     /// draw Filled arc between start an end angles
@@ -84,7 +85,17 @@ extension CircularSlider {
         // stroke Arc
         CircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .stroke, inContext: context)
     }
-    
+
+    internal func drawShadowArc(fromAngle startAngle: CGFloat, toAngle endAngle: CGFloat, inContext context: CGContext) {
+        trackShadowColor.setStroke()
+
+        let origin = CGPoint(x: bounds.center.x + trackShadowOffset.x, y: bounds.center.y + trackShadowOffset.y)
+        let circle = Circle(origin: origin, radius: self.radius)
+        let arc = Arc(circle: circle, startAngle: startAngle, endAngle: endAngle)
+
+        // stroke Arc
+        CircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .stroke, inContext: context)
+    }
     
     /**
      Draw the thumb and return the coordinates of its center

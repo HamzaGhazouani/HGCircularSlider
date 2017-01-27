@@ -271,23 +271,8 @@ internal class CircularSliderHelper {
         if offsetBeta > halfValue {
             return offsetBeta - circleMaxValue
         }
-        else if offsetBeta < 0 {
-            return offsetBeta
-        }
         else {
             return offsetBeta
         }
-
-//        let phi = abs(beta - alpha).truncatingRemainder(dividingBy: circleMaxValue)
-//        let distance = phi > (circleMaxValue / 2) ? (circleMaxValue - phi) : phi
-//
-//
-//        let clockwiseDiff = abs((alpha + distance).truncatingRemainder(dividingBy: circleMaxValue) - beta)
-//        let counterClockwiseDiff = abs((alpha - distance).truncatingRemainder(dividingBy: circleMaxValue) - beta)
-//
-//        let clockwise = clockwiseDiff < counterClockwiseDiff
-//        print("\(alpha) TO \(beta) === \(clockwise ? "CLOCKWISE" : "COUNTER_CLOCKWISE") , \(distance)")
-//
-//        return clockwise ? distance : -distance
     }
 }

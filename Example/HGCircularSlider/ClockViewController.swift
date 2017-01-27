@@ -33,8 +33,8 @@ class ClockViewController: UIViewController {
         super.viewDidLoad()
         
         // setup O'clock
-        rangeCircularSlider.startThumbImage = UIImage(named: "Bedtime")
-        rangeCircularSlider.endThumbImage = UIImage(named: "Wake")
+        rangeCircularSlider.startThumbImage = #imageLiteral(resourceName: "iconScheduleTurnon") //UIImage(named: "Bedtime")
+        rangeCircularSlider.endThumbImage = #imageLiteral(resourceName: "iconSchedulePause") //UIImage(named: "Wake")
         
         rangeCircularSlider.maximumValue = Time.day
         rangeCircularSlider.numberOfRounds = 2

@@ -15,7 +15,7 @@ import UIKit
  */
 open class RangeCircularSlider: CircularSlider {
     
-    enum SelectedThumb {
+    public enum SelectedThumb {
         case startThumb
         case endThumb
         case none
@@ -205,26 +205,25 @@ open class RangeCircularSlider: CircularSlider {
         let startAngle = CircularSliderHelper.scaleToAngle(value: startPointValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
         // get end angle from end value
         let endAngle = CircularSliderHelper.scaleToAngle(value: endPointValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
-        
+
+        drawShadowArc(fromAngle: startAngle, toAngle: endAngle, inContext: context)
         drawFilledArc(fromAngle: startAngle, toAngle: endAngle, inContext: context)
         
         // end thumb
         endThumbTintColor.setFill()
         (isHighlighted == true && selectedThumb == .endThumb) ? endThumbStrokeHighlightedColor.setStroke() : endThumbStrokeColor.setStroke()
+        endThumbCenter = drawThumb(withAngle: endAngle, inContext: context)
         if let image = endThumbImage {
             endThumbCenter = drawThumb(withImage: image, angle: endAngle, inContext: context)
-        } else {
-            endThumbCenter = drawThumb(withAngle: endAngle, inContext: context)
         }
         
         // start thumb
         startThumbTintColor.setFill()
         (isHighlighted == true && selectedThumb == .startThumb) ? startThumbStrokeHighlightedColor.setStroke() : startThumbStrokeColor.setStroke()
-        
+
+        startThumbCenter = drawThumb(withAngle: startAngle, inContext: context)
         if let image = startThumbImage {
             startThumbCenter = drawThumb(withImage: image, angle: startAngle, inContext: context)
-        } else {
-            startThumbCenter = drawThumb(withAngle: startAngle, inContext: context)
         }
     }
     
@@ -237,15 +236,7 @@ open class RangeCircularSlider: CircularSlider {
         sendActions(for: .editingDidBegin)
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
-        
-        if isThumb(withCenter: startThumbCenter, containsPoint: touchPosition) {
-            selectedThumb = .startThumb
-        }
-        else if isThumb(withCenter: endThumbCenter, containsPoint: touchPosition) {
-            selectedThumb = .endThumb
-        } else {
-            selectedThumb = .none
-        }
+        selectedThumb = thumb(for: touchPosition)
         
         return (selectedThumb != .none)
     }
@@ -284,5 +275,17 @@ open class RangeCircularSlider: CircularSlider {
         
         return true
     }
-    
+
+    // MARK: - Helpers
+    open func thumb(for touchPosition: CGPoint) -> SelectedThumb {
+        if isThumb(withCenter: startThumbCenter, containsPoint: touchPosition) {
+            return .startThumb
+        }
+        else if isThumb(withCenter: endThumbCenter, containsPoint: touchPosition) {
+            return .endThumb
+        } else {
+            return .none
+        }
+    }
+
 }
