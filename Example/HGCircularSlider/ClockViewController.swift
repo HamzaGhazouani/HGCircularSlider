@@ -36,11 +36,11 @@ class ClockViewController: UIViewController {
         rangeCircularSlider.startThumbImage = UIImage(named: "Bedtime")
         rangeCircularSlider.endThumbImage = UIImage(named: "Wake")
         
-        let dayInSeconds = 24 * 60 * 60
-        rangeCircularSlider.maximumValue = CGFloat(dayInSeconds)
+        rangeCircularSlider.maximumValue = Time.day
+        rangeCircularSlider.numberOfRounds = 2
         
-        rangeCircularSlider.startPointValue = 1 * 60 * 60
-        rangeCircularSlider.endPointValue = 8 * 60 * 60
+        rangeCircularSlider.startPointValue = Time.hour
+        rangeCircularSlider.endPointValue = Time.hour * 8
 
         updateTexts(rangeCircularSlider)
     }

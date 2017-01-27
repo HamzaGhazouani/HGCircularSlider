@@ -8,16 +8,39 @@
 
 import UIKit
 
+// MARK: - Public Structures
+public struct Time {
+    public typealias Unit = CGFloat
 
+    public static let second: Time.Unit = 1
+    public static let minute = Time.second * CGFloat(Time.secondsInMinute)
+    public static let hour = Time.minute * CGFloat(Time.minutesInHour)
+    public static let day = Time.hour * CGFloat(Time.hoursInDay)
+    
+    fileprivate static let secondsInMinute = 60
+    fileprivate static let minutesInHour = 60
+    fileprivate static let hoursInDay = 24
+}
+
+public extension Time.Unit {
+    public var seconds: Int { return Int(self) % Time.secondsInMinute }
+    public var minutes: Int { return Int(self / Time.minute) % Time.minutesInHour }
+    public var hours: Int { return Int(self / Time.hour) % Time.hoursInDay }
+    public var days: Int { return Int(self / Time.day) }
+}
+
+// MARK: - Internal Structures
 internal struct Interval {
     var min: CGFloat = 0.0
     var max: CGFloat = 0.0
+    var rounds: Int
 
-    init(min: CGFloat, max: CGFloat) {
-        assert(min <= max, NSLocalizedString("Illegal interval", comment: ""))
+    init(min: CGFloat, max: CGFloat, rounds: Int = 1) {
+        assert(min <= max && rounds > 0, NSLocalizedString("Illegal interval", comment: ""))
         
         self.min = min
         self.max = max
+        self.rounds = rounds
     }
 }
 
@@ -47,7 +70,8 @@ internal struct Arc {
     }
 }
 
-extension CGVector {
+// MARK: - Internal Extensions
+internal extension CGVector {
     
     /**
      Calculate the vector between two points
@@ -83,7 +107,7 @@ extension CGVector {
     }
 }
 
-extension CGRect {
+internal extension CGRect {
  
     // get the center of rect (bounds or frame)
     internal var center: CGPoint {
@@ -94,7 +118,8 @@ extension CGRect {
     }
 }
 
-class CircularSliderHelper {
+// MARK: - Internal Helper
+internal class CircularSliderHelper {
     
     @nonobjc static let circleMinValue: CGFloat = 0
     @nonobjc static let circleMaxValue: CGFloat = CGFloat(2 * M_PI)
@@ -172,9 +197,10 @@ class CircularSliderHelper {
      - returns: the value in the new interval
      */
     internal static func scaleValue(_ value: CGFloat, fromInterval source: Interval, toInterval destination: Interval) -> CGFloat {
-        let sourceRange = source.max - source.min
-        let destinationRange = destination.max - destination.min
-        let newValue =  (((value - source.min) * destinationRange) / sourceRange) + destination.min
+        let sourceRange = (source.max - source.min) / CGFloat(source.rounds)
+        let destinationRange = (destination.max - destination.min) / CGFloat(destination.rounds)
+        let scaledValue = source.min + (value - source.min).truncatingRemainder(dividingBy: sourceRange)
+        let newValue =  (((scaledValue - source.min) * destinationRange) / sourceRange) + destination.min
         
         return  newValue
     }
@@ -217,5 +243,51 @@ class CircularSliderHelper {
         let value = scaleValue(angle, fromInterval: angleIntreval, toInterval: newInterval)
         
         return value
+    }
+
+    internal static func delta(in interval: Interval, for angle: CGFloat, oldValue: CGFloat) -> CGFloat {
+        let angleIntreval = Interval(min: circleMinValue , max: circleMaxValue)
+
+        let oldAngle = scaleToAngle(value: oldValue, inInterval: interval)
+        let deltaAngle = self.angle(from: oldAngle, to: angle)
+
+        let value = scaleValue(deltaAngle, fromInterval: angleIntreval, toInterval: interval)
+
+        print("DELTA ANGLE = \(deltaAngle)")
+
+        return value
+    }
+
+    /**
+     * Length (angular) of a shortest way between two angles.
+     * It will be in range [-π/2, π/2], where sign means dir (+ for clockwise, - for counter clockwise).
+     */
+    private static  func angle(from alpha: CGFloat, to beta: CGFloat) -> CGFloat {
+        let halfValue = circleMaxValue/2
+        // Rotate right
+        let offset = alpha >= halfValue ? circleMaxValue - alpha : -alpha
+        let offsetBeta = beta + offset
+
+        if offsetBeta > halfValue {
+            return offsetBeta - circleMaxValue
+        }
+        else if offsetBeta < 0 {
+            return offsetBeta
+        }
+        else {
+            return offsetBeta
+        }
+
+//        let phi = abs(beta - alpha).truncatingRemainder(dividingBy: circleMaxValue)
+//        let distance = phi > (circleMaxValue / 2) ? (circleMaxValue - phi) : phi
+//
+//
+//        let clockwiseDiff = abs((alpha + distance).truncatingRemainder(dividingBy: circleMaxValue) - beta)
+//        let counterClockwiseDiff = abs((alpha - distance).truncatingRemainder(dividingBy: circleMaxValue) - beta)
+//
+//        let clockwise = clockwiseDiff < counterClockwiseDiff
+//        print("\(alpha) TO \(beta) === \(clockwise ? "CLOCKWISE" : "COUNTER_CLOCKWISE") , \(distance)")
+//
+//        return clockwise ? distance : -distance
     }
 }

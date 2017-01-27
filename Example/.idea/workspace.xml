@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c01f5aaf-76fa-4517-a819-b9a200350be0" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="ClockViewController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HGCircularSlider/ClockViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+              <folding>
+                <element signature="e#163#175#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CircularSliderHelper.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../HGCircularSlider/Classes/CircularSliderHelper.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="251" column="62" lean-forward="false" selection-start-line="251" selection-start-column="62" selection-end-line="251" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#2#0" expanded="false" />
+                <element signature="e#141#597#0" expanded="false" />
+                <element signature="e#599#919#0" expanded="false" />
+                <element signature="e#656#699#0" expanded="false" />
+                <element signature="e#728#783#0" expanded="false" />
+                <element signature="e#810#860#0" expanded="false" />
+                <element signature="e#886#917#0" expanded="false" />
+                <element signature="e#1058#1292#0" expanded="false" />
+                <element signature="e#1296#1587#0" expanded="false" />
+                <element signature="e#1388#1585#0" expanded="false" />
+                <element signature="e#1589#1922#0" expanded="false" />
+                <element signature="e#1748#1920#0" expanded="false" />
+                <element signature="e#1955#3136#0" expanded="false" />
+                <element signature="e#1994#2227#0" expanded="false" />
+                <element signature="e#2232#2398#0" expanded="false" />
+                <element signature="e#2408#2534#0" expanded="false" />
+                <element signature="e#2544#2673#0" expanded="false" />
+                <element signature="e#2683#3134#0" expanded="false" />
+                <element signature="e#3138#3359#0" expanded="false" />
+                <element signature="e#3249#3357#0" expanded="false" />
+                <element signature="e#3259#3351#0" expanded="false" />
+                <element signature="e#3631#3764#0" expanded="false" />
+                <element signature="e#3769#3889#0" expanded="false" />
+                <element signature="e#3895#4157#0" expanded="false" />
+                <element signature="e#4162#4952#0" expanded="false" />
+                <element signature="e#4307#4596#0" expanded="false" />
+                <element signature="e#4962#5195#0" expanded="false" />
+                <element signature="e#5200#5678#0" expanded="false" />
+                <element signature="e#5294#5425#0" expanded="false" />
+                <element signature="e#5688#6070#0" expanded="false" />
+                <element signature="e#6075#6627#0" expanded="false" />
+                <element signature="e#6637#7041#0" expanded="false" />
+                <element signature="e#7046#7359#0" expanded="false" />
+                <element signature="e#7763#8070#0" expanded="false" />
+                <marker date="1485524654000" expanded="true" signature="3424:9866" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RangeCircularSlider.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../HGCircularSlider/Classes/RangeCircularSlider.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="267" column="0" lean-forward="false" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#2#0" expanded="false" />
+                <element signature="e#112#400#0" expanded="false" />
+                <element signature="e#459#728#0" expanded="false" />
+                <element signature="e#789#974#0" expanded="false" />
+                <element signature="e#1080#1265#0" expanded="false" />
+                <element signature="e#1354#1472#0" expanded="false" />
+                <element signature="e#1578#1747#0" expanded="false" />
+                <element signature="e#1855#2312#0" expanded="false" />
+                <element signature="e#2357#2500#0" expanded="false" />
+                <element signature="e#2510#2957#0" expanded="false" />
+                <element signature="e#3021#3160#0" expanded="false" />
+                <marker date="1485524802000" expanded="true" signature="448:10015" ph="{...}" />
+                <marker date="1485524802000" expanded="true" signature="8800:10008" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CircularSlider.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../HGCircularSlider/Classes/CircularSlider.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="115" column="13" lean-forward="false" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Interval(</find>
+      <find>public</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>internal</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/HGCircularSlider/ClockViewController.swift" />
+        <option value="$PROJECT_DIR$/../HGCircularSlider/Classes/VectorMath.swift" />
+        <option value="$PROJECT_DIR$/../HGCircularSlider/Classes/RangeCircularSlider.swift" />
+        <option value="$PROJECT_DIR$/../HGCircularSlider/Classes/CircularSliderHelper.swift" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="3200" />
+    <option name="y" value="-375" />
+    <option name="width" value="1916" />
+    <option name="height" value="1058" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pods" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pods" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Development Pods" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HGCircularSlider" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HGCircularSlider" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HGCircularSlider" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Example for HGCircularSlider" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RunManager" selected="Application.HGCircularSlider-Example">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HGCircularSlider" TARGET_NAME="HGCircularSlider_Example" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HGCircularSlider" RUN_TARGET_NAME="HGCircularSlider_Example" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HGCircularSlider" TARGET_NAME="HGCircularSlider_Example" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HGCircularSlider" TARGET_NAME="HGCircularSlider_Tests" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.HGCircularSlider-Example" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c01f5aaf-76fa-4517-a819-b9a200350be0" name="Default" comment="" />
+      <created>1485515153348</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1485515153348</updated>
+      <workItem from="1485515155287" duration="6890000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6890000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="3200" y="-375" width="1916" height="1058" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960423" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../HGCircularSlider/Classes/CircularSlider+Draw.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HGCircularSlider/Classes/MidPointCircularSlider.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HGCircularSlider/ClockViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding>
+            <element signature="e#163#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HGCircularSlider/Classes/RangeCircularSlider.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="267" column="0" lean-forward="false" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#112#400#0" expanded="false" />
+            <element signature="e#459#728#0" expanded="false" />
+            <element signature="e#789#974#0" expanded="false" />
+            <element signature="e#1080#1265#0" expanded="false" />
+            <element signature="e#1354#1472#0" expanded="false" />
+            <element signature="e#1578#1747#0" expanded="false" />
+            <element signature="e#1855#2312#0" expanded="false" />
+            <element signature="e#2357#2500#0" expanded="false" />
+            <element signature="e#2510#2957#0" expanded="false" />
+            <element signature="e#3021#3160#0" expanded="false" />
+            <marker date="1485524802000" expanded="true" signature="448:10015" ph="{...}" />
+            <marker date="1485524802000" expanded="true" signature="8800:10008" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HGCircularSlider/Classes/CircularSliderHelper.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="251" column="62" lean-forward="false" selection-start-line="251" selection-start-column="62" selection-end-line="251" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#141#597#0" expanded="false" />
+            <element signature="e#599#919#0" expanded="false" />
+            <element signature="e#656#699#0" expanded="false" />
+            <element signature="e#728#783#0" expanded="false" />
+            <element signature="e#810#860#0" expanded="false" />
+            <element signature="e#886#917#0" expanded="false" />
+            <element signature="e#1058#1292#0" expanded="false" />
+            <element signature="e#1296#1587#0" expanded="false" />
+            <element signature="e#1388#1585#0" expanded="false" />
+            <element signature="e#1589#1922#0" expanded="false" />
+            <element signature="e#1748#1920#0" expanded="false" />
+            <element signature="e#1955#3136#0" expanded="false" />
+            <element signature="e#1994#2227#0" expanded="false" />
+            <element signature="e#2232#2398#0" expanded="false" />
+            <element signature="e#2408#2534#0" expanded="false" />
+            <element signature="e#2544#2673#0" expanded="false" />
+            <element signature="e#2683#3134#0" expanded="false" />
+            <element signature="e#3138#3359#0" expanded="false" />
+            <element signature="e#3249#3357#0" expanded="false" />
+            <element signature="e#3259#3351#0" expanded="false" />
+            <element signature="e#3631#3764#0" expanded="false" />
+            <element signature="e#3769#3889#0" expanded="false" />
+            <element signature="e#3895#4157#0" expanded="false" />
+            <element signature="e#4162#4952#0" expanded="false" />
+            <element signature="e#4307#4596#0" expanded="false" />
+            <element signature="e#4962#5195#0" expanded="false" />
+            <element signature="e#5200#5678#0" expanded="false" />
+            <element signature="e#5294#5425#0" expanded="false" />
+            <element signature="e#5688#6070#0" expanded="false" />
+            <element signature="e#6075#6627#0" expanded="false" />
+            <element signature="e#6637#7041#0" expanded="false" />
+            <element signature="e#7046#7359#0" expanded="false" />
+            <element signature="e#7763#8070#0" expanded="false" />
+            <marker date="1485524654000" expanded="true" signature="3424:9866" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HGCircularSlider/Classes/VectorMath.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="380" column="1" lean-forward="true" selection-start-line="380" selection-start-column="1" selection-end-line="380" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HGCircularSlider/Classes/CircularSlider.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="115" column="13" lean-forward="false" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

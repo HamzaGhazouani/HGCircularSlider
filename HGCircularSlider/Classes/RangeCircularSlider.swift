@@ -19,6 +19,13 @@ open class RangeCircularSlider: CircularSlider {
         case startThumb
         case endThumb
         case none
+
+        var isStart: Bool {
+            return  self == SelectedThumb.startThumb
+        }
+        var isEnd: Bool {
+            return  self == SelectedThumb.endThumb
+        }
     }
     
     // MARK: Changing the Slider’s Appearance
@@ -90,21 +97,13 @@ open class RangeCircularSlider: CircularSlider {
             }
         }
     }
-    
+
     /**
-     * The fixed distance between the start value and the end value
-     *
-     * If you change the value of this property, the end value is adjusted to match (startPointValue + distance)
-     * If the end value is above the maximum value, the end value is adjusted to match the maximum value and the start value is adjusted to match (endPointValue - distance)
-     * To disable distance use -1 (by default)
-     *
-     * The default value of this property is -1
+     * Fixed number of rounds - how many circles has user to do to reach max value (like apple bedtime clock - which have 2)
      */
-    @IBInspectable
-    open var distance: CGFloat = -1 {
+    open var numberOfRounds: Int = 1 {
         didSet {
-            assert(distance <= maximumValue - minimumValue, "The distance value is greater than distance between max and min value")
-            endPointValue = startPointValue + distance
+            assert(numberOfRounds > 0)
         }
     }
     
@@ -118,16 +117,8 @@ open class RangeCircularSlider: CircularSlider {
      */
     open var startPointValue: CGFloat = 0.0 {
         didSet {
-            if oldValue == startPointValue {
+            guard oldValue != startPointValue else {
                 return
-            }
-            
-            if startPointValue < minimumValue {
-                startPointValue = minimumValue
-            }
-            
-            if distance > 0 {
-                endPointValue = startPointValue + distance
             }
             
             setNeedsDisplay()
@@ -143,17 +134,9 @@ open class RangeCircularSlider: CircularSlider {
      * The default value of this property is 0.5
      */
     override open var endPointValue: CGFloat {
-        didSet {            
-            if oldValue == endPointValue && distance <= 0 {
+        didSet {
+            guard oldValue != endPointValue else {
                 return
-            }
-            
-            if endPointValue > maximumValue {
-                endPointValue = maximumValue
-            }
-            
-            if distance > 0 {
-                startPointValue = endPointValue - distance
             }
             
             setNeedsDisplay()
@@ -217,7 +200,7 @@ open class RangeCircularSlider: CircularSlider {
         
         drawCircularSlider(inContext: context)
         
-        let interval = Interval(min: minimumValue, max: maximumValue)
+        let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
         // get start angle from start value
         let startAngle = CircularSliderHelper.scaleToAngle(value: startPointValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
         // get end angle from end value
@@ -274,15 +257,24 @@ open class RangeCircularSlider: CircularSlider {
         
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
-        
         let startPoint = CGPoint(x: bounds.center.x, y: 0)
         let angle = CircularSliderHelper.angle(betweenFirstPoint: startPoint, secondPoint: touchPosition, inCircleWithCenter: bounds.center)
         
-        let interval = Interval(min: minimumValue, max: maximumValue)
-        let newValue = CircularSliderHelper.value(inInterval: interval, fromAngle: angle)
-        
-        
-        if selectedThumb == .startThumb {
+        let oldValue: CGFloat = selectedThumb.isStart ? startPointValue : endPointValue
+        let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
+        let deltaValue = CircularSliderHelper.delta(in: interval, for: angle, oldValue: oldValue)
+
+        var newValue = oldValue + deltaValue
+        let range = maximumValue - minimumValue
+
+        if newValue > maximumValue {
+            newValue -= range
+        }
+        else if newValue < minimumValue {
+            newValue += range
+        }
+
+        if selectedThumb.isStart {
             startPointValue = newValue
         }
         else {
@@ -292,4 +284,5 @@ open class RangeCircularSlider: CircularSlider {
         
         return true
     }
+    
 }
