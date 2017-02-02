@@ -1,9 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="HGCircularSlider-Example" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HGCircularSlider" TARGET_NAME="HGCircularSlider_Example" CONFIG_NAME="Debug" SCHEME_NAME="HGCircularSlider-Example" RUN_TARGET_PROJECT_NAME="HGCircularSlider" RUN_TARGET_NAME="HGCircularSlider_Example" MAKE_ACTIVE="TRUE">
-    <envs />
-    <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-      <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-    </EXTENSION>
-    <method />
-  </configuration>
-</component>
