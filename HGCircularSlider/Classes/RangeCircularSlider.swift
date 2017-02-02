@@ -14,7 +14,7 @@ import UIKit
  ValueChanged, EditingDidBegin and EditingDidEnd
  */
 open class RangeCircularSlider: CircularSlider {
-    
+
     public enum SelectedThumb {
         case startThumb
         case endThumb
@@ -27,7 +27,7 @@ open class RangeCircularSlider: CircularSlider {
             return  self == SelectedThumb.endThumb
         }
     }
-    
+
     // MARK: Changing the Slider’s Appearance
     
     /**
@@ -237,15 +237,18 @@ open class RangeCircularSlider: CircularSlider {
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
         selectedThumb = thumb(for: touchPosition)
-        
-        return (selectedThumb != .none)
+
+        return selectedThumb != .none
     }
     
     /**
      See superclass documentation
      */
     override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        
+        guard selectedThumb != .none else {
+            return false
+        }
+
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
         let startPoint = CGPoint(x: bounds.center.x, y: 0)
@@ -275,6 +278,11 @@ open class RangeCircularSlider: CircularSlider {
         
         return true
     }
+
+    override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        super.endTracking(touch, with: event)
+    }
+
 
     // MARK: - Helpers
     open func thumb(for touchPosition: CGPoint) -> SelectedThumb {

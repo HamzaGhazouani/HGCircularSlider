@@ -1,5 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
+## [1.0.3](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/1.0.3)
+
+* Change midPointValue from private to open
+* Imporve the documentation
 
 ## [1.0.2](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/1.0.2)
 
