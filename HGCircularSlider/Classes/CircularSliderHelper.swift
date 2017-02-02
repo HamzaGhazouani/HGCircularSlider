@@ -20,13 +20,32 @@ public struct Time {
     fileprivate static let secondsInMinute = 60
     fileprivate static let minutesInHour = 60
     fileprivate static let hoursInDay = 24
+
 }
 
-public extension Time.Unit {
+extension Time.Unit {
     public var seconds: Int { return Int(self) % Time.secondsInMinute }
     public var minutes: Int { return Int(self / Time.minute) % Time.minutesInHour }
     public var hours: Int { return Int(self / Time.hour) % Time.hoursInDay }
     public var days: Int { return Int(self / Time.day) }
+
+    public var localized: String {
+        return hoursString12
+    }
+
+    private var hoursString12: String {
+        if self.hours < 13 {
+            return "\(hours)am"
+        }
+        else {
+            return "\(hours - 12)pm"
+        }
+    }
+
+    public static func *(lhs: Int, rhs: Time.Unit) -> Time.Unit {
+        return Time.Unit(lhs) * rhs
+    }
+
 }
 
 // MARK: - Internal Structures
@@ -251,11 +270,7 @@ internal class CircularSliderHelper {
         let oldAngle = scaleToAngle(value: oldValue, inInterval: interval)
         let deltaAngle = self.angle(from: oldAngle, to: angle)
 
-        let value = scaleValue(deltaAngle, fromInterval: angleIntreval, toInterval: interval)
-
-        print("DELTA ANGLE = \(deltaAngle)")
-
-        return value
+        return scaleValue(deltaAngle, fromInterval: angleIntreval, toInterval: interval)
     }
 
     /**
