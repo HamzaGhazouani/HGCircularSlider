@@ -97,8 +97,8 @@ extension CGRect {
 class CircularSliderHelper {
     
     @nonobjc static let circleMinValue: CGFloat = 0
-    @nonobjc static let circleMaxValue: CGFloat = CGFloat(2 * M_PI)
-    @nonobjc static let circleInitialAngle: CGFloat = -CGFloat(M_PI_2)
+    @nonobjc static let circleMaxValue: CGFloat = CGFloat(2 * Double.pi)
+    @nonobjc static let circleInitialAngle: CGFloat = -CGFloat(Double.pi / 2)
     
     /**
      Convert angle from radians to degrees
@@ -108,7 +108,7 @@ class CircularSliderHelper {
      - returns: degree value
      */
     internal static func degrees(fromRadians value: CGFloat) -> CGFloat {
-        return value * 180.0 / CGFloat(M_PI)
+        return value * 180.0 / CGFloat(Double.pi)
     }
 
     /**
@@ -133,7 +133,7 @@ class CircularSliderHelper {
         let angle = atan2(uv.determinant, uv.dotProduct)
         
         // change the angle interval
-        let newAngle = (angle < 0) ? -angle : Float(2 * M_PI) - angle
+        let newAngle = (angle < 0) ? -angle : Float(2 * Double.pi) - angle
         
         return CGFloat(newAngle)
     }
