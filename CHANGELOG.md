@@ -1,5 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
+
+## [1.1.0](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/1.1.0)
+
+* Fix Swift 3.1 warnings
+
 ## [1.0.3](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/1.0.3)
 
 * Change midPointValue from private to open

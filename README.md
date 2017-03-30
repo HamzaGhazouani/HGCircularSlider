@@ -29,8 +29,8 @@ it, simply add the following line to your Podfile:
 
 ``` ruby
 
-# Swift 3.0 - Xcode 8
-pod 'HGCircularSlider', '~> 1.0.3'
+# Swift 3.1 - Xcode 8.3
+pod 'HGCircularSlider', '~> 1.1.0'
 
 # Swift 2.2 - Xcode 7.3.1 (Checkout Swift2_Xcode7.3 branche)
 pod 'HGCircularSlider', '~> 0.1.2'
