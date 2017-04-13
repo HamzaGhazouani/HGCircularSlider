@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CCCC96461E9F7FD000999D34 /* MidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC96451E9F7FD000999D34 /* MidPointCircularSlider.swift */; };
 		CCDBFDE01E43366F005D6F08 /* HGCircularSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = CCDBFDDE1E43366F005D6F08 /* HGCircularSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCDBFDFD1E4336C9005D6F08 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CCDBFDF61E4336C9005D6F08 /* .gitkeep */; };
 		CCDBFDFF1E4336C9005D6F08 /* CircularSlider+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBFDF91E4336C9005D6F08 /* CircularSlider+Draw.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CCCC96451E9F7FD000999D34 /* MidPointCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidPointCircularSlider.swift; sourceTree = "<group>"; };
 		CCDBFDDB1E43366F005D6F08 /* HGCircularSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDBFDDE1E43366F005D6F08 /* HGCircularSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGCircularSlider.h; sourceTree = "<group>"; };
 		CCDBFDDF1E43366F005D6F08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				CCDBFDF91E4336C9005D6F08 /* CircularSlider+Draw.swift */,
 				CCDBFDFA1E4336C9005D6F08 /* CircularSlider.swift */,
 				CCDBFDFB1E4336C9005D6F08 /* CircularSliderHelper.swift */,
+				CCCC96451E9F7FD000999D34 /* MidPointCircularSlider.swift */,
 				CCDBFDFC1E4336C9005D6F08 /* RangeCircularSlider.swift */,
 			);
 			path = Classes;
@@ -167,6 +170,7 @@
 				CCDBFDFF1E4336C9005D6F08 /* CircularSlider+Draw.swift in Sources */,
 				CCDBFE021E4336C9005D6F08 /* RangeCircularSlider.swift in Sources */,
 				CCDBFE001E4336C9005D6F08 /* CircularSlider.swift in Sources */,
+				CCCC96461E9F7FD000999D34 /* MidPointCircularSlider.swift in Sources */,
 				CCDBFE011E4336C9005D6F08 /* CircularSliderHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

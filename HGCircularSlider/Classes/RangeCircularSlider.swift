@@ -101,9 +101,11 @@ open class RangeCircularSlider: CircularSlider {
     /**
      * Fixed number of rounds - how many circles has user to do to reach max value (like apple bedtime clock - which have 2)
      */
+    @IBInspectable
     open var numberOfRounds: Int = 1 {
         didSet {
-            assert(numberOfRounds > 0)
+            assert(numberOfRounds > 0, "Number of rounds has to be positive value!")
+            setNeedsDisplay()
         }
     }
     
@@ -117,10 +119,7 @@ open class RangeCircularSlider: CircularSlider {
      */
     open var startPointValue: CGFloat = 0.0 {
         didSet {
-            guard oldValue != startPointValue else {
-                return
-            }
-            
+            guard oldValue != startPointValue else { return }
             setNeedsDisplay()
         }
     }
@@ -135,10 +134,7 @@ open class RangeCircularSlider: CircularSlider {
      */
     override open var endPointValue: CGFloat {
         didSet {
-            guard oldValue != endPointValue else {
-                return
-            }
-            
+            guard oldValue != endPointValue else { return }
             setNeedsDisplay()
         }
     }
