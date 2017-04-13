@@ -15,11 +15,12 @@ extension Date {
 
 class ClockViewController: UIViewController {
     
-    
+
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var bedtimeLabel: UILabel!
     @IBOutlet weak var wakeLabel: UILabel!
     @IBOutlet weak var rangeCircularSlider: RangeCircularSlider!
+    @IBOutlet weak var clockFormatSegmentedControl: UISegmentedControl!
     
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -65,5 +66,16 @@ class ClockViewController: UIViewController {
         durationLabel.text = dateFormatter.string(from: durationDate)
         dateFormatter.dateFormat = "hh:mm a"
     }
+
+    @IBAction func clockFormatChange(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0: rangeCircularSlider.numberOfRounds = 1
+        case 1: rangeCircularSlider.numberOfRounds = 2
+        default: assert(false)
+        }
+
+        
+    }
+
 }
 

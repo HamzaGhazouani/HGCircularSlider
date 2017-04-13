@@ -54,7 +54,16 @@ open class CircularSlider: UIControl {
      */
     @IBInspectable
     open var lineWidth: CGFloat = 5.0
-    
+
+    @IBInspectable
+    open var backtrackLineWidth: CGFloat = 5.0
+
+    @IBInspectable
+    open var trackShadowOffset: CGPoint = CGPoint.zero
+
+    @IBInspectable
+    open var trackShadowColor: UIColor = UIColor.gray
+
     /**
      * The width of the thumb stroke line
      *
@@ -145,14 +154,14 @@ open class CircularSlider: UIControl {
      * The default value of this property is 0.5
      */
     open var endPointValue: CGFloat = 0.5 {
-        didSet {            
+        didSet {
             if oldValue == endPointValue {
                 return
             }
             if endPointValue > maximumValue {
                 endPointValue = maximumValue
             }
-            
+
             setNeedsDisplay()
         }
     }
@@ -200,7 +209,8 @@ open class CircularSlider: UIControl {
     internal func setup() {
         trackFillColor = tintColor
     }
-    
+
+
     // MARK: Drawing methods
     
     /**
@@ -243,7 +253,6 @@ open class CircularSlider: UIControl {
      See superclass documentation
      */
     override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
         
