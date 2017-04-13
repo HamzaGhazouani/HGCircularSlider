@@ -56,9 +56,10 @@ open class MidPointCircularSlider: RangeCircularSlider {
      * The value of this property should be >= 0
      * The default value of this property is 0.2
      */
-    override open var distance: CGFloat {
+    open var distance: CGFloat {
         didSet {
             assert(distance >= 0, "The MidPointCircularSlider works only with fixed distance between start and end points, so distance property should be > 0")
+            endPointValue = startPointValue + distance
         }
     }
     
@@ -84,12 +85,14 @@ open class MidPointCircularSlider: RangeCircularSlider {
      See superclass documentation
      */
     required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    
         distance = 0.2
+
+        super.init(coder: aDecoder)
     }
     
     override init(frame: CGRect) {
+        distance = 0.2
+        
         super.init(frame: frame)
     }
     
