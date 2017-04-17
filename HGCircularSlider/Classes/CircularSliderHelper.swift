@@ -8,46 +8,6 @@
 
 import UIKit
 
-// MARK: - Public Structures
-public struct Time {
-    public typealias Unit = CGFloat
-
-    public static let second: Time.Unit = 1
-    public static let minute = Time.second * CGFloat(Time.secondsInMinute)
-    public static let hour = Time.minute * CGFloat(Time.minutesInHour)
-    public static let day = Time.hour * CGFloat(Time.hoursInDay)
-    
-    fileprivate static let secondsInMinute = 60
-    fileprivate static let minutesInHour = 60
-    fileprivate static let hoursInDay = 24
-
-}
-
-extension Time.Unit {
-    public var seconds: Int { return Int(self) % Time.secondsInMinute }
-    public var minutes: Int { return Int(self / Time.minute) % Time.minutesInHour }
-    public var hours: Int { return Int(self / Time.hour) % Time.hoursInDay }
-    public var days: Int { return Int(self / Time.day) }
-
-    public var localized: String {
-        return hoursString12
-    }
-
-    private var hoursString12: String {
-        if self.hours < 13 {
-            return "\(hours)am"
-        }
-        else {
-            return "\(hours - 12)pm"
-        }
-    }
-
-    public static func *(lhs: Int, rhs: Time.Unit) -> Time.Unit {
-        return Time.Unit(lhs) * rhs
-    }
-
-}
-
 // MARK: - Internal Structures
 internal struct Interval {
     var min: CGFloat = 0.0
