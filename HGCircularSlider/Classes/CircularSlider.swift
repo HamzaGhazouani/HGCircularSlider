@@ -24,28 +24,28 @@ open class CircularSlider: UIControl {
      * The default value is a transparent color.
      */
     @IBInspectable
-    open var diskFillColor: UIColor = UIColor.clear
+    open var diskFillColor: UIColor = .clear
     
     /**
      * The color shown for the unselected portion of the slider disk. (outside start and end values)
      * The default value of this property is the black color with alpha = 0.3.
      */
     @IBInspectable
-    open var diskColor: UIColor = UIColor.gray
+    open var diskColor: UIColor = .gray
     
     /**
      * The color shown for the selected track portion. (between start and end values)
      * The default value of this property is the tint color.
      */
     @IBInspectable
-    open var trackFillColor: UIColor = UIColor.clear
+    open var trackFillColor: UIColor = .clear
     
     /**
      * The color shown for the unselected track portion. (outside start and end values)
      * The default value of this property is the white color.
      */
     @IBInspectable
-    open var trackColor: UIColor = UIColor.white
+    open var trackColor: UIColor = .white
     
     /**
      * The width of the circular line
@@ -55,14 +55,29 @@ open class CircularSlider: UIControl {
     @IBInspectable
     open var lineWidth: CGFloat = 5.0
 
+    /**
+     * The width of the unselected track portion of the slider
+     *
+     * The default value of this property is 5.0.
+     */
     @IBInspectable
     open var backtrackLineWidth: CGFloat = 5.0
 
+    /**
+     * The shadow offset of the slider
+     *
+     * The default value of this property is .zero.
+     */
     @IBInspectable
-    open var trackShadowOffset: CGPoint = CGPoint.zero
+    open var trackShadowOffset: CGPoint = .zero
 
+    /**
+     * The color of the shadow offset of the slider
+     *
+     * The default value of this property is .gray.
+     */
     @IBInspectable
-    open var trackShadowColor: UIColor = UIColor.gray
+    open var trackShadowColor: UIColor = .gray
 
     /**
      * The width of the thumb stroke line
@@ -87,14 +102,14 @@ open class CircularSlider: UIControl {
      * The default value of this property is the groupTableViewBackgroundColor.
      */
     @IBInspectable
-    open var endThumbTintColor: UIColor = UIColor.groupTableViewBackground
+    open var endThumbTintColor: UIColor = .groupTableViewBackground
     
     /**
      * The stroke highlighted color of the end thumb
      * The default value of this property is blue
      */
     @IBInspectable
-    open var endThumbStrokeHighlightedColor: UIColor = UIColor.blue
+    open var endThumbStrokeHighlightedColor: UIColor = .blue
     
     /**
      * The color used to tint the stroke of the end thumb
@@ -103,7 +118,7 @@ open class CircularSlider: UIControl {
      * The default value of this property is red.
      */
     @IBInspectable
-    open var endThumbStrokeColor: UIColor = UIColor.red
+    open var endThumbStrokeColor: UIColor = .red
     
     /**
      * The image of the end thumb
