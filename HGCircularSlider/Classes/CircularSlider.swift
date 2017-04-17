@@ -116,6 +116,18 @@ open class CircularSlider: UIControl {
     // MARK: Accessing the Slider’s Value Limits
     
     /**
+     * Fixed number of rounds - how many circles has user to do to reach max value (like apple bedtime clock - which have 2)
+     * the default value if this property is 1
+     */
+    @IBInspectable
+    open var numberOfRounds: Int = 1 {
+        didSet {
+            assert(numberOfRounds > 0, "Number of rounds has to be positive value!")
+            setNeedsDisplay()
+        }
+    }
+    
+    /**
      * The minimum value of the receiver.
      *
      * If you change the value of this property, and the end value of the receiver is below the new minimum, the end point value is adjusted to match the new minimum value automatically.
@@ -221,7 +233,7 @@ open class CircularSlider: UIControl {
         
         drawCircularSlider(inContext: context)
         
-        let valuesInterval = Interval(min: minimumValue, max: maximumValue)
+        let valuesInterval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
         // get end angle from end value
         let endAngle = CircularSliderHelper.scaleToAngle(value: endPointValue, inInterval: valuesInterval) + CircularSliderHelper.circleInitialAngle
         
@@ -255,14 +267,10 @@ open class CircularSlider: UIControl {
     override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
-        
         let startPoint = CGPoint(x: bounds.center.x, y: 0)
-        let angle = CircularSliderHelper.angle(betweenFirstPoint: startPoint, secondPoint: touchPosition, inCircleWithCenter: bounds.center)
+        let value = newValue(from: endPointValue, touch: touchPosition, start: startPoint)
         
-        let interval = Interval(min: minimumValue, max: maximumValue)
-        let newValue = CircularSliderHelper.value(inInterval: interval, fromAngle: angle)
-        
-        endPointValue = newValue
+        endPointValue = value
         sendActions(for: .valueChanged)
         
         return true
@@ -275,4 +283,24 @@ open class CircularSlider: UIControl {
         sendActions(for: .editingDidEnd)
     }
 
+    // MARK: Utilities methods
+    internal func newValue(from oldValue: CGFloat, touch touchPosition: CGPoint, start startPosition: CGPoint) -> CGFloat {
+        let angle = CircularSliderHelper.angle(betweenFirstPoint: startPosition, secondPoint: touchPosition, inCircleWithCenter: bounds.center)
+        let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
+        let deltaValue = CircularSliderHelper.delta(in: interval, for: angle, oldValue: oldValue)
+        
+        var newValue = oldValue + deltaValue
+        let range = maximumValue - minimumValue
+        
+        if newValue > maximumValue {
+            newValue -= range
+        }
+        else if newValue < minimumValue {
+            newValue += range
+        }
+        return newValue
+    }
+    
+    
+    
 }

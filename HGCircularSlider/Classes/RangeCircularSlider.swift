@@ -97,17 +97,6 @@ open class RangeCircularSlider: CircularSlider {
             }
         }
     }
-
-    /**
-     * Fixed number of rounds - how many circles has user to do to reach max value (like apple bedtime clock - which have 2)
-     */
-    @IBInspectable
-    open var numberOfRounds: Int = 1 {
-        didSet {
-            assert(numberOfRounds > 0, "Number of rounds has to be positive value!")
-            setNeedsDisplay()
-        }
-    }
     
     /**
      * The value in the start thumb.
@@ -248,27 +237,14 @@ open class RangeCircularSlider: CircularSlider {
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
         let startPoint = CGPoint(x: bounds.center.x, y: 0)
-        let angle = CircularSliderHelper.angle(betweenFirstPoint: startPoint, secondPoint: touchPosition, inCircleWithCenter: bounds.center)
         
         let oldValue: CGFloat = selectedThumb.isStart ? startPointValue : endPointValue
-        let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
-        let deltaValue = CircularSliderHelper.delta(in: interval, for: angle, oldValue: oldValue)
-
-        var newValue = oldValue + deltaValue
-        let range = maximumValue - minimumValue
-
-        if newValue > maximumValue {
-            newValue -= range
-        }
-        else if newValue < minimumValue {
-            newValue += range
-        }
-
+        let value =  newValue(from: oldValue, touch: touchPosition, start: startPoint)
+        
         if selectedThumb.isStart {
-            startPointValue = newValue
-        }
-        else {
-            endPointValue = newValue
+            startPointValue = value
+        } else {
+            endPointValue = value
         }
         sendActions(for: .valueChanged)
         
