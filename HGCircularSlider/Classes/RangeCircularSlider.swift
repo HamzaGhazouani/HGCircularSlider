@@ -127,6 +127,15 @@ open class RangeCircularSlider: CircularSlider {
     open var startPointValue: CGFloat = 0.0 {
         didSet {
             guard oldValue != startPointValue else { return }
+            
+            if startPointValue < minimumValue {
+                startPointValue = minimumValue
+            }
+            
+            if distance > 0 {
+                endPointValue = startPointValue + distance
+            }
+            
             setNeedsDisplay()
         }
     }
@@ -141,7 +150,18 @@ open class RangeCircularSlider: CircularSlider {
      */
     override open var endPointValue: CGFloat {
         didSet {
-            guard oldValue != endPointValue else { return }
+            if oldValue == endPointValue && distance <= 0 {
+                return
+            }
+            
+            if endPointValue > maximumValue {
+                endPointValue = maximumValue
+            }
+            
+            if distance > 0 {
+                startPointValue = endPointValue - distance
+            }
+            
             setNeedsDisplay()
         }
     }
