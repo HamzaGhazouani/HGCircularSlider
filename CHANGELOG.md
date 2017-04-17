@@ -1,25 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
-## [2.1.0](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/2.0.0)
-
-* Updated to Swift 3.1 - fixed deprecations
-* Reintroduced example project, with number of rounds
-* Fixed example project pods settings
-
-## [2.0.1](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/2.0.0)
-
-* Added Carthage prebuilt binary
-* Set deployment target to iOS 9.0
 
 ## [2.0.0](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/2.0.0)
-
 * Added Carthage support
 * Added number of rounds, allowing to create slider same as Apple bedtime slider (12h clock with two rounds)
 * Added backtrack inspectable properties, allowing to modify its properties
 * Added shadow track color and offset inspectable attributes
 * Removed distance from default slider definition
-* Removed example project
-* Removed MidPointCircularSlider
 
 
 ## [1.1.0](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/1.1.0)
