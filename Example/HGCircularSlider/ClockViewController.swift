@@ -52,6 +52,11 @@ class ClockViewController: UIViewController {
     }
     
     @IBAction func updateTexts(_ sender: AnyObject) {
+        
+        adjustValue(value: &rangeCircularSlider.startPointValue)
+        adjustValue(value: &rangeCircularSlider.endPointValue)
+
+        
         let bedtime = TimeInterval(rangeCircularSlider.startPointValue)
         let bedtimeDate = Date(timeIntervalSinceReferenceDate: bedtime)
         bedtimeLabel.text = dateFormatter.string(from: bedtimeDate)
@@ -66,15 +71,11 @@ class ClockViewController: UIViewController {
         durationLabel.text = dateFormatter.string(from: durationDate)
         dateFormatter.dateFormat = "hh:mm a"
     }
-
-    @IBAction func clockFormatChange(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0: rangeCircularSlider.numberOfRounds = 1
-        case 1: rangeCircularSlider.numberOfRounds = 2
-        default: assert(false)
-        }
-
-        
+    
+    func adjustValue(value: inout CGFloat) {
+        let minutes = value / 60
+        let adjustedMinutes =  ceil(minutes / 5.0) * 5
+        value = adjustedMinutes * 60
     }
 
 }
