@@ -15,7 +15,7 @@
 
 ## Example
 
-![](/Screenshots/Clock.gif) ![](/Screenshots/Player.gif) ![](/Screenshots/OClock.gif)  ![](/Screenshots/BasicExample.gif)
+![](/Screenshots/Bedtime.gif) ![](/Screenshots/Player.gif) ![](/Screenshots/OClock.gif) ![](/Screenshots/Other.gif) ![](/Screenshots/Circular.gif)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
@@ -31,7 +31,7 @@ it, simply add the following line to your Podfile:
 
 ``` ruby
 # Swift 3.1 - Xcode 8.3
-pod 'HGCircularSlider', '~> 2.1.0'
+pod 'HGCircularSlider', '~> 2.0.0'
 
 # Swift 3 - Xcode 8
 pod 'HGCircularSlider', '~> 1.0.3'

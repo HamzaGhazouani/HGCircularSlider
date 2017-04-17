@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dyk-gn-E0m">
-                                <rect key="frame" x="26" y="64.5" width="323" height="57"/>
+                                <rect key="frame" x="26" y="76" width="323" height="57"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="116" placeholderIntrinsicHeight="57" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DG9-tl-Yx0" userLabel="BedTime Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="154" height="57"/>
@@ -79,17 +79,22 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7k-gj-MGd" customClass="RangeCircularSlider" customModule="HGCircularSlider">
-                                <rect key="frame" x="16" y="137.5" width="343" height="343"/>
+                                <rect key="frame" x="27.5" y="149" width="320" height="320"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hours" translatesAutoresizingMaskIntoConstraints="NO" id="MZM-ia-laW">
-                                        <rect key="frame" x="61.5" y="62" width="219" height="219"/>
+                                        <rect key="frame" x="65" y="65" width="190" height="190"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MZM-ia-laW" secondAttribute="height" multiplier="1:1" id="Sa8-Wq-bG0"/>
+                                            <constraint firstAttribute="width" constant="190" id="oYT-wT-0kd"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="MZM-ia-laW" firstAttribute="centerY" secondItem="B7k-gj-MGd" secondAttribute="centerY" id="KTa-wx-rUK"/>
-                                    <constraint firstAttribute="width" secondItem="B7k-gj-MGd" secondAttribute="height" id="NVA-rO-PLq"/>
-                                    <constraint firstItem="MZM-ia-laW" firstAttribute="centerX" secondItem="B7k-gj-MGd" secondAttribute="centerX" id="zv1-tt-hOd"/>
+                                    <constraint firstItem="MZM-ia-laW" firstAttribute="centerY" secondItem="B7k-gj-MGd" secondAttribute="centerY" id="8Kc-iN-j4o"/>
+                                    <constraint firstAttribute="width" secondItem="B7k-gj-MGd" secondAttribute="height" id="Q58-Rs-yGZ"/>
+                                    <constraint firstAttribute="width" constant="320" id="b7b-at-v9d"/>
+                                    <constraint firstItem="MZM-ia-laW" firstAttribute="centerX" secondItem="B7k-gj-MGd" secondAttribute="centerX" id="xLC-da-bQb"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
@@ -106,12 +111,6 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
                                         <color key="value" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="trackShadowColor">
-                                        <color key="value" red="0.9852592349" green="0.96683830019999994" blue="0.4157809019" alpha="0.13519370719178081" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="trackShadowOffset">
-                                        <point key="value" x="4" y="6"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="backtrackLineWidth">
                                         <real key="value" value="40"/>
@@ -134,14 +133,13 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="B7k-gj-MGd" firstAttribute="centerX" secondItem="4jd-aQ-SwJ" secondAttribute="centerX" id="A2F-1K-8e3"/>
                             <constraint firstItem="dyk-gn-E0m" firstAttribute="leading" secondItem="4jd-aQ-SwJ" secondAttribute="leadingMargin" constant="10" id="Dl0-lI-EH6"/>
-                            <constraint firstItem="B7k-gj-MGd" firstAttribute="leading" secondItem="4jd-aQ-SwJ" secondAttribute="leadingMargin" id="Jac-u5-3tf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dyk-gn-E0m" secondAttribute="trailing" constant="10" id="N5U-c7-Tfy"/>
-                            <constraint firstItem="2Yn-91-Eq6" firstAttribute="centerX" secondItem="B7k-gj-MGd" secondAttribute="centerX" id="NhB-HJ-CVg"/>
-                            <constraint firstItem="B7k-gj-MGd" firstAttribute="centerY" secondItem="4jd-aQ-SwJ" secondAttribute="centerY" id="PL4-sy-Mdd"/>
-                            <constraint firstItem="2Yn-91-Eq6" firstAttribute="centerY" secondItem="B7k-gj-MGd" secondAttribute="centerY" id="WEA-Mb-rJ7"/>
-                            <constraint firstItem="B7k-gj-MGd" firstAttribute="top" secondItem="dyk-gn-E0m" secondAttribute="bottom" constant="16" id="laA-G1-dtg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="B7k-gj-MGd" secondAttribute="trailing" id="xTa-q5-KzN"/>
+                            <constraint firstItem="2Yn-91-Eq6" firstAttribute="centerY" secondItem="B7k-gj-MGd" secondAttribute="centerY" id="OM2-lB-fj3"/>
+                            <constraint firstItem="2Yn-91-Eq6" firstAttribute="centerX" secondItem="B7k-gj-MGd" secondAttribute="centerX" id="VWY-Ky-HzA"/>
+                            <constraint firstItem="B7k-gj-MGd" firstAttribute="centerY" secondItem="4jd-aQ-SwJ" secondAttribute="centerY" id="YFL-7T-X0H"/>
+                            <constraint firstItem="B7k-gj-MGd" firstAttribute="top" secondItem="dyk-gn-E0m" secondAttribute="bottom" constant="16" id="wTi-nq-Asd"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
