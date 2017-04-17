@@ -59,6 +59,7 @@ open class MidPointCircularSlider: RangeCircularSlider {
     override open var distance: CGFloat {
         didSet {
             assert(distance >= 0, "The MidPointCircularSlider works only with fixed distance between start and end points, so distance property should be > 0")
+            endPointValue = startPointValue + distance
         }
     }
     
@@ -85,12 +86,12 @@ open class MidPointCircularSlider: RangeCircularSlider {
      */
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    
         distance = 0.2
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        distance = 0.2
     }
     
     /**
@@ -101,7 +102,7 @@ open class MidPointCircularSlider: RangeCircularSlider {
         
         drawCircularSlider(inContext: context)
         
-        let valuesInterval = Interval(min: minimumValue, max: maximumValue)
+        let valuesInterval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
         
         // get start angle from start value
         let startAngle = CircularSliderHelper.scaleToAngle(value: startPointValue, inInterval: valuesInterval) + CircularSliderHelper.circleInitialAngle
@@ -142,13 +143,9 @@ open class MidPointCircularSlider: RangeCircularSlider {
 
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let startPoint = CGPoint(x: center.x, y: 0)
-        let angle = CircularSliderHelper.angle(betweenFirstPoint: startPoint, secondPoint: touchPosition, inCircleWithCenter: center)
+        let value = newValue(from: midPointValue, touch: touchPosition, start: startPoint)
         
-        let interval = Interval(min: minimumValue, max: maximumValue)
-        let newValue = CircularSliderHelper.value(inInterval: interval, fromAngle: angle)
-        
-
-        midPointValue = newValue
+        midPointValue = value
         sendActions(for: .valueChanged)
         
         return true

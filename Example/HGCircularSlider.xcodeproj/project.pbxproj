@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DF970E3D7BE7173DEC1D05C /* Pods_HGCircularSlider_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7918EC49141F7F4652E8F1 /* Pods_HGCircularSlider_Tests.framework */; };
+		3EC27E521EA546F700631582 /* CircularSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC27E511EA546F700631582 /* CircularSliderViewController.swift */; };
 		551FF6F21DD3BFE300BD5B76 /* OtherExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FF6F11DD3BFE300BD5B76 /* OtherExampleViewController.swift */; };
 		5539B1B91DD275250038D49D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539B1B81DD275250038D49D /* PlayerViewController.swift */; };
 		5539B1BB1DD276C00038D49D /* StrangeZero.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5539B1BA1DD276C00038D49D /* StrangeZero.mp3 */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		04EAC630898381E6412A72E4 /* Pods-HGCircularSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCircularSlider_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2A9608AFE40174911E5079C3 /* Pods-HGCircularSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCircularSlider_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HGCircularSlider_Tests/Pods-HGCircularSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3EC27E511EA546F700631582 /* CircularSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSliderViewController.swift; sourceTree = "<group>"; };
 		41A4019E034E0265198683A8 /* Pods_HGCircularSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGCircularSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EC1122B43F882A3D3679B7 /* HGCircularSlider.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HGCircularSlider.podspec; path = ../HGCircularSlider.podspec; sourceTree = "<group>"; };
 		551FF6F11DD3BFE300BD5B76 /* OtherExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherExampleViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				3EC27E511EA546F700631582 /* CircularSliderViewController.swift */,
 				607FACD71AFB9204008FA782 /* ClockViewController.swift */,
 				5539B1B81DD275250038D49D /* PlayerViewController.swift */,
 				551FF6F11DD3BFE300BD5B76 /* OtherExampleViewController.swift */,
@@ -227,11 +230,13 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = BKKRU5K7TG;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = FP33JJN6C2;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
 						TestTargetID = 607FACCF1AFB9204008FA782;
@@ -378,6 +383,7 @@
 			files = (
 				551FF6F21DD3BFE300BD5B76 /* OtherExampleViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ClockViewController.swift in Sources */,
+				3EC27E521EA546F700631582 /* CircularSliderViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				5539B1B91DD275250038D49D /* PlayerViewController.swift in Sources */,
 				55CE65391DD3D32100B0C2B2 /* OClockViewController.swift in Sources */,
@@ -511,13 +517,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04EAC630898381E6412A72E4 /* Pods-HGCircularSlider_Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = BKKRU5K7TG;
 				INFOPLIST_FILE = HGCircularSlider/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoapods.HGCircularSlider-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onmobile.HGCircularSlider-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "979b7b1f-969d-43fe-82ea-a1cc58ec7aab";
+				PROVISIONING_PROFILE_SPECIFIER = "OM-Ent Generic Universal Distribution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -526,13 +536,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BA305BCC009CE17283FE799 /* Pods-HGCircularSlider_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HGCircularSlider/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoapods.HGCircularSlider-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onmobile.HGCircularSlider-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -541,6 +554,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A9608AFE40174911E5079C3 /* Pods-HGCircularSlider_Tests.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = FP33JJN6C2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -553,7 +568,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HGCircularSlider_Example.app/HGCircularSlider_Example";
 			};
 			name = Debug;
 		};
@@ -561,6 +578,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 99A3B0410141275989079EB6 /* Pods-HGCircularSlider_Tests.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -569,7 +588,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HGCircularSlider_Example.app/HGCircularSlider_Example";
 			};
 			name = Release;
 		};

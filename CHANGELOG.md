@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.0.0](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/2.0.0)
+* Added Carthage support
+* Added number of rounds, allowing to create slider same as Apple bedtime slider (12h clock with two rounds)
+* Added backtrack inspectable properties, allowing to modify its properties
+* Added shadow track color and offset inspectable attributes
+* Removed distance from default slider definition
+
+
 ## [1.1.0](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/1.1.0)
 
 * Fix Swift 3.1 warnings
@@ -16,7 +24,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.1](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/1.0.1)
 
-* remove warnings 
+* remove warnings
 
 ## [1.0.0](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/1.0.0)
 
@@ -25,7 +33,7 @@ All notable changes to this project will be documented in this file.
 ## [0.1.2](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/0.1.2)
 
 * Add documentation
-* Last version that support Xcode 7.3.1 
+* Last version that support Xcode 7.3.1
 
 ## [0.1.1](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/0.1.1)
 
