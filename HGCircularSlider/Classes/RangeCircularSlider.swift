@@ -99,6 +99,24 @@ open class RangeCircularSlider: CircularSlider {
     }
     
     /**
+    * The fixed distance between the start value and the end value
+    *
+    * If you change the value of this property, the end value is adjusted to match (startPointValue + distance)
+    * If the end value is above the maximum value, the end value is adjusted to match the maximum value and the start value is adjusted to match (endPointValue - distance)
+    * To disable distance use -1 (by default)
+    *
+    * The default value of this property is -1
+    */
+    @IBInspectable
+    open var distance: CGFloat = -1 {
+        didSet {
+            assert(distance <= maximumValue - minimumValue, "The distance value is greater than distance between max and min value")
+            endPointValue = startPointValue + distance
+        }
+    }
+    
+    
+    /**
      * The value in the start thumb.
      *
      * If you try to set a value that is below the minimum value, the minimum value is set instead.
