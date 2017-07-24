@@ -86,6 +86,11 @@ circularSlider.midPointValue = 5.0
 Full documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/HGCircularSlider/).<br/>
 You can also install documentation locally using [jazzy](https://github.com/realm/jazzy).
 
+
+## You also may like
+
+* **[HGPlaceholders](https://github.com/HamzaGhazouani/HGPlaceholders)** - Nice library to show placeholders for any UITableView in your project
+
 ## References
 The UI examples of the demo project inspired from [Dribbble](https://dribbble.com).
 
