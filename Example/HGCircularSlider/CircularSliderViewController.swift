@@ -21,7 +21,6 @@ class CircularSliderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        circularSlider.endPointValue = 1
         updateTexts()
         circularSlider.addTarget(self, action: #selector(updateTexts), for: .valueChanged)
     }
