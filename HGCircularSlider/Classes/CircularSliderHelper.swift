@@ -97,12 +97,25 @@ internal extension CGRect {
     }
 }
 
+extension CGPoint {
+    func rotate(around center: CGPoint, with degrees: CGFloat) -> CGPoint {
+        let dx = self.x - center.x
+        let dy = self.y - center.y
+        let radius = sqrt(dx * dx + dy * dy)
+        let azimuth = atan2(dy, dx) // in radians
+        let newAzimuth = azimuth + degrees * CGFloat(Double.pi / 180.0) // convert it to radians
+        let x = center.x + radius * cos(newAzimuth)
+        let y = center.y + radius * sin(newAzimuth)
+        return CGPoint(x: x, y: y)
+    }
+}
+
 // MARK: - Internal Helper
 internal class CircularSliderHelper {
     
     @nonobjc static let circleMinValue: CGFloat = 0
     @nonobjc static let circleMaxValue: CGFloat = CGFloat(2 * Double.pi)
-    @nonobjc static let circleInitialAngle: CGFloat = -CGFloat(Double.pi / 2)
+    @nonobjc static var circleInitialAngle: CGFloat = -CGFloat(Double.pi / 2)
     
     /**
      Convert angle from radians to degrees
@@ -111,8 +124,19 @@ internal class CircularSliderHelper {
      
      - returns: degree value
      */
-    internal static func degrees(fromRadians value: CGFloat) -> CGFloat {
+    static func degrees(fromRadians value: CGFloat) -> CGFloat {
         return value * 180.0 / CGFloat(Double.pi)
+    }
+
+    /**
+     Convert angle from radians to degrees
+
+     - parameter value: radians value
+
+     - returns: degree value
+     */
+    static func radians(fromDegrees value: CGFloat) -> CGFloat {
+        return CGFloat(Double.pi) * value / 180.0
     }
 
     /**

@@ -212,9 +212,20 @@ open class CircularSlider: UIControl {
             setNeedsDisplay()
         }
     }
-    
+
+    /**
+     *
+     */
+    @IBInspectable
+    open var circleInitialAngle: CGFloat = -CGFloat(90) {
+        didSet {
+            CircularSliderHelper.circleInitialAngle = CircularSliderHelper.radians(fromDegrees: circleInitialAngle)
+            setNeedsDisplay()
+        }
+    }
+
     // MARK: init methods
-    
+
     /**
      See superclass documentation
      */
@@ -252,7 +263,7 @@ open class CircularSlider: UIControl {
         // get end angle from end value
         let endAngle = CircularSliderHelper.scaleToAngle(value: endPointValue, inInterval: valuesInterval) + CircularSliderHelper.circleInitialAngle
         
-        drawFilledArc(fromAngle: CircularSliderHelper.circleInitialAngle, toAngle: endAngle, inContext: context)
+        drawFilledArc(fromAngle: CircularSliderHelper.radians(fromDegrees: circleInitialAngle), toAngle: endAngle, inContext: context)
         
         // draw end thumb
         endThumbTintColor.setFill()
@@ -282,7 +293,8 @@ open class CircularSlider: UIControl {
     override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
-        let startPoint = CGPoint(x: bounds.center.x, y: 0)
+        let centerPoint = CGPoint(x: bounds.maxX, y: bounds.center.y)
+        let startPoint = centerPoint.rotate(around: bounds.center, with: circleInitialAngle)
         let value = newValue(from: endPointValue, touch: touchPosition, start: startPoint)
         
         endPointValue = value
