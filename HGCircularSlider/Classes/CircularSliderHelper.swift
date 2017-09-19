@@ -98,6 +98,7 @@ internal extension CGRect {
 }
 
 extension CGPoint {
+    
     func rotate(around center: CGPoint, with degrees: CGFloat) -> CGPoint {
         let dx = self.x - center.x
         let dy = self.y - center.y
