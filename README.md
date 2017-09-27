@@ -59,14 +59,14 @@ github "HamzaGhazouani/HGCircularSlider"
 1. Change the class of a view from UIView to CircularSlider, RangeCircularSlider or MidPointCircularSlider
 2. Programmatically:
 
-```
+```swift
 let circularSlider = CircularSlider(frame: myFrame)
 circularSlider.minimumValue = 0.0
 circularSlider.maximumValue = 1.0
 circularSlider.endPointValue = 0.2
 ```
 OR
-```
+```swift
 let circularSlider = RangeCircularSlider(frame: myFrame)
 circularSlider.startThumbImage = UIImage(named: "Bedtime")
 circularSlider.endThumbImage = UIImage(named: "Wake")
@@ -79,7 +79,7 @@ circularSlider.endPointValue = 8 * 60 * 60
 circularSlider.numberOfRounds = 2 // Two rotations for full 24h range
 ```
 OR
-```
+```swift
 let circularSlider = MidPointCircularSlider(frame: myFrame)
 circularSlider.minimumValue = 0.0
 circularSlider.maximumValue = 10.0
