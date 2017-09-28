@@ -19,6 +19,10 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## You also may like
+
+* **[HGPlaceholders](https://github.com/HamzaGhazouani/HGPlaceholders)** - Nice library to show placeholders for any UITableView in your project
+
 ## Requirements
 
 - iOS 9.0+
@@ -85,11 +89,6 @@ circularSlider.midPointValue = 5.0
 ## Documentation
 Full documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/HGCircularSlider/).<br/>
 You can also install documentation locally using [jazzy](https://github.com/realm/jazzy).
-
-
-## You also may like
-
-* **[HGPlaceholders](https://github.com/HamzaGhazouani/HGPlaceholders)** - Nice library to show placeholders for any UITableView in your project
 
 ## References
 The UI examples of the demo project inspired from [Dribbble](https://dribbble.com).
