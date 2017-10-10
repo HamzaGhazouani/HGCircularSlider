@@ -63,7 +63,6 @@ let circularSlider = CircularSlider(frame: myFrame)
 circularSlider.minimumValue = 0.0
 circularSlider.maximumValue = 1.0
 circularSlider.endPointValue = 0.2
-
 ```
 OR
 ```
@@ -86,6 +85,18 @@ circularSlider.maximumValue = 10.0
 circularSlider.distance = 1.0
 circularSlider.midPointValue = 5.0
 ```
+##### If you would like to use it like a progress view 
+```
+let progressView = CircularSlider(frame: myFrame)
+progressView.minimumValue = 0.0
+progressView.maximumValue = 1.0
+progressView.endPointValue = 0.2 // the progress 
+progressView.userInteractionEnabled = false 
+// to remove padding, for more details see issue #25
+progressView.thumbLineWidth = 0.0
+progressView.thumbRadius = 0.0
+```
+
 ## Documentation
 Full documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/HGCircularSlider/).<br/>
 You can also install documentation locally using [jazzy](https://github.com/realm/jazzy).
