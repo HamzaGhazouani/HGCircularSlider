@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [3.2.0](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/3.2.0)
+* Support for Swift 3.2.
+
 ## [2.0.0](https://github.com/HamzaGhazouani/HGCircularSlider/releases/tag/2.0.0)
 * Added Carthage support
 * Added number of rounds, allowing to create slider same as Apple bedtime slider (12h clock with two rounds)
