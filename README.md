@@ -22,6 +22,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## You also may like
 
 * **[HGPlaceholders](https://github.com/HamzaGhazouani/HGPlaceholders)** - Nice library to show placeholders for any UITableView in your project
+* **[HGRippleRadarView](https://github.com/HamzaGhazouani/HGRippleRadarView)** - A beautiful radar view to show nearby users with ripple animation, fully customizable
 
 ## Requirements
 
