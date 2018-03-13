@@ -137,4 +137,40 @@ extension CircularSlider {
 
         return thumbOrigin
     }
+    
+    /**
+     Draw Progress label and return the coordinates of its center
+     
+     - parameter angle:   the angle of the point in the main circle
+     - parameter labelFont:   the font of the label
+     - parameter labelFontColor:   the font color of the label
+     - parameter context: the context
+     
+     - returns: return the origin point of the thumb
+     */
+    @discardableResult
+    internal func drawLable(withAngle angle: CGFloat, labelFont: UIFont, labelFontColor: UIColor, inContext context: CGContext) -> CGPoint {
+        UIGraphicsPushContext(context)
+        context.beginPath()
+        let circle = Circle(origin: bounds.center, radius: self.radius)
+        let thumbOrigin = CircularSliderHelper.endPoint(fromCircle: circle, angle: angle)
+        let imageSize = CGSize(width:lineWidth , height: lineWidth)
+        let imageFrame = CGRect(x: thumbOrigin.x - (imageSize.width / 2), y: thumbOrigin.y - (imageSize.height / 2), width: imageSize.width, height: imageSize.height)
+        let textStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+        textStyle.alignment = NSTextAlignment.center
+        
+        let textFontAttributes = [
+            NSFontAttributeName: labelFont,
+            NSParagraphStyleAttributeName: textStyle,
+            NSForegroundColorAttributeName: labelFontColor
+        ]
+        
+        let st = "\(String(format: "%.1f", endPointValue))" as NSString
+        
+        st.draw(in: imageFrame, withAttributes: textFontAttributes)
+        
+        UIGraphicsPopContext()
+        
+        return thumbOrigin
+    }
 }
