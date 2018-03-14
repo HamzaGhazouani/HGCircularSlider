@@ -159,15 +159,25 @@ extension CircularSlider {
         let textStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         textStyle.alignment = NSTextAlignment.center
         
-        let textFontAttributes = [
-            NSFontAttributeName: labelFont,
-            NSParagraphStyleAttributeName: textStyle,
-            NSForegroundColorAttributeName: labelFontColor
-        ]
-        
         let st = "\(String(format: "%.1f", endPointValue))" as NSString
-        
-        st.draw(in: imageFrame, withAttributes: textFontAttributes)
+
+        #if swift(>=4.0)
+            let textFontAttributes = [
+            NSAttributedStringKey.font: labelFont,
+            NSAttributedStringKey.paragraphStyle: textStyle,
+            NSAttributedStringKey.foregroundColor: labelFontColor
+            ]
+            st.draw(in: imageFrame, withAttributes: textFontAttributes)
+        #elseif swift(>=3.0)
+            
+            let textFontAttributes = [
+                NSFontAttributeName: labelFont,
+                NSParagraphStyleAttributeName: textStyle,
+                NSForegroundColorAttributeName: labelFontColor,
+                NSBackgroundColorAttributeName: UIColor.red
+            ]
+            st.draw(in: imageFrame, withAttributes: textFontAttributes)
+        #endif
         
         UIGraphicsPopContext()
         
