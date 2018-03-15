@@ -306,7 +306,7 @@ extension CircularSlider {
         // Move the origin by half the size of the text
         context.translateBy (x: -offset.width / 2, y: -offset.height / 2) // Move the origin to the centre of the text (negating the y-axis manually)
         // Draw the text
-        str.draw(at: CGPoint(x: 0, y: 0), withAttributes: attributes as [String : Any])
+        str.draw(at: CGPoint(x: 0, y: 0), withAttributes: attributes)
         // Restore the context
         context.restoreGState()
     }
