@@ -1,6 +1,5 @@
 # HGCircularSlider
 
-
 [![Backers on Open Collective](https://opencollective.com/HGCircularSlider/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/HGCircularSlider/sponsors/badge.svg)](#sponsors) [![Twitter: @GhazouaniHamza](https://img.shields.io/badge/contact-@GhazouaniHamza-blue.svg?style=flat)](https://twitter.com/GhazouaniHamza)
 [![CI Status](http://img.shields.io/travis/HamzaGhazouani/HGCircularSlider.svg?style=flat)](https://travis-ci.org/HamzaGhazouani/HGCircularSlider)
 [![Version](https://img.shields.io/cocoapods/v/HGCircularSlider.svg?style=flat)](http://cocoapods.org/pods/HGCircularSlider)
