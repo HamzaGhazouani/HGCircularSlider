@@ -31,7 +31,7 @@ class CircularSliderViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateTexts() {
+    @objc func updateTexts() {
         let value = circularSlider.endPointValue
         let ok = (circularSlider.maximumValue  / CGFloat(circularSlider.numberOfRounds))
         let ff = ceil(value / ok)

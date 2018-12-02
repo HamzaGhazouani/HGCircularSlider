@@ -59,21 +59,21 @@ class PlayerViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             let currentTime = Float64(circularSlider.endPointValue)
-            let newTime = CMTimeMakeWithSeconds(currentTime, 600)
-            audioPlayer.seek(to: newTime, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
+            let newTime = CMTimeMakeWithSeconds(currentTime, preferredTimescale: 600)
+            audioPlayer.seek(to: newTime, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero)
             audioPlayer.play()
         default:
             audioPlayer.pause()
         }
     }
     
-    func play() {
+    @objc func play() {
         self.playerSegmentedControl.selectedSegmentIndex = 0
         togglePlayer(playerSegmentedControl)
     }
     
-    func pause() {
-        self.playerSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
+    @objc func pause() {
+        self.playerSegmentedControl.selectedSegmentIndex = UISegmentedControl.noSegment
         togglePlayer(playerSegmentedControl)
     }
 
@@ -91,7 +91,7 @@ class PlayerViewController: UIViewController {
         
         let durationInSeconds = CMTimeGetSeconds(asset.duration)
         circularSlider.maximumValue = CGFloat(durationInSeconds)
-        let interval = CMTimeMake(1, 4)
+        let interval = CMTimeMake(value: 1, timescale: 4)
         audioPlayer.addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main) {
             [weak self] time in
             let seconds = CMTimeGetSeconds(time)
@@ -110,7 +110,7 @@ class PlayerViewController: UIViewController {
         timerLabel.text = dateComponentsFormatter.string(from: components)
     }
     
-    func updateTimer() {
+    @objc func updateTimer() {
         var components = DateComponents()
         components.second = Int(circularSlider.endPointValue)
         timerLabel.text = dateComponentsFormatter.string(from: components)
@@ -118,10 +118,10 @@ class PlayerViewController: UIViewController {
     
     // MARK: - Notification 
     
-    func playerItemDidReachEnd(_ notification: Notification) {
+    @objc func playerItemDidReachEnd(_ notification: Notification) {
         if let playerItem: AVPlayerItem = notification.object as? AVPlayerItem {
-            playerItem.seek(to: kCMTimeZero)
-            playerSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
+            playerItem.seek(to: CMTime.zero)
+            playerSegmentedControl.selectedSegmentIndex = UISegmentedControl.noSegment
         }
     }
     
