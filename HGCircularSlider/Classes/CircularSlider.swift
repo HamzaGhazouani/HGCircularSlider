@@ -299,7 +299,7 @@ open class CircularSlider: UIControl {
     }
 
     // MARK: Utilities methods
-    internal func newValue(from oldValue: CGFloat, touch touchPosition: CGPoint, start startPosition: CGPoint) -> CGFloat {
+    open func newValue(from oldValue: CGFloat, touch touchPosition: CGPoint, start startPosition: CGPoint) -> CGFloat {
         let angle = CircularSliderHelper.angle(betweenFirstPoint: startPosition, secondPoint: touchPosition, inCircleWithCenter: bounds.center)
         let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
         let deltaValue = CircularSliderHelper.delta(in: interval, for: angle, oldValue: oldValue)
@@ -315,7 +315,4 @@ open class CircularSlider: UIControl {
         }
         return newValue
     }
-    
-    
-    
 }
