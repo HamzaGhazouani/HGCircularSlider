@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="sp2-vV-rZV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="sp2-vV-rZV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Clock-->
         <scene sceneID="t1m-6j-OQq">
@@ -173,6 +179,7 @@
                         <segue destination="Npo-RV-git" kind="relationship" relationship="viewControllers" id="DMS-53-eB9"/>
                         <segue destination="fOf-1m-bg4" kind="relationship" relationship="viewControllers" id="5Ik-om-DOr"/>
                         <segue destination="814-W4-dSU" kind="relationship" relationship="viewControllers" id="xpY-bZ-bvy"/>
+                        <segue destination="uCY-G3-fpt" kind="relationship" relationship="viewControllers" id="ZMo-80-JtU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDj-DB-klF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -738,6 +745,56 @@
             </objects>
             <point key="canvasLocation" x="643" y="2468"/>
         </scene>
+        <!--ProgressView-->
+        <scene sceneID="585-dC-k4G">
+            <objects>
+                <viewController id="uCY-G3-fpt" userLabel="ProgressView" customClass="ProgressViewController" customModule="HGCircularSlider_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Okq-t8-NgG"/>
+                        <viewControllerLayoutGuide type="bottom" id="oeF-gJ-j3z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7d8-jc-GnI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yge-Qv-7Vc" customClass="CircularProgressView" customModule="HGCircularSlider">
+                                <rect key="frame" x="37" y="183.5" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="5Ln-x1-T3z"/>
+                                    <constraint firstAttribute="width" constant="300" id="P0K-uy-Dgk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="diskFillColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="diskColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showEndThumb" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLabelFontSize">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yge-Qv-7Vc" firstAttribute="centerY" secondItem="7d8-jc-GnI" secondAttribute="centerY" id="LdN-iP-lBa"/>
+                            <constraint firstItem="yge-Qv-7Vc" firstAttribute="centerX" secondItem="7d8-jc-GnI" secondAttribute="centerX" id="noE-hj-R1R"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="5Kv-Zq-WGc"/>
+                    <connections>
+                        <outlet property="rangeCircularSlider" destination="yge-Qv-7Vc" id="4yd-qM-5PP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VC-H0-XBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="Hours" width="219" height="219"/>
@@ -747,9 +804,4 @@
         <image name="second" width="30" height="30"/>
         <image name="time_indicators" width="301" height="300"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>
