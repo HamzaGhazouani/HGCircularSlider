@@ -1,1 +1,27 @@
 language: objective-c
+os: osx
+osx_image:
+  - xcode10.1
+
+env:
+  global:
+  - IOS_SCHEME="HGCircularSlider"
+
+  matrix:
+  - DESTINATION="OS=12.0,name=iPhone X"
+    SCHEME="$IOS_SCHEME"     RUN_TESTS="YES"
+  - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"
+    SCHEME="$IOS_SCHEME"     RUN_TESTS="YES"
+  - DESTINATION="OS=9.3,name=iPhone 5"
+    SCHEME="$IOS_SCHEME"     RUN_TESTS="YES"
+
+script:
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+
+  - if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | xcpretty;
+    else
+      xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | xcpretty;
+    fi

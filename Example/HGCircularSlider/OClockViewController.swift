@@ -47,27 +47,27 @@ class OClockViewController: UIViewController {
     
     // MARK: user interaction methods
     
-    func updateHours() {
+    @objc func updateHours() {
         var selectedHour = Int(hoursCircularSlider.endPointValue)
         // TODO: use date formatter
         selectedHour = (selectedHour == 0 ? 12 : selectedHour)
         hoursLabel.text = String(format: "%02d", selectedHour)
     }
     
-    func adjustHours() {
+    @objc func adjustHours() {
         let selectedHour = round(hoursCircularSlider.endPointValue)
         hoursCircularSlider.endPointValue = selectedHour
         updateHours()
     }
     
-    func updateMinutes() {
+    @objc func updateMinutes() {
         var selectedMinute = Int(minutesCircularSlider.endPointValue)
         // TODO: use date formatter
         selectedMinute = (selectedMinute == 60 ? 0 : selectedMinute)
         minutesLabel.text = String(format: "%02d", selectedMinute)
     }
     
-    func adjustMinutes() {
+    @objc func adjustMinutes() {
         let selectedMinute = round(minutesCircularSlider.endPointValue)
         minutesCircularSlider.endPointValue = selectedMinute
         updateMinutes()
