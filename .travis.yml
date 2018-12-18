@@ -20,8 +20,6 @@ script:
   - xcodebuild -version
   - xcodebuild -showsdks
 
-  - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | xcpretty;
-    else
-      xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | xcpretty;
-    fi
+  - xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug | xcpretty;
+  - xcodebuild build -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release | xcpretty;
+    
