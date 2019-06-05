@@ -97,6 +97,20 @@ internal extension CGRect {
     }
 }
 
+extension CGPoint {
+    
+    func rotate(around center: CGPoint, with radians: CGFloat) -> CGPoint {
+        let dx = self.x - center.x
+        let dy = self.y - center.y
+        let radius = sqrt(dx * dx + dy * dy)
+        let azimuth = atan2(dy, dx)
+        let newAzimuth = azimuth + radians
+        let x = center.x + radius * cos(newAzimuth)
+        let y = center.y + radius * sin(newAzimuth)
+        return CGPoint(x: x, y: y)
+    }
+}
+
 // MARK: - Internal Helper
 internal class CircularSliderHelper {
     
