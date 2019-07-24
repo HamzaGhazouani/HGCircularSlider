@@ -235,19 +235,13 @@ open class RangeCircularSlider: CircularSlider {
         // end thumb
         endThumbTintColor.setFill()
         (isHighlighted == true && selectedThumb == .endThumb) ? endThumbStrokeHighlightedColor.setStroke() : endThumbStrokeColor.setStroke()
-        endThumbCenter = drawThumb(withAngle: endAngle, inContext: context)
-        if let image = endThumbImage {
-            endThumbCenter = drawThumb(withImage: image, angle: endAngle, inContext: context)
-        }
+        endThumbCenter = drawThumbAt(endAngle, with: endThumbImage, inContext: context)
         
         // start thumb
         startThumbTintColor.setFill()
         (isHighlighted == true && selectedThumb == .startThumb) ? startThumbStrokeHighlightedColor.setStroke() : startThumbStrokeColor.setStroke()
 
-        startThumbCenter = drawThumb(withAngle: startAngle, inContext: context)
-        if let image = startThumbImage {
-            startThumbCenter = drawThumb(withImage: image, angle: startAngle, inContext: context)
-        }
+        startThumbCenter = drawThumbAt(startAngle, with: startThumbImage, inContext: context)
     }
     
     // MARK: User interaction methods

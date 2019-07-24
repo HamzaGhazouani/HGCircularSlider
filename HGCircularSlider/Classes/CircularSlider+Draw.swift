@@ -100,14 +100,21 @@ extension CircularSlider {
      Draw the thumb and return the coordinates of its center
      
      - parameter angle:   the angle of the point in the main circle
+     - parameter image:   the image of the thumb, if it's nil we use a disk (circle), the default value is nil
      - parameter context: the context
      
      - returns: return the origin point of the thumb
      */
     @discardableResult
-    internal func drawThumb(withAngle angle: CGFloat, inContext context: CGContext) -> CGPoint {
-        let circle = Circle(origin: bounds.center, radius: self.radius)
+    internal func drawThumbAt(_ angle: CGFloat, with image: UIImage? = nil, inContext context: CGContext) -> CGPoint {
+        let circle = Circle(origin: bounds.center, radius: self.radius + self.thumbOffset)
         let thumbOrigin = CircularSliderHelper.endPoint(fromCircle: circle, angle: angle)
+        
+        if let image = image {
+            return drawThumb(withImage: image, thumbOrigin: thumbOrigin, inContext: context)
+        }
+        
+        // Draw a disk as thumb
         let thumbCircle = Circle(origin: thumbOrigin, radius: thumbRadius)
         let thumbArc = Arc(circle: thumbCircle, startAngle: CircularSliderHelper.circleMinValue, endAngle: CircularSliderHelper.circleMaxValue)
 
@@ -125,11 +132,9 @@ extension CircularSlider {
      - returns: return the origin point of the thumb
      */
     @discardableResult
-    internal func drawThumb(withImage image: UIImage, angle: CGFloat, inContext context: CGContext) -> CGPoint {
+    private func drawThumb(withImage image: UIImage, thumbOrigin: CGPoint, inContext context: CGContext) -> CGPoint {
         UIGraphicsPushContext(context)
         context.beginPath()
-        let circle = Circle(origin: bounds.center, radius: self.radius)
-        let thumbOrigin = CircularSliderHelper.endPoint(fromCircle: circle, angle: angle)
         let imageSize = image.size
         let imageFrame = CGRect(x: thumbOrigin.x - (imageSize.width / 2), y: thumbOrigin.y - (imageSize.height / 2), width: imageSize.width, height: imageSize.height)
         image.draw(in: imageFrame)
