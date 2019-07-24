@@ -117,11 +117,7 @@ open class MidPointCircularSlider: RangeCircularSlider {
         midThumbTintColor.setFill()
         (isHighlighted == true) ? midThumbStrokeHighlightedColor.setStroke() : midThumbStrokeColor.setStroke()
         
-        guard let image = midThumbImage else {
-           drawThumb(withAngle: midAngle, inContext: context)
-            return
-        }
-        drawThumb(withImage: image, angle: midAngle, inContext: context)
+        drawThumbAt(midAngle, with: midThumbImage, inContext: context)
     }
     
     // MARK: User interaction methods

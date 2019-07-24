@@ -219,7 +219,7 @@ open class CircularSlider: UIControl {
             var radius =  min(bounds.center.x, bounds.center.y)
             
             // if we use an image for the thumb, the radius of the image will be used
-            let maxThumbRadius = max(thumbRadius, (self.endThumbImage?.size.width  ?? 0) / 2)
+            let maxThumbRadius = max(thumbRadius, (self.endThumbImage?.size.height ?? 0) / 2)
 
             // all elements should be inside the view rect, for that we should subtract the highest value between the radius of thumb and the line width
             radius -= max(lineWidth, (maxThumbRadius + thumbLineWidth + thumbOffset))
@@ -279,11 +279,7 @@ open class CircularSlider: UIControl {
         endThumbTintColor.setFill()
         (isHighlighted == true) ? endThumbStrokeHighlightedColor.setStroke() : endThumbStrokeColor.setStroke()
         
-        guard let image = endThumbImage else {
-            drawThumb(withAngle: endAngle, inContext: context)
-            return
-        }
-        drawThumb(withImage: image, angle: endAngle, inContext: context)
+        drawThumbAt(endAngle, with: endThumbImage, inContext: context)
     }
     
     // MARK: User interaction methods
