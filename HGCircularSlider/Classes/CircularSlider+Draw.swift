@@ -125,14 +125,23 @@ extension CircularSlider {
      - returns: return the origin point of the thumb
      */
     @discardableResult
-    internal func drawThumb(withImage image: UIImage, angle: CGFloat, inContext context: CGContext) -> CGPoint {
+    internal func drawThumb(withImage image: UIImage, angle: CGFloat, inContext context: CGContext, rotate: Bool) -> CGPoint {
         UIGraphicsPushContext(context)
         context.beginPath()
         let circle = Circle(origin: bounds.center, radius: self.radius + self.thumbOffset)
         let thumbOrigin = CircularSliderHelper.endPoint(fromCircle: circle, angle: angle)
         let imageSize = image.size
         let imageFrame = CGRect(x: thumbOrigin.x - (imageSize.width / 2), y: thumbOrigin.y - (imageSize.height / 2), width: imageSize.width, height: imageSize.height)
+        if rotate {
+            context.saveGState()
+            context.translateBy(x: imageFrame.center.x, y: imageFrame.center.y)
+            context.rotate(by: angle)
+            context.translateBy(x: -imageFrame.center.x, y: -imageFrame.center.y)
+        }
         image.draw(in: imageFrame)
+        if rotate {
+            context.restoreGState()
+        }
         UIGraphicsPopContext()
 
         return thumbOrigin

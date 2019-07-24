@@ -121,7 +121,7 @@ open class MidPointCircularSlider: RangeCircularSlider {
            drawThumb(withAngle: midAngle, inContext: context)
             return
         }
-        drawThumb(withImage: image, angle: midAngle, inContext: context)
+        drawThumb(withImage: image, angle: midAngle, inContext: context, rotate: rotatesThumb)
     }
     
     // MARK: User interaction methods

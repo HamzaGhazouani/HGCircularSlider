@@ -126,6 +126,7 @@ open class CircularSlider: UIControl {
      *
      * The default value of this property is nil
      */
+    @IBInspectable
     open var endThumbImage: UIImage?
     
     // MARK: Accessing the Slider’s Value Limits
@@ -186,6 +187,16 @@ open class CircularSlider: UIControl {
         }
     }
 
+    /**
+     * When set to true, thumb image will rotate when the value changes.
+     */
+    @IBInspectable
+    open var rotatesThumb: Bool = false {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
     /**
      * The value of the endThumb (changed when the user change the position of the end thumb)
      *
@@ -283,7 +294,7 @@ open class CircularSlider: UIControl {
             drawThumb(withAngle: endAngle, inContext: context)
             return
         }
-        drawThumb(withImage: image, angle: endAngle, inContext: context)
+        drawThumb(withImage: image, angle: endAngle, inContext: context, rotate: rotatesThumb)
     }
     
     // MARK: User interaction methods

@@ -237,7 +237,7 @@ open class RangeCircularSlider: CircularSlider {
         (isHighlighted == true && selectedThumb == .endThumb) ? endThumbStrokeHighlightedColor.setStroke() : endThumbStrokeColor.setStroke()
         endThumbCenter = drawThumb(withAngle: endAngle, inContext: context)
         if let image = endThumbImage {
-            endThumbCenter = drawThumb(withImage: image, angle: endAngle, inContext: context)
+            endThumbCenter = drawThumb(withImage: image, angle: endAngle, inContext: context, rotate: rotatesThumb)
         }
         
         // start thumb
@@ -246,7 +246,7 @@ open class RangeCircularSlider: CircularSlider {
 
         startThumbCenter = drawThumb(withAngle: startAngle, inContext: context)
         if let image = startThumbImage {
-            startThumbCenter = drawThumb(withImage: image, angle: startAngle, inContext: context)
+            startThumbCenter = drawThumb(withImage: image, angle: startAngle, inContext: context, rotate: rotatesThumb)
         }
     }
     
