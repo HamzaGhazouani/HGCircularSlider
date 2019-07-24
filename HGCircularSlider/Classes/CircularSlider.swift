@@ -187,6 +187,14 @@ open class CircularSlider: UIControl {
     }
 
     /**
+    * Stop the thumb going beyond the min/max.
+    *
+    */
+    @IBInspectable
+    open var stopThumbAtMinMax: Bool = false
+
+
+    /**
      * The value of the endThumb (changed when the user change the position of the end thumb)
      *
      * If you try to set a value that is above the maximum value, the property automatically resets to the maximum value.
@@ -323,13 +331,16 @@ open class CircularSlider: UIControl {
         
         var newValue = oldValue + deltaValue
         let range = maximumValue - minimumValue
-        
-        if newValue > maximumValue {
-            newValue -= range
+
+        if !stopThumbAtMinMax {
+            if newValue > maximumValue {
+                newValue -= range
+            }
+            else if newValue < minimumValue {
+                newValue += range
+            }
         }
-        else if newValue < minimumValue {
-            newValue += range
-        }
+
         return newValue
     }
     
