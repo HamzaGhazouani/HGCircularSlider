@@ -13,7 +13,7 @@ internal struct Interval {
     var min: CGFloat = 0.0
     var max: CGFloat = 0.0
     var rounds: Int
-
+    
     init(min: CGFloat, max: CGFloat, rounds: Int = 1) {
         assert(min <= max && rounds > 0, NSLocalizedString("Illegal interval", comment: ""))
         
@@ -42,7 +42,7 @@ internal struct Arc {
     var endAngle: CGFloat = 0.0
     
     init(circle: Circle, startAngle: CGFloat, endAngle: CGFloat) {
-    
+        
         self.circle = circle
         self.startAngle = startAngle
         self.endAngle = endAngle
@@ -87,9 +87,9 @@ internal extension CGVector {
 }
 
 internal extension CGRect {
- 
+    
     // get the center of rect (bounds or frame)
-    internal var center: CGPoint {
+    var center: CGPoint {
         get {
             let center = CGPoint(x: midX, y: midY)
             return center
@@ -114,7 +114,7 @@ internal class CircularSliderHelper {
     internal static func degrees(fromRadians value: CGFloat) -> CGFloat {
         return value * 180.0 / CGFloat(Double.pi)
     }
-
+    
     /**
      Returns the angle AÔB of an circle
      
@@ -176,12 +176,20 @@ internal class CircularSliderHelper {
      - returns: the value in the new interval
      */
     internal static func scaleValue(_ value: CGFloat, fromInterval source: Interval, toInterval destination: Interval) -> CGFloat {
-        let sourceRange = (source.max - source.min) / CGFloat(source.rounds)
-        let destinationRange = (destination.max - destination.min) / CGFloat(destination.rounds)
-        let scaledValue = source.min + (value - source.min).truncatingRemainder(dividingBy: sourceRange)
-        let newValue =  (((scaledValue - source.min) * destinationRange) / sourceRange) + destination.min
-        
-        return  newValue
+        // If the value is equal to the min or the max no need to calculate
+        switch value {
+        case source.min:
+            return destination.min
+        case source.max:
+            return destination.max
+        default:
+            let sourceRange = (source.max - source.min) / CGFloat(source.rounds)
+            let destinationRange = (destination.max - destination.min) / CGFloat(destination.rounds)
+            let scaledValue = source.min + (value - source.min).truncatingRemainder(dividingBy: sourceRange)
+            let newValue =  (((scaledValue - source.min) * destinationRange) / sourceRange) + destination.min
+            
+            return  newValue
+        }
     }
     
     /**
@@ -192,7 +200,7 @@ internal class CircularSliderHelper {
      the angle value is equal to π
      
      @see value(inInterval: fromAngle:)
-
+     
      - parameter aValue:      the original value
      - parameter oldIntreval: the original interval
      
@@ -223,16 +231,16 @@ internal class CircularSliderHelper {
         
         return value
     }
-
+    
     internal static func delta(in interval: Interval, for angle: CGFloat, oldValue: CGFloat) -> CGFloat {
         let angleIntreval = Interval(min: circleMinValue , max: circleMaxValue)
-
+        
         let oldAngle = scaleToAngle(value: oldValue, inInterval: interval)
         let deltaAngle = self.angle(from: oldAngle, to: angle)
-
+        
         return scaleValue(deltaAngle, fromInterval: angleIntreval, toInterval: interval)
     }
-
+    
     /**
      * Length (angular) of a shortest way between two angles.
      * It will be in range [-π/2, π/2], where sign means dir (+ for clockwise, - for counter clockwise).
@@ -242,7 +250,7 @@ internal class CircularSliderHelper {
         // Rotate right
         let offset = alpha >= halfValue ? circleMaxValue - alpha : -alpha
         let offsetBeta = beta + offset
-
+        
         if offsetBeta > halfValue {
             return offsetBeta - circleMaxValue
         }
