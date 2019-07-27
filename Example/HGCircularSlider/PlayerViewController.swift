@@ -120,7 +120,7 @@ class PlayerViewController: UIViewController {
     
     @objc func playerItemDidReachEnd(_ notification: Notification) {
         if let playerItem: AVPlayerItem = notification.object as? AVPlayerItem {
-            playerItem.seek(to: CMTime.zero)
+            playerItem.seek(to: CMTime.zero, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero,completionHandler:nil)
             playerSegmentedControl.selectedSegmentIndex = UISegmentedControl.noSegment
         }
     }
