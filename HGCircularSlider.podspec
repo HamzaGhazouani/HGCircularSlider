@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
 s.name               = 'HGCircularSlider'
-s.version            = '2.1.0'
+s.version            = '2.2.0'
 s.summary            = 'Multiple Circular Sliders used to select a value from a continuous range of values.'
-s.swift_version      = '4.2'
+s.swift_version      = '5.0'
 
 s.description      = <<-DESC
 Circular Sliders used to select a value from a continuous range of values.
