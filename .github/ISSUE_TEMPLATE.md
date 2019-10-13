@@ -1,2 +1,2 @@
-<!-- Love HGCircularSlider? Please consider supporting our collective:
-👉  https://opencollective.com/HGCircularSlider/donate -->
+<!-- Love HGCircularSlider? Please consider supporting :
+👉  https://github.com/users/HamzaGhazouani/sponsorship -->
