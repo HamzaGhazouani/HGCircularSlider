@@ -47,4 +47,26 @@ class CircularSliderHelperTests: XCTestCase {
         let angle  = CircularSliderHelper.scaleValue(value, fromInterval: valuesInterval, toInterval: cirlceInterval).toDegrees
         XCTAssertEqual(angle, 180)
     }
+    
+    func testValueFromRangeToAnotherRangeMinValueEqualToZero() {
+        let oldRange = Interval(min: 0, max: 100)
+        let newRange = Interval(min: 10, max: 20)
+        
+        let value: CGFloat = 10
+        
+        let newValue = CircularSliderHelper.scaleValue(value, fromInterval: oldRange, toInterval: newRange)
+        
+        XCTAssertEqual(newValue, 11)
+    }
+    
+    func testValueFromRangeToAnotherRangeMinValueGratherThanZero() {
+           let oldRange = Interval(min: 5, max: 30)
+           let newRange = Interval(min: 0, max: 100)
+           
+           let value: CGFloat = 10
+           
+           let newValue = CircularSliderHelper.scaleValue(value, fromInterval: oldRange, toInterval: newRange)
+           
+           XCTAssertEqual(newValue, 20)
+       }
 }

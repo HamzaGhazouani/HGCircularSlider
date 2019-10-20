@@ -210,7 +210,7 @@ open class CircularSlider: UIControl {
             if endPointValue > maximumValue {
                 endPointValue = maximumValue
             }
-            else if endPointValue < minimumValue {
+            if endPointValue < minimumValue {
                 endPointValue = minimumValue
             }
 
@@ -329,7 +329,7 @@ open class CircularSlider: UIControl {
         let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
         let deltaValue = CircularSliderHelper.delta(in: interval, for: angle, oldValue: oldValue)
         
-        var newValue = oldValue + deltaValue
+        var newValue = oldValue + deltaValue - minimumValue
         let range = maximumValue - minimumValue
 
         if !stopThumbAtMinMax {
@@ -343,7 +343,4 @@ open class CircularSlider: UIControl {
 
         return newValue
     }
-    
-    
-    
 }
