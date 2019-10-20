@@ -19,6 +19,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BB409EA9235C82CE006DC844 /* CircularSliderHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB409EA7235C82CA006DC844 /* CircularSliderHelperTests.swift */; };
+		BB409EAB235C8ACE006DC844 /* CircularSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB409EAA235C8ACE006DC844 /* CircularSliderTests.swift */; };
 		BDF84380A076F46A79D0C634 /* Pods_HGCircularSlider_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A4019E034E0265198683A8 /* Pods_HGCircularSlider_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		6C7918EC49141F7F4652E8F1 /* Pods_HGCircularSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGCircularSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A3B0410141275989079EB6 /* Pods-HGCircularSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCircularSlider_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HGCircularSlider_Tests/Pods-HGCircularSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9BA305BCC009CE17283FE799 /* Pods-HGCircularSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCircularSlider_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
+		BB409EA7235C82CA006DC844 /* CircularSliderHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSliderHelperTests.swift; sourceTree = "<group>"; };
+		BB409EAA235C8ACE006DC844 /* CircularSliderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSliderTests.swift; sourceTree = "<group>"; };
 		E7D1A678D25EC3365B800DB3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EEE4816CB037512E066C24A8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +145,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BB409EA7235C82CA006DC844 /* CircularSliderHelperTests.swift */,
+				BB409EAA235C8ACE006DC844 /* CircularSliderTests.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -356,6 +362,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				BB409EAB235C8ACE006DC844 /* CircularSliderTests.swift in Sources */,
+				BB409EA9235C82CE006DC844 /* CircularSliderHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

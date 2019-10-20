@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB692D2E235C9EB300CB74DA /* HGCircularSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB692D2D235C9EB300CB74DA /* HGCircularSliderTests.swift */; };
+		BB692D30235C9EB300CB74DA /* HGCircularSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDBFDDB1E43366F005D6F08 /* HGCircularSlider.framework */; };
+		BB692D37235C9F1100CB74DA /* CircularSliderHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB692D36235C9F1100CB74DA /* CircularSliderHelperTests.swift */; };
+		BB692D39235C9F1C00CB74DA /* CircularSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB692D38235C9F1C00CB74DA /* CircularSliderTests.swift */; };
 		CCCC96461E9F7FD000999D34 /* MidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC96451E9F7FD000999D34 /* MidPointCircularSlider.swift */; };
 		CCDBFDE01E43366F005D6F08 /* HGCircularSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = CCDBFDDE1E43366F005D6F08 /* HGCircularSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCDBFDFD1E4336C9005D6F08 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CCDBFDF61E4336C9005D6F08 /* .gitkeep */; };
@@ -16,7 +20,22 @@
 		CCDBFE021E4336C9005D6F08 /* RangeCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBFDFC1E4336C9005D6F08 /* RangeCircularSlider.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BB692D31235C9EB300CB74DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCDBFDD21E43366F005D6F08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCDBFDDA1E43366F005D6F08;
+			remoteInfo = HGCircularSlider;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		BB692D2B235C9EB300CB74DA /* HGCircularSliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HGCircularSliderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB692D2D235C9EB300CB74DA /* HGCircularSliderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCircularSliderTests.swift; sourceTree = "<group>"; };
+		BB692D2F235C9EB300CB74DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB692D36235C9F1100CB74DA /* CircularSliderHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularSliderHelperTests.swift; path = Example/Tests/CircularSliderHelperTests.swift; sourceTree = SOURCE_ROOT; };
+		BB692D38235C9F1C00CB74DA /* CircularSliderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularSliderTests.swift; path = Example/Tests/CircularSliderTests.swift; sourceTree = SOURCE_ROOT; };
 		CCCC96451E9F7FD000999D34 /* MidPointCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidPointCircularSlider.swift; sourceTree = "<group>"; };
 		CCDBFDDB1E43366F005D6F08 /* HGCircularSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDBFDDE1E43366F005D6F08 /* HGCircularSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGCircularSlider.h; sourceTree = "<group>"; };
@@ -29,6 +48,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BB692D28235C9EB300CB74DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB692D30235C9EB300CB74DA /* HGCircularSlider.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CCDBFDD71E43366F005D6F08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,10 +66,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB692D2C235C9EB300CB74DA /* HGCircularSliderTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB692D36235C9F1100CB74DA /* CircularSliderHelperTests.swift */,
+				BB692D38235C9F1C00CB74DA /* CircularSliderTests.swift */,
+				BB692D2D235C9EB300CB74DA /* HGCircularSliderTests.swift */,
+				BB692D2F235C9EB300CB74DA /* Info.plist */,
+			);
+			path = HGCircularSliderTests;
+			sourceTree = "<group>";
+		};
 		CCDBFDD11E43366F005D6F08 = {
 			isa = PBXGroup;
 			children = (
 				CCDBFDDD1E43366F005D6F08 /* HGCircularSlider */,
+				BB692D2C235C9EB300CB74DA /* HGCircularSliderTests */,
 				CCDBFDDC1E43366F005D6F08 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				CCDBFDDB1E43366F005D6F08 /* HGCircularSlider.framework */,
+				BB692D2B235C9EB300CB74DA /* HGCircularSliderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +140,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		BB692D2A235C9EB300CB74DA /* HGCircularSliderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB692D35235C9EB300CB74DA /* Build configuration list for PBXNativeTarget "HGCircularSliderTests" */;
+			buildPhases = (
+				BB692D27235C9EB300CB74DA /* Sources */,
+				BB692D28235C9EB300CB74DA /* Frameworks */,
+				BB692D29235C9EB300CB74DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB692D32235C9EB300CB74DA /* PBXTargetDependency */,
+			);
+			name = HGCircularSliderTests;
+			productName = HGCircularSliderTests;
+			productReference = BB692D2B235C9EB300CB74DA /* HGCircularSliderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CCDBFDDA1E43366F005D6F08 /* HGCircularSlider */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCDBFDE31E43366F005D6F08 /* Build configuration list for PBXNativeTarget "HGCircularSlider" */;
@@ -124,9 +182,14 @@
 		CCDBFDD21E43366F005D6F08 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = intive;
 				TargetAttributes = {
+					BB692D2A235C9EB300CB74DA = {
+						CreatedOnToolsVersion = 11.1;
+						ProvisioningStyle = Automatic;
+					};
 					CCDBFDDA1E43366F005D6F08 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = R6JBLAQ685;
@@ -148,11 +211,19 @@
 			projectRoot = "";
 			targets = (
 				CCDBFDDA1E43366F005D6F08 /* HGCircularSlider */,
+				BB692D2A235C9EB300CB74DA /* HGCircularSliderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BB692D29235C9EB300CB74DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CCDBFDD91E43366F005D6F08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +235,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BB692D27235C9EB300CB74DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB692D2E235C9EB300CB74DA /* HGCircularSliderTests.swift in Sources */,
+				BB692D39235C9F1C00CB74DA /* CircularSliderTests.swift in Sources */,
+				BB692D37235C9F1100CB74DA /* CircularSliderHelperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CCDBFDD61E43366F005D6F08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,7 +259,56 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BB692D32235C9EB300CB74DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCDBFDDA1E43366F005D6F08 /* HGCircularSlider */;
+			targetProxy = BB692D31235C9EB300CB74DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BB692D33235C9EB300CB74DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = HGCircularSliderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.HGCircularSliderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB692D34235C9EB300CB74DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = HGCircularSliderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.HGCircularSliderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CCDBFDE11E43366F005D6F08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -339,6 +469,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB692D35235C9EB300CB74DA /* Build configuration list for PBXNativeTarget "HGCircularSliderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB692D33235C9EB300CB74DA /* Debug */,
+				BB692D34235C9EB300CB74DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CCDBFDD51E43366F005D6F08 /* Build configuration list for PBXProject "HGCircularSlider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
