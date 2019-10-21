@@ -11,6 +11,9 @@
 		BB692D30235C9EB300CB74DA /* HGCircularSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDBFDDB1E43366F005D6F08 /* HGCircularSlider.framework */; };
 		BB692D37235C9F1100CB74DA /* CircularSliderHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB692D36235C9F1100CB74DA /* CircularSliderHelperTests.swift */; };
 		BB692D39235C9F1C00CB74DA /* CircularSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB692D38235C9F1C00CB74DA /* CircularSliderTests.swift */; };
+		BB692D3D235E473800CB74DA /* CircularSlider.swift in Headers */ = {isa = PBXBuildFile; fileRef = CCDBFDFA1E4336C9005D6F08 /* CircularSlider.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB692D3E235E473B00CB74DA /* MidPointCircularSlider.swift in Headers */ = {isa = PBXBuildFile; fileRef = CCCC96451E9F7FD000999D34 /* MidPointCircularSlider.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB692D3F235E474000CB74DA /* RangeCircularSlider.swift in Headers */ = {isa = PBXBuildFile; fileRef = CCDBFDFC1E4336C9005D6F08 /* RangeCircularSlider.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCCC96461E9F7FD000999D34 /* MidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC96451E9F7FD000999D34 /* MidPointCircularSlider.swift */; };
 		CCDBFDE01E43366F005D6F08 /* HGCircularSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = CCDBFDDE1E43366F005D6F08 /* HGCircularSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCDBFDFD1E4336C9005D6F08 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CCDBFDF61E4336C9005D6F08 /* .gitkeep */; };
@@ -134,6 +137,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCDBFDE01E43366F005D6F08 /* HGCircularSlider.h in Headers */,
+				BB692D3D235E473800CB74DA /* CircularSlider.swift in Headers */,
+				BB692D3E235E473B00CB74DA /* MidPointCircularSlider.swift in Headers */,
+				BB692D3F235E474000CB74DA /* RangeCircularSlider.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
