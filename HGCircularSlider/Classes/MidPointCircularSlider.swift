@@ -6,6 +6,8 @@
 //
 //
 
+import UIKit
+
 /**
  A visual control used to select a fixed range of values from a continuous range of values.
  MidPointCircularSlider use the target-action mechanism to report changes made during the course of editing:
