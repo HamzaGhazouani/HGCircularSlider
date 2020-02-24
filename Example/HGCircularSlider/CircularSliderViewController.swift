@@ -14,14 +14,24 @@ class CircularSliderViewController: UIViewController {
 
     @IBOutlet weak var circularSlider: CircularSlider!
     @IBOutlet weak var roundsLabel: UILabel!
-    @IBOutlet weak var maxValueLabel: UILabel!
-    @IBOutlet weak var minValueLabel: UILabel!
-    @IBOutlet weak var currentValueLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         circularSlider.endPointValue = 1
+        circularSlider.trackFillColors =
+            [ UIColor(displayP3Red: 57.0/255.0,
+                      green: 57.0/255.0,
+                      blue: 57.0/255.0,
+                      alpha: 1.0),
+              UIColor(displayP3Red: 243.0/255.0,
+                      green: 6.0/255.0,
+                      blue: 44.0/255.0,
+                      alpha: 1.0)]
+        
+        circularSlider.trackFillColorLocations = [0.0, 0.4]
+        circularSlider.thumbShadow = true
+        
         updateTexts()
         circularSlider.addTarget(self, action: #selector(updateTexts), for: .valueChanged)
     }
@@ -33,14 +43,13 @@ class CircularSliderViewController: UIViewController {
     
     @objc func updateTexts() {
         let value = circularSlider.endPointValue
-        let ok = (circularSlider.maximumValue  / CGFloat(circularSlider.numberOfRounds))
-        let ff = ceil(value / ok)
+        //let ok = (circularSlider.maximumValue  / CGFloat(circularSlider.numberOfRounds))
         
-        maxValueLabel.text = String(format: "%.0f", circularSlider.maximumValue)
-        minValueLabel.text = String(format: "%.0f", circularSlider.minimumValue)
+        //maxValueLabel.text = String(format: "%.0f", circularSlider.maximumValue)
+        //minValueLabel.text = String(format: "%.0f", circularSlider.minimumValue)
+        //currentValueLabel.text = String(format: "%.0f", value)
         
-        currentValueLabel.text = String(format: "%.0f", value)
-        roundsLabel.text = "Round N° " +  String(format: "%.0f", ff)
+        roundsLabel.text = String(format: "%.0f", value)
     }
 
     /*

@@ -41,6 +41,20 @@ open class CircularSlider: UIControl {
     open var trackFillColor: UIColor = .clear
     
     /**
+     * The gradient list shown from the start of the arc to the end of the arc. The start of the arc
+     * is always at colour 0 and the end of the arc is at colour **n-1**. If **trackFillColors** is **nil**, then the track
+     * will be filled with the single **trackFillColor** variable.
+     */
+    @IBInspectable
+    open var trackFillColors: [UIColor] = []
+    
+    /**
+     * The locations for the track fill colors on the gradient. Values are 0 - 1
+     */
+    @IBInspectable
+    open var trackFillColorLocations: [CGFloat] = []
+    
+    /**
      * The color shown for the unselected track portion. (outside start and end values)
      * The default value of this property is the white color.
      */
@@ -94,6 +108,14 @@ open class CircularSlider: UIControl {
      */
     @IBInspectable
     open var thumbRadius: CGFloat = 13.0
+    
+    /**
+     * Flag indicating whether thumbs should be shadowed
+     *
+     * The default value of this property is **true**.
+     */
+    @IBInspectable
+    open var thumbShadow: Bool = false
     
     /**
      * The color used to tint the thumb
@@ -173,6 +195,16 @@ open class CircularSlider: UIControl {
     }
 
     /**
+      * Angle in radians of the starting point for the track. Defaults to -π/2 (top position).
+      */
+     @IBInspectable
+     open var circleInitialAngle: CGFloat = CircularSliderHelper.circleInitialAngle {
+         didSet {
+             setNeedsDisplay()
+         }
+     }
+    
+    /**
     * The offset of the thumb centre from the circle.
     *
     * You can use this to move the thumb inside or outside the circle of the slider
@@ -242,6 +274,8 @@ open class CircularSlider: UIControl {
         }
     }
     
+    internal var cachedGradientImage: CGImage? = nil
+    
     // MARK: init methods
     
     /**
@@ -278,10 +312,11 @@ open class CircularSlider: UIControl {
         drawCircularSlider(inContext: context)
         
         let valuesInterval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
-        // get end angle from end value
-        let endAngle = CircularSliderHelper.scaleToAngle(value: endPointValue, inInterval: valuesInterval) + CircularSliderHelper.circleInitialAngle
         
-        drawFilledArc(fromAngle: CircularSliderHelper.circleInitialAngle, toAngle: endAngle, inContext: context)
+        // get end angle from end value
+        let endAngle = CircularSliderHelper.scaleToAngle(value: endPointValue, inInterval: valuesInterval) + circleInitialAngle
+        
+        drawFilledArc(fromAngle: circleInitialAngle, toAngle: endAngle, inContext: context)
         
         // draw end thumb
         endThumbTintColor.setFill()
@@ -307,7 +342,10 @@ open class CircularSlider: UIControl {
     override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
-        let startPoint = CGPoint(x: bounds.center.x, y: 0)
+        
+        let zeroPoint = CGPoint(x: bounds.maxX, y: bounds.center.y)
+        let startPoint = zeroPoint.rotate(around: bounds.center, with: circleInitialAngle)
+        
         let value = newValue(from: endPointValue, touch: touchPosition, start: startPoint)
         
         endPointValue = value

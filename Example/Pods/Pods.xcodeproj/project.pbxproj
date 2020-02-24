@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D8D7FA523FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D7FA423FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift */; };
 		23AE8D7B15AE823A76B41ACF746FC91D /* MidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00034A66E44CC7047F5DE9931D09366E /* MidPointCircularSlider.swift */; };
 		33129701D6A331F40BEC83251A91EFE6 /* CircularSliderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4029A4F3440DDE800772CCD4BE734 /* CircularSliderHelper.swift */; };
 		4156A559278B58C621B0EA4DE16C53CC /* Pods-HGCircularSlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C16B40AB1704FFF772672C6D1C349BA /* Pods-HGCircularSlider_Tests-dummy.m */; };
@@ -44,6 +45,7 @@
 		00034A66E44CC7047F5DE9931D09366E /* MidPointCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MidPointCircularSlider.swift; path = HGCircularSlider/Classes/MidPointCircularSlider.swift; sourceTree = "<group>"; };
 		02588610488867870353D10A66D62EBA /* Pods-HGCircularSlider_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		0531D278A24CD38372CAB079C2BCC3CC /* Pods-HGCircularSlider_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HGCircularSlider_Tests-umbrella.h"; sourceTree = "<group>"; };
+		1D8D7FA423FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CircularSlider+GradientGenerator.swift"; path = "HGCircularSlider/Classes/CircularSlider+GradientGenerator.swift"; sourceTree = "<group>"; };
 		20D4029A4F3440DDE800772CCD4BE734 /* CircularSliderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSliderHelper.swift; path = HGCircularSlider/Classes/CircularSliderHelper.swift; sourceTree = "<group>"; };
 		2878A7138E8A98E3B5985164713B37C3 /* Pods-HGCircularSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HGCircularSlider_Tests.modulemap"; sourceTree = "<group>"; };
 		2A9F8906F31F255CFAC8C955C0AD0EB8 /* Pods-HGCircularSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HGCircularSlider_Example.modulemap"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				F0DE0386A588366C60D5DA20DB32166D /* RangeCircularSlider.swift */,
 				8AA6462E6F9603B0996C9649BBF4EFC9 /* Pod */,
 				01CF1CE9FF991C21E45B154B67790C88 /* Support Files */,
+				1D8D7FA423FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift */,
 			);
 			name = HGCircularSlider;
 			path = ../..;
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4927D68F6D455229FC1D386DEA83466 /* CircularSlider+Draw.swift in Sources */,
+				1D8D7FA523FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift in Sources */,
 				FFAA32FE26C07E3C3486F608F471FC8A /* CircularSlider.swift in Sources */,
 				33129701D6A331F40BEC83251A91EFE6 /* CircularSliderHelper.swift in Sources */,
 				701C2F5A876C21D45629A096FDC17081 /* HGCircularSlider-dummy.m in Sources */,
