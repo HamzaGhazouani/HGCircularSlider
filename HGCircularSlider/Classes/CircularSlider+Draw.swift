@@ -33,9 +33,7 @@ extension CircularSlider {
                 colors: colors,
                 locations: locations.map { Float($0) },
                 scale: 0.25)
-            
             cachedGradientImage = createMatchingBackingDataWithImage(imageRef: cachedGradientImage, customRotation: 92.0, customMirrored: true, customSwapWidthHeight: true)
-            
         }
         
         let circle = arc.circle
@@ -49,12 +47,12 @@ extension CircularSlider {
         context.setLineCap(CGLineCap.round)
         context.addArc(center: origin, radius: circle.radius, startAngle: arc.startAngle, endAngle: arc.endAngle, clockwise: false)
         context.move(to: CGPoint(x: origin.x, y: origin.y))
-
         context.replacePathWithStrokedPath()
         context.clip()
         
         // Cache this later
         if let image = cachedGradientImage {
+            context.setBlendMode(.normal)
             context.draw(image, in: CGRect(origin: .zero, size: frame.size))
         }
         

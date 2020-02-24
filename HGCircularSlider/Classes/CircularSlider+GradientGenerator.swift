@@ -215,7 +215,7 @@ extension CircularSlider {
         let h = Int(size.height * (scale ?? UIScreen.main.scale))
         let bitsPerComponent: Int = MemoryLayout<UInt8>.size * 8
         let bytesPerPixel: Int = bitsPerComponent * 4 / 8
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let colorSpace = CGColorSpace(name: CGColorSpace.displayP3)
         let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
         
         var data = [RGBA]()
@@ -227,7 +227,7 @@ extension CircularSlider {
             }
         }
         
-        let ctx = CGContext(data: &data, width: w, height: h, bitsPerComponent: bitsPerComponent, bytesPerRow: w * bytesPerPixel, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+        let ctx = CGContext(data: &data, width: w, height: h, bitsPerComponent: bitsPerComponent, bytesPerRow: w * bytesPerPixel, space: colorSpace!, bitmapInfo: bitmapInfo.rawValue)
         
         let img = ctx?.makeImage()!
         return img!
