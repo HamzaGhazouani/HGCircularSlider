@@ -504,16 +504,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U9E7JWZWR9;
 				"DEVELOPMENT_TEAM[sdk=*]" = 62L4CLZDFB;
 				INFOPLIST_FILE = HGCircularSlider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "robert-chalmers.uk.HGCircularSlider-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "realityworks.HGCircularSlider-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[arch=*]" = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -527,16 +527,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U9E7JWZWR9;
 				"DEVELOPMENT_TEAM[sdk=*]" = 62L4CLZDFB;
 				INFOPLIST_FILE = HGCircularSlider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "robert-chalmers.uk.HGCircularSlider-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "realityworks.HGCircularSlider-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[arch=*]" = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

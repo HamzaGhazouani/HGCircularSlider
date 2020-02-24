@@ -11,6 +11,57 @@ import UIKit
 extension CircularSlider {
     
     /**
+     * Draw arc that will have it's stroke path filled with a linear or radial gradient.
+     *
+     *
+     - parameter arc:           the arc coordinates (origin, radius, start angle, end angle)
+     - parameter lineWidth:     the with of the circle line (optional) by default 2px
+     - parameter context:       the context
+     */
+    internal static func drawGradientArc(withArc arc: Arc,
+                                         colors: [CGColor],
+                                         locations: [CGFloat],
+                                         frame: CGRect,
+                                         lineWidth: CGFloat = 2,
+                                         cachedGradientImage: inout CGImage?,
+                                         inContext context: CGContext) {
+        
+        if cachedGradientImage == nil {
+            cachedGradientImage = gradientImage(
+                type: .conical,
+                size: frame.size,
+                colors: colors,
+                locations: locations.map { Float($0) },
+                scale: 0.25)
+            
+            cachedGradientImage = createMatchingBackingDataWithImage(imageRef: cachedGradientImage, customRotation: 92.0, customMirrored: true, customSwapWidthHeight: true)
+            
+        }
+        
+        let circle = arc.circle
+        let origin = circle.origin
+                
+        UIGraphicsPushContext(context)
+        context.saveGState()
+        context.beginPath()
+        
+        context.setLineWidth(lineWidth)
+        context.setLineCap(CGLineCap.round)
+        context.addArc(center: origin, radius: circle.radius, startAngle: arc.startAngle, endAngle: arc.endAngle, clockwise: false)
+        context.move(to: CGPoint(x: origin.x, y: origin.y))
+
+        context.replacePathWithStrokedPath()
+        context.clip()
+        
+        // Cache this later
+        if let image = cachedGradientImage {
+            context.draw(image, in: CGRect(origin: .zero, size: frame.size))
+        }
+        
+        context.restoreGState()
+        UIGraphicsPopContext()
+    }
+    /**
      Draw arc with stroke mode (Stroke) or Disk (Fill) or both (FillStroke) mode
      FillStroke used by default
      
@@ -20,7 +71,7 @@ extension CircularSlider {
      - parameter context:       the context
      
      */
-    internal static func drawArc(withArc arc: Arc, lineWidth: CGFloat = 2, mode: CGPathDrawingMode = .fillStroke, inContext context: CGContext) {
+    internal static func drawArc(withArc arc: Arc, lineWidth: CGFloat = 2, mode: CGPathDrawingMode = .fillStroke, inContext context: CGContext, withShadow shadowed: Bool = false) {
         
         let circle = arc.circle
         let origin = circle.origin
@@ -32,8 +83,13 @@ extension CircularSlider {
         context.setLineCap(CGLineCap.round)
         context.addArc(center: origin, radius: circle.radius, startAngle: arc.startAngle, endAngle: arc.endAngle, clockwise: false)
         context.move(to: CGPoint(x: origin.x, y: origin.y))
-        context.drawPath(using: mode)
         
+        if shadowed {
+            context.setShadow(offset: .zero, blur: circle.radius, color: UIColor.black.cgColor)
+        }
+        
+        context.drawPath(using: mode)
+
         UIGraphicsPopContext()
     }
     
@@ -49,13 +105,14 @@ extension CircularSlider {
         let origin = circle.origin
 
         UIGraphicsPushContext(context)
+        
         context.beginPath()
-
+        
         context.setLineWidth(0)
         context.addArc(center: origin, radius: circle.radius, startAngle: arc.startAngle, endAngle: arc.endAngle, clockwise: false)
         context.addLine(to: CGPoint(x: origin.x, y: origin.y))
         context.drawPath(using: .fill)
-
+        
         UIGraphicsPopContext()
     }
 
@@ -68,21 +125,37 @@ extension CircularSlider {
 
         let circle = Circle(origin: bounds.center, radius: self.radius)
         let sliderArc = Arc(circle: circle, startAngle: CircularSliderHelper.circleMinValue, endAngle: CircularSliderHelper.circleMaxValue)
-        CircularSlider.drawArc(withArc: sliderArc, lineWidth: backtrackLineWidth, inContext: context)
+        
+        CircularSlider.drawArc(
+            withArc: sliderArc,
+            lineWidth: backtrackLineWidth,
+            inContext: context)
     }
 
     /// draw Filled arc between start an end angles
     internal func drawFilledArc(fromAngle startAngle: CGFloat, toAngle endAngle: CGFloat, inContext context: CGContext) {
         diskFillColor.setFill()
         trackFillColor.setStroke()
-
+        
         let circle = Circle(origin: bounds.center, radius: self.radius)
         let arc = Arc(circle: circle, startAngle: startAngle, endAngle: endAngle)
         
         // fill Arc
         CircularSlider.drawDisk(withArc: arc, inContext: context)
+        
         // stroke Arc
-        CircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .stroke, inContext: context)
+        if trackFillColors.count > 0 {
+            CircularSlider.drawGradientArc(
+                withArc: arc,
+                colors: trackFillColors.map { $0.cgColor },
+                locations: trackFillColorLocations,
+                frame: frame,
+                lineWidth: lineWidth,
+                cachedGradientImage: &cachedGradientImage,
+                inContext: context)
+        } else {
+            CircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .stroke, inContext: context)
+        }
     }
 
     internal func drawShadowArc(fromAngle startAngle: CGFloat, toAngle endAngle: CGFloat, inContext context: CGContext) {
@@ -118,7 +191,8 @@ extension CircularSlider {
         let thumbCircle = Circle(origin: thumbOrigin, radius: thumbRadius)
         let thumbArc = Arc(circle: thumbCircle, startAngle: CircularSliderHelper.circleMinValue, endAngle: CircularSliderHelper.circleMaxValue)
 
-        CircularSlider.drawArc(withArc: thumbArc, lineWidth: thumbLineWidth, inContext: context)
+        CircularSlider.drawArc(withArc: thumbArc, lineWidth: thumbLineWidth, inContext: context, withShadow: thumbShadow)
+                
         return thumbOrigin
     }
 
