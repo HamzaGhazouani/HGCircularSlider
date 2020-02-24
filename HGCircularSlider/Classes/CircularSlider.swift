@@ -48,7 +48,6 @@ open class CircularSlider: UIControl {
     @IBInspectable
     open var trackFillColors: [UIColor] = [] {
         didSet {
-            cachedGradientImage = nil
             trackFillColorLocations = []
             setNeedsDisplay()
         }
