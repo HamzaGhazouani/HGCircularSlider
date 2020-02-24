@@ -27,13 +27,13 @@ class CircularSliderViewController: UIViewController {
               UIColor(red: 250.0/122.0,
                       green: 0.0/255.0,
                       blue: 122.0/255.0,
-                      alpha: 0.0),
+                      alpha: 0.66),
               UIColor(red: 243.0/255.0,
                       green: 6.0/255.0,
                       blue: 44.0/255.0,
                       alpha: 1.0)]
         
-        circularSlider.trackFillColorLocations = [0.0, 0.16, 0.6]
+        circularSlider.trackFillColorLocations = [0.0, 0.16, 0.7]
         circularSlider.thumbShadow = true
         
         updateTexts()
