@@ -20,16 +20,20 @@ class CircularSliderViewController: UIViewController {
         
         circularSlider.endPointValue = 1
         circularSlider.trackFillColors =
-            [ UIColor(displayP3Red: 57.0/255.0,
+            [ UIColor(red: 57.0/255.0,
                       green: 57.0/255.0,
                       blue: 57.0/255.0,
-                      alpha: 1.0),
-              UIColor(displayP3Red: 243.0/255.0,
+                      alpha: 0.0),
+              UIColor(red: 250.0/122.0,
+                      green: 0.0/255.0,
+                      blue: 122.0/255.0,
+                      alpha: 0.0),
+              UIColor(red: 243.0/255.0,
                       green: 6.0/255.0,
                       blue: 44.0/255.0,
                       alpha: 1.0)]
         
-        circularSlider.trackFillColorLocations = [0.0, 0.4]
+        circularSlider.trackFillColorLocations = [0.0, 0.16, 0.6]
         circularSlider.thumbShadow = true
         
         updateTexts()
