@@ -48,7 +48,9 @@ open class CircularSlider: UIControl {
     @IBInspectable
     open var trackFillColors: [UIColor] = [] {
         didSet {
+            cachedGradientImage = nil
             trackFillColorLocations = []
+            setNeedsDisplay()
         }
     }
     
@@ -140,7 +142,11 @@ open class CircularSlider: UIControl {
      * The default value of this property is blue
      */
     @IBInspectable
-    open var endThumbStrokeHighlightedColor: UIColor = .blue
+    open var endThumbStrokeHighlightedColor: UIColor = .blue {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     /**
      * The color used to tint the stroke of the end thumb
@@ -149,7 +155,11 @@ open class CircularSlider: UIControl {
      * The default value of this property is red.
      */
     @IBInspectable
-    open var endThumbStrokeColor: UIColor = .red
+    open var endThumbStrokeColor: UIColor = .red {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     /**
      * The image of the end thumb
