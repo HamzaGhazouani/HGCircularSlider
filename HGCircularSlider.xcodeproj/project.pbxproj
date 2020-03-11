@@ -18,6 +18,7 @@
 		CCDBFE001E4336C9005D6F08 /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBFDFA1E4336C9005D6F08 /* CircularSlider.swift */; };
 		CCDBFE011E4336C9005D6F08 /* CircularSliderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBFDFB1E4336C9005D6F08 /* CircularSliderHelper.swift */; };
 		CCDBFE021E4336C9005D6F08 /* RangeCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBFDFC1E4336C9005D6F08 /* RangeCircularSlider.swift */; };
+		F150BCBC24189118006DDCB7 /* CircularSlider+GradientGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F150BCBB24189118006DDCB7 /* CircularSlider+GradientGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		CCDBFDFA1E4336C9005D6F08 /* CircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
 		CCDBFDFB1E4336C9005D6F08 /* CircularSliderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSliderHelper.swift; sourceTree = "<group>"; };
 		CCDBFDFC1E4336C9005D6F08 /* RangeCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeCircularSlider.swift; sourceTree = "<group>"; };
+		F150BCBB24189118006DDCB7 /* CircularSlider+GradientGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CircularSlider+GradientGenerator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +119,9 @@
 		CCDBFDF71E4336C9005D6F08 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CCDBFDF91E4336C9005D6F08 /* CircularSlider+Draw.swift */,
 				CCDBFDFA1E4336C9005D6F08 /* CircularSlider.swift */,
+				CCDBFDF91E4336C9005D6F08 /* CircularSlider+Draw.swift */,
+				F150BCBB24189118006DDCB7 /* CircularSlider+GradientGenerator.swift */,
 				CCDBFDFB1E4336C9005D6F08 /* CircularSliderHelper.swift */,
 				CCCC96451E9F7FD000999D34 /* MidPointCircularSlider.swift */,
 				CCDBFDFC1E4336C9005D6F08 /* RangeCircularSlider.swift */,
@@ -254,6 +257,7 @@
 				CCDBFE001E4336C9005D6F08 /* CircularSlider.swift in Sources */,
 				CCCC96461E9F7FD000999D34 /* MidPointCircularSlider.swift in Sources */,
 				CCDBFE011E4336C9005D6F08 /* CircularSliderHelper.swift in Sources */,
+				F150BCBC24189118006DDCB7 /* CircularSlider+GradientGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
