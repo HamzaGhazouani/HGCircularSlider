@@ -39,6 +39,7 @@ class CircularSliderViewController: UIViewController {
         
         circularSlider.trackFillColorLocations = [0.0, 0.25, 0.5, 0.75]
         circularSlider.thumbShadow = true
+        circularSlider.isFilled = true
         
         updateTexts()
         circularSlider.addTarget(self, action: #selector(updateTexts), for: .valueChanged)
