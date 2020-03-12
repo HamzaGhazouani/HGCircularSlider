@@ -155,6 +155,7 @@
 			children = (
 				F8E6657289603D268E52A3576C3F2BF2 /* CircularSlider.swift */,
 				75A468421B7F6824DAFB2559A66327E6 /* CircularSlider+Draw.swift */,
+				1D8D7FA423FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift */,
 				20D4029A4F3440DDE800772CCD4BE734 /* CircularSliderHelper.swift */,
 				00034A66E44CC7047F5DE9931D09366E /* MidPointCircularSlider.swift */,
 				F0DE0386A588366C60D5DA20DB32166D /* RangeCircularSlider.swift */,

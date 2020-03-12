@@ -242,7 +242,18 @@ open class CircularSlider: UIControl {
     */
     @IBInspectable
     open var stopThumbAtMinMax: Bool = false
-
+    
+    /**
+     * Variable defining whether to the track fill colours ignore the min/max.
+     *  When this value is set to true, the track fill colours are filled from the start to the end of the
+     *  circular slider, ignoring the endPointValue.
+     */
+    @IBInspectable
+    open var isFilled: Bool = false {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
 
     /**
      * The value of the endThumb (changed when the user change the position of the end thumb)
@@ -332,7 +343,8 @@ open class CircularSlider: UIControl {
         let valuesInterval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
         
         // get end angle from end value
-        let endAngle = CircularSliderHelper.scaleToAngle(value: endPointValue, inInterval: valuesInterval) + circleInitialAngle
+        let usingEndPointValue = isFilled ? maximumValue : endPointValue
+        let endAngle = CircularSliderHelper.scaleToAngle(value: usingEndPointValue, inInterval: valuesInterval) + circleInitialAngle
         
         drawFilledArc(fromAngle: circleInitialAngle, toAngle: endAngle, inContext: context)
         
