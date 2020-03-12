@@ -194,6 +194,7 @@ open class CircularSlider: UIControl {
             if endPointValue < minimumValue {
                 endPointValue = minimumValue
             }
+            setNeedsDisplay()
         }
     }
     
@@ -209,6 +210,7 @@ open class CircularSlider: UIControl {
             if endPointValue > maximumValue {
                 endPointValue = maximumValue
             }
+            setNeedsDisplay()
         }
     }
 
