@@ -122,12 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				CCDBFDFA1E4336C9005D6F08 /* CircularSlider.swift */,
-<<<<<<< HEAD
 				CCDBFDF91E4336C9005D6F08 /* CircularSlider+Draw.swift */,
 				F150BCBB24189118006DDCB7 /* CircularSlider+GradientGenerator.swift */,
-=======
-				1D914402241A240100A74BF2 /* CircularSlider+GradientGenerator.swift */,
->>>>>>> master
 				CCDBFDFB1E4336C9005D6F08 /* CircularSliderHelper.swift */,
 				CCCC96451E9F7FD000999D34 /* MidPointCircularSlider.swift */,
 				CCDBFDFC1E4336C9005D6F08 /* RangeCircularSlider.swift */,
@@ -263,11 +259,7 @@
 				CCDBFE001E4336C9005D6F08 /* CircularSlider.swift in Sources */,
 				CCCC96461E9F7FD000999D34 /* MidPointCircularSlider.swift in Sources */,
 				CCDBFE011E4336C9005D6F08 /* CircularSliderHelper.swift in Sources */,
-<<<<<<< HEAD
 				F150BCBC24189118006DDCB7 /* CircularSlider+GradientGenerator.swift in Sources */,
-=======
-				1D914403241A240100A74BF2 /* CircularSlider+GradientGenerator.swift in Sources */,
->>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
