@@ -343,4 +343,8 @@ open class CircularSlider: UIControl {
 
         return newValue
     }
+
+  open override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    return !(gestureRecognizer is UIPanGestureRecognizer)
+  }
 }
