@@ -98,6 +98,20 @@ progressView.thumbLineWidth = 0.0
 progressView.thumbRadius = 0.0
 ```
 
+##### Or use part of circle:
+
+```swift
+let progressView = CircularSlider(frame: myFrame)
+circularSlider.minimumValue = 0.0
+circularSlider.maximumValue = 1.0
+circularSlider.endPointValue = 0.2
+
+// set angle
+progressView.circleMinValue = 0
+progressView.circleMaxValue = .pi
+progressView.circleInitialAngle = .pi / 2
+```
+
 ## Documentation
 Full documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/HGCircularSlider/).<br/>
 You can also install documentation locally using [jazzy](https://github.com/realm/jazzy).
