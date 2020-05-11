@@ -243,15 +243,7 @@ internal class CircularSliderHelper {
 
   internal static func delta(circleInitialAngle: CGFloat, circleMinValue: CGFloat, circleMaxValue: CGFloat, in interval: Interval, for angle: CGFloat, oldValue: CGFloat) -> CGFloat {
     let angleIntreval = Interval(min: circleMinValue , max: circleMaxValue)
-
-    print("interval, ", interval)
-    print("oldValue, ", oldValue)
-
     let oldAngle = scaleToAngle(circleMinValue: circleMinValue, circleMaxValue: circleMaxValue, value: oldValue, inInterval: interval)
-
-    print("oldAngle, ", oldAngle)
-    print("angle, ", angle)
-
     let deltaAngle = self.angle(circleInitialAngle: circleInitialAngle, circleMaxValue: circleMaxValue, from: oldAngle, to: angle)
 
     return scaleValue(deltaAngle, fromInterval: angleIntreval, toInterval: interval)

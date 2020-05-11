@@ -67,7 +67,7 @@ extension CircularSlider {
     trackColor.setStroke()
 
     let circle = Circle(origin: bounds.center, radius: self.radius)
-    let sliderArc = Arc(circle: circle, startAngle: circleMinValue, endAngle: circleMaxValue)
+    let sliderArc = Arc(circle: circle, startAngle: circleMinValue + circleInitialAngle, endAngle: circleMaxValue + circleInitialAngle)
     CircularSlider.drawArc(withArc: sliderArc, lineWidth: backtrackLineWidth, inContext: context)
   }
 
