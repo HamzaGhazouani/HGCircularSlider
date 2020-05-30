@@ -32,6 +32,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Installation
 
 HGCircularSlider is also available through [Swift Package Manager](https://swift.org/package-manager/)
+
 Follow this [doc](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app?language=swift).
 
 HGCircularSlider is also available through [CocoaPods](http://cocoapods.org). To install
