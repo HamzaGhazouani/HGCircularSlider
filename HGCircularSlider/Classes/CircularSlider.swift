@@ -368,8 +368,10 @@ open class CircularSlider: UIControl {
         let touchPosition = touch.location(in: self)
         let center = bounds.center
         let distance = center.distance(to: touchPosition)
+        let touchOffset = max(lineWidth, thumbRadius*2)
         
-        if distance < radius - lineWidth {
+        /// Add a scale to make it easier to touch
+        if distance < radius - (touchOffset * 1.25) {
             return false
         }
         
