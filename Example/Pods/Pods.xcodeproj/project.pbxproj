@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D8D7FA523FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D7FA423FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift */; };
-		23AE8D7B15AE823A76B41ACF746FC91D /* MidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00034A66E44CC7047F5DE9931D09366E /* MidPointCircularSlider.swift */; };
-		33129701D6A331F40BEC83251A91EFE6 /* CircularSliderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4029A4F3440DDE800772CCD4BE734 /* CircularSliderHelper.swift */; };
+		39543C76AB4B10F13294CC3AC48A41C9 /* MidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB619B925FC546DB6C530FD0AF59B4C9 /* MidPointCircularSlider.swift */; };
 		4156A559278B58C621B0EA4DE16C53CC /* Pods-HGCircularSlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C16B40AB1704FFF772672C6D1C349BA /* Pods-HGCircularSlider_Tests-dummy.m */; };
 		51FFC6B04820BF18E1A619F80207DEE7 /* Pods-HGCircularSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 335044A8F24C8F65A1C993D9DF2B659F /* Pods-HGCircularSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		558D472EC7E226CE750D2AB16E4B493C /* RangeCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996699EA9605DCB8ED42FD501E5733EC /* RangeCircularSlider.swift */; };
+		5B39FD3BE9D268C1ACFE8CED4C561535 /* HGCircularSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4604B4A342FCDF23CBEF29C8572DD /* HGCircularSlider-dummy.m */; };
 		5C3308D6D683344B34EEC13931A08313 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		5D39FA5BB0EC03687A946F440BCE8EE7 /* Pods-HGCircularSlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FC561DDFE28687FAB5EE8B81912CF6 /* Pods-HGCircularSlider_Example-dummy.m */; };
-		701C2F5A876C21D45629A096FDC17081 /* HGCircularSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A615A78F332CC0909358A951D116F /* HGCircularSlider-dummy.m */; };
+		87A66800DFE0790AED15F8979ACBE90B /* CircularSliderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF443AB1D79C8F392117CAEBDB3454 /* CircularSliderHelper.swift */; };
+		8C1D224AD0E0BC932412979EB23B6CCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		95BACCE3B04F5848054B2DE34FA9722B /* Pods-HGCircularSlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0531D278A24CD38372CAB079C2BCC3CC /* Pods-HGCircularSlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7F517124F9D6913DD2E7CE52D18BD34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		D5E466C9BEE9CF508910C3D1782A8382 /* HGCircularSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A6397F560C0F0036557E4B05812B188 /* HGCircularSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4606FAE0CFBA2C4BA46647307ACD499 /* RangeCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0386A588366C60D5DA20DB32166D /* RangeCircularSlider.swift */; };
-		E96E87B8CE55AD88940EC4EE401978F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		F4927D68F6D455229FC1D386DEA83466 /* CircularSlider+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A468421B7F6824DAFB2559A66327E6 /* CircularSlider+Draw.swift */; };
-		FFAA32FE26C07E3C3486F608F471FC8A /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E6657289603D268E52A3576C3F2BF2 /* CircularSlider.swift */; };
+		C11BE6684BB19558507543B635065D92 /* CircularSlider+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = A239E2CF7E005CFF41D3EAC29C209013 /* CircularSlider+Draw.swift */; };
+		CD2D2FB54AC26132ED7F8B46658E9A22 /* CircularSlider+GradientGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FABCF4C50F8A284FC61334A8C72C8FE /* CircularSlider+GradientGenerator.swift */; };
+		E4F753CA7212CBE74F24E80E14FB419F /* HGCircularSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF9C0F5FC53A6C4CF4FEBAE547E8219 /* HGCircularSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0F066D4AA918067367A18A3BF871B9F /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4351AC18E093B8E123A3ECE4E0FDC776 /* CircularSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,51 +42,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00034A66E44CC7047F5DE9931D09366E /* MidPointCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MidPointCircularSlider.swift; path = HGCircularSlider/Classes/MidPointCircularSlider.swift; sourceTree = "<group>"; };
 		02588610488867870353D10A66D62EBA /* Pods-HGCircularSlider_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		03AF443AB1D79C8F392117CAEBDB3454 /* CircularSliderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSliderHelper.swift; path = HGCircularSlider/Classes/CircularSliderHelper.swift; sourceTree = "<group>"; };
 		0531D278A24CD38372CAB079C2BCC3CC /* Pods-HGCircularSlider_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HGCircularSlider_Tests-umbrella.h"; sourceTree = "<group>"; };
-		1D8D7FA423FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CircularSlider+GradientGenerator.swift"; path = "HGCircularSlider/Classes/CircularSlider+GradientGenerator.swift"; sourceTree = "<group>"; };
-		20D4029A4F3440DDE800772CCD4BE734 /* CircularSliderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSliderHelper.swift; path = HGCircularSlider/Classes/CircularSliderHelper.swift; sourceTree = "<group>"; };
+		1400178ED524CC60C5609938F4384924 /* HGCircularSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HGCircularSlider-Info.plist"; sourceTree = "<group>"; };
+		1EF9C0F5FC53A6C4CF4FEBAE547E8219 /* HGCircularSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-umbrella.h"; sourceTree = "<group>"; };
+		1FABCF4C50F8A284FC61334A8C72C8FE /* CircularSlider+GradientGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CircularSlider+GradientGenerator.swift"; path = "HGCircularSlider/Classes/CircularSlider+GradientGenerator.swift"; sourceTree = "<group>"; };
+		2032F7F12FEEE696975536DBDF257233 /* HGCircularSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HGCircularSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2878A7138E8A98E3B5985164713B37C3 /* Pods-HGCircularSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HGCircularSlider_Tests.modulemap"; sourceTree = "<group>"; };
 		2A9F8906F31F255CFAC8C955C0AD0EB8 /* Pods-HGCircularSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HGCircularSlider_Example.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		335044A8F24C8F65A1C993D9DF2B659F /* Pods-HGCircularSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HGCircularSlider_Example-umbrella.h"; sourceTree = "<group>"; };
-		3A6397F560C0F0036557E4B05812B188 /* HGCircularSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-umbrella.h"; sourceTree = "<group>"; };
 		40A9E1BF9BD7E69EC9050CD12524CA6A /* Pods-HGCircularSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4228D6D3CEDCA8624C7F5A1F8225A29B /* Pods-HGCircularSlider_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Example-Info.plist"; sourceTree = "<group>"; };
+		4351AC18E093B8E123A3ECE4E0FDC776 /* CircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSlider.swift; path = HGCircularSlider/Classes/CircularSlider.swift; sourceTree = "<group>"; };
 		4926A9DAFEDBBFB51FC2FA92126C7032 /* Pods-HGCircularSlider_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Tests-Info.plist"; sourceTree = "<group>"; };
 		4C16B40AB1704FFF772672C6D1C349BA /* Pods-HGCircularSlider_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HGCircularSlider_Tests-dummy.m"; sourceTree = "<group>"; };
-		5436D8550DC4C6321D1A40278A848C0B /* HGCircularSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HGCircularSlider-Info.plist"; sourceTree = "<group>"; };
-		54A3FC20C66408531C03EEF4B9821AE3 /* Pods_HGCircularSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGCircularSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C8A615A78F332CC0909358A951D116F /* HGCircularSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HGCircularSlider-dummy.m"; sourceTree = "<group>"; };
-		75A468421B7F6824DAFB2559A66327E6 /* CircularSlider+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CircularSlider+Draw.swift"; path = "HGCircularSlider/Classes/CircularSlider+Draw.swift"; sourceTree = "<group>"; };
+		54A3FC20C66408531C03EEF4B9821AE3 /* Pods_HGCircularSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HGCircularSlider_Tests.framework; path = "Pods-HGCircularSlider_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E9232E4D8B4E251EC97AAA75824ACC6 /* HGCircularSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HGCircularSlider.modulemap; sourceTree = "<group>"; };
+		6F7A87D63B29ABB41658805B06029253 /* HGCircularSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-prefix.pch"; sourceTree = "<group>"; };
 		81FC561DDFE28687FAB5EE8B81912CF6 /* Pods-HGCircularSlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HGCircularSlider_Example-dummy.m"; sourceTree = "<group>"; };
+		88FD2A1BA35BF4A2E041E114D95CA887 /* HGCircularSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.release.xcconfig; sourceTree = "<group>"; };
 		8CD6A4F5CE27BAFFC31E4878DDB01BDD /* Pods-HGCircularSlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		912406725FA30057CA11E94A42405766 /* Pods_HGCircularSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGCircularSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A371A0DD4113F3F67231EECD9C878B92 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		912406725FA30057CA11E94A42405766 /* Pods_HGCircularSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HGCircularSlider_Example.framework; path = "Pods-HGCircularSlider_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		996699EA9605DCB8ED42FD501E5733EC /* RangeCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeCircularSlider.swift; path = HGCircularSlider/Classes/RangeCircularSlider.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A239E2CF7E005CFF41D3EAC29C209013 /* CircularSlider+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CircularSlider+Draw.swift"; path = "HGCircularSlider/Classes/CircularSlider+Draw.swift"; sourceTree = "<group>"; };
 		A3CD69074F507B3569D5B513D27549F8 /* Pods-HGCircularSlider_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HGCircularSlider_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A6D6DEBDCDDD8970F43649C218F8746E /* HGCircularSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HGCircularSlider.modulemap; sourceTree = "<group>"; };
-		AACB37F05405DDBD40F4BDB778341695 /* HGCircularSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-prefix.pch"; sourceTree = "<group>"; };
-		D18BC77130A0F952686F6640607DC850 /* HGCircularSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.xcconfig; sourceTree = "<group>"; };
+		ACBB8020F3F5BB2CF879EBD387EB1DBB /* HGCircularSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.debug.xcconfig; sourceTree = "<group>"; };
+		BB619B925FC546DB6C530FD0AF59B4C9 /* MidPointCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MidPointCircularSlider.swift; path = HGCircularSlider/Classes/MidPointCircularSlider.swift; sourceTree = "<group>"; };
+		CDC6F7B56AB056DC5A09CC9E37D14FD7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		DA1EA90A0DC940741BB9510A83433F9E /* Pods-HGCircularSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFA59C572EC367C5762E2EC58381F29A /* HGCircularSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HGCircularSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E18CA88D30C0132ED7002DF4A39C5045 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HGCircularSlider.framework; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89E5B545A6604882E250A1E69959933 /* Pods-HGCircularSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F0DE0386A588366C60D5DA20DB32166D /* RangeCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeCircularSlider.swift; path = HGCircularSlider/Classes/RangeCircularSlider.swift; sourceTree = "<group>"; };
+		EBA22BAB8EB6933C0C2B66578CFB78D4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		F48C480530B1EEC63B12E3D25AC41FBF /* Pods-HGCircularSlider_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HGCircularSlider_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F5D4D0CC167B194D4B1C35D0105DB71E /* Pods-HGCircularSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F8E6657289603D268E52A3576C3F2BF2 /* CircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSlider.swift; path = HGCircularSlider/Classes/CircularSlider.swift; sourceTree = "<group>"; };
+		F9A4604B4A342FCDF23CBEF29C8572DD /* HGCircularSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HGCircularSlider-dummy.m"; sourceTree = "<group>"; };
 		FA9955D22C912FD36A0B6FC9CC971DBA /* Pods-HGCircularSlider_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HGCircularSlider_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8E33AA61865BAA0D01C8929DBE89F87E /* Frameworks */ = {
+		1C7F969C388A711B805E4B2B6D310D41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E96E87B8CE55AD88940EC4EE401978F0 /* Foundation.framework in Frameworks */,
+				8C1D224AD0E0BC932412979EB23B6CCF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,18 +110,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01CF1CE9FF991C21E45B154B67790C88 /* Support Files */ = {
+		397F265E09D8DB0DEFC7D265BAEDDFCA /* HGCircularSlider */ = {
 			isa = PBXGroup;
 			children = (
-				A6D6DEBDCDDD8970F43649C218F8746E /* HGCircularSlider.modulemap */,
-				D18BC77130A0F952686F6640607DC850 /* HGCircularSlider.xcconfig */,
-				6C8A615A78F332CC0909358A951D116F /* HGCircularSlider-dummy.m */,
-				5436D8550DC4C6321D1A40278A848C0B /* HGCircularSlider-Info.plist */,
-				AACB37F05405DDBD40F4BDB778341695 /* HGCircularSlider-prefix.pch */,
-				3A6397F560C0F0036557E4B05812B188 /* HGCircularSlider-umbrella.h */,
+				4351AC18E093B8E123A3ECE4E0FDC776 /* CircularSlider.swift */,
+				A239E2CF7E005CFF41D3EAC29C209013 /* CircularSlider+Draw.swift */,
+				1FABCF4C50F8A284FC61334A8C72C8FE /* CircularSlider+GradientGenerator.swift */,
+				03AF443AB1D79C8F392117CAEBDB3454 /* CircularSliderHelper.swift */,
+				BB619B925FC546DB6C530FD0AF59B4C9 /* MidPointCircularSlider.swift */,
+				996699EA9605DCB8ED42FD501E5733EC /* RangeCircularSlider.swift */,
+				B42E82CF6626175B70E5F4DF7635631E /* Pod */,
+				AC2F16A52A6E7088EE7C2E240AB6BE03 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/HGCircularSlider";
+			name = HGCircularSlider;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3FA31729FD53F5A33E4C3AD28CAC899C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				397F265E09D8DB0DEFC7D265BAEDDFCA /* HGCircularSlider */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		61925295BDE53FC7B183C344DAB64C7D /* Pods-HGCircularSlider_Example */ = {
@@ -150,29 +161,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B7DC1B0969185108F5D9A1394EA8642 /* HGCircularSlider */ = {
+		AC2F16A52A6E7088EE7C2E240AB6BE03 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F8E6657289603D268E52A3576C3F2BF2 /* CircularSlider.swift */,
-				75A468421B7F6824DAFB2559A66327E6 /* CircularSlider+Draw.swift */,
-				1D8D7FA423FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift */,
-				20D4029A4F3440DDE800772CCD4BE734 /* CircularSliderHelper.swift */,
-				00034A66E44CC7047F5DE9931D09366E /* MidPointCircularSlider.swift */,
-				F0DE0386A588366C60D5DA20DB32166D /* RangeCircularSlider.swift */,
-				8AA6462E6F9603B0996C9649BBF4EFC9 /* Pod */,
-				01CF1CE9FF991C21E45B154B67790C88 /* Support Files */,
-				1D8D7FA423FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift */,
+				6E9232E4D8B4E251EC97AAA75824ACC6 /* HGCircularSlider.modulemap */,
+				F9A4604B4A342FCDF23CBEF29C8572DD /* HGCircularSlider-dummy.m */,
+				1400178ED524CC60C5609938F4384924 /* HGCircularSlider-Info.plist */,
+				6F7A87D63B29ABB41658805B06029253 /* HGCircularSlider-prefix.pch */,
+				1EF9C0F5FC53A6C4CF4FEBAE547E8219 /* HGCircularSlider-umbrella.h */,
+				ACBB8020F3F5BB2CF879EBD387EB1DBB /* HGCircularSlider.debug.xcconfig */,
+				88FD2A1BA35BF4A2E041E114D95CA887 /* HGCircularSlider.release.xcconfig */,
 			);
-			name = HGCircularSlider;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HGCircularSlider";
 			sourceTree = "<group>";
 		};
-		8AA6462E6F9603B0996C9649BBF4EFC9 /* Pod */ = {
+		B42E82CF6626175B70E5F4DF7635631E /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				DFA59C572EC367C5762E2EC58381F29A /* HGCircularSlider.podspec */,
-				A371A0DD4113F3F67231EECD9C878B92 /* LICENSE */,
-				E18CA88D30C0132ED7002DF4A39C5045 /* README.md */,
+				2032F7F12FEEE696975536DBDF257233 /* HGCircularSlider.podspec */,
+				CDC6F7B56AB056DC5A09CC9E37D14FD7 /* LICENSE */,
+				EBA22BAB8EB6933C0C2B66578CFB78D4 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -210,19 +219,11 @@
 			path = "Target Support Files/Pods-HGCircularSlider_Tests";
 			sourceTree = "<group>";
 		};
-		C7ECD141E5CD8B953154795392AC0E73 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7B7DC1B0969185108F5D9A1394EA8642 /* HGCircularSlider */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				C7ECD141E5CD8B953154795392AC0E73 /* Development Pods */,
+				3FA31729FD53F5A33E4C3AD28CAC899C /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				61A8098C0CD960AE63619A6278E2F44E /* Products */,
 				B69618D6B496333892E43F3157EB0896 /* Targets Support Files */,
@@ -248,11 +249,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		767C99A70BD3DBCFB9160917392C8EB6 /* Headers */ = {
+		79427DDEA1AC54803975ED9BA8B2CAF1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5E466C9BEE9CF508910C3D1782A8382 /* HGCircularSlider-umbrella.h in Headers */,
+				E4F753CA7212CBE74F24E80E14FB419F /* HGCircularSlider-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +270,12 @@
 /* Begin PBXNativeTarget section */
 		82EEAE7DB07C6F17150BFE2EAD014CB2 /* HGCircularSlider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 830DCB0A097257D0F9E1D557676CFDE1 /* Build configuration list for PBXNativeTarget "HGCircularSlider" */;
+			buildConfigurationList = 217B62640B85FC9B2902CE2337FD3DB1 /* Build configuration list for PBXNativeTarget "HGCircularSlider" */;
 			buildPhases = (
-				767C99A70BD3DBCFB9160917392C8EB6 /* Headers */,
-				6978B58842DD4999449ECEB578D444D9 /* Sources */,
-				8E33AA61865BAA0D01C8929DBE89F87E /* Frameworks */,
-				5F9A73F81E071C4227DCD8F475E6B09B /* Resources */,
+				79427DDEA1AC54803975ED9BA8B2CAF1 /* Headers */,
+				96D21FD26CAEBED494F1CD737190D3C7 /* Sources */,
+				1C7F969C388A711B805E4B2B6D310D41 /* Frameworks */,
+				89A43E65E5B1DAC7CCA00963382E5805 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -330,7 +331,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -338,6 +339,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 61A8098C0CD960AE63619A6278E2F44E /* Products */;
@@ -359,7 +361,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F9A73F81E071C4227DCD8F475E6B09B /* Resources */ = {
+		89A43E65E5B1DAC7CCA00963382E5805 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -384,17 +386,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6978B58842DD4999449ECEB578D444D9 /* Sources */ = {
+		96D21FD26CAEBED494F1CD737190D3C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4927D68F6D455229FC1D386DEA83466 /* CircularSlider+Draw.swift in Sources */,
-				1D8D7FA523FFC646002EFBB7 /* CircularSlider+GradientGenerator.swift in Sources */,
-				FFAA32FE26C07E3C3486F608F471FC8A /* CircularSlider.swift in Sources */,
-				33129701D6A331F40BEC83251A91EFE6 /* CircularSliderHelper.swift in Sources */,
-				701C2F5A876C21D45629A096FDC17081 /* HGCircularSlider-dummy.m in Sources */,
-				23AE8D7B15AE823A76B41ACF746FC91D /* MidPointCircularSlider.swift in Sources */,
-				E4606FAE0CFBA2C4BA46647307ACD499 /* RangeCircularSlider.swift in Sources */,
+				C11BE6684BB19558507543B635065D92 /* CircularSlider+Draw.swift in Sources */,
+				CD2D2FB54AC26132ED7F8B46658E9A22 /* CircularSlider+GradientGenerator.swift in Sources */,
+				F0F066D4AA918067367A18A3BF871B9F /* CircularSlider.swift in Sources */,
+				87A66800DFE0790AED15F8979ACBE90B /* CircularSliderHelper.swift in Sources */,
+				5B39FD3BE9D268C1ACFE8CED4C561535 /* HGCircularSlider-dummy.m in Sources */,
+				39543C76AB4B10F13294CC3AC48A41C9 /* MidPointCircularSlider.swift in Sources */,
+				558D472EC7E226CE750D2AB16E4B493C /* RangeCircularSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,43 +490,12 @@
 			};
 			name = Debug;
 		};
-		524A721E382C0B078D2BD85C67078D57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D18BC77130A0F952686F6640607DC850 /* HGCircularSlider.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider.modulemap";
-				PRODUCT_MODULE_NAME = HGCircularSlider;
-				PRODUCT_NAME = HGCircularSlider;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		54A6A8BFFD209EFDC1207E2B0A48D497 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E89E5B545A6604882E250A1E69959933 /* Pods-HGCircularSlider_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -559,6 +530,7 @@
 			baseConfigurationReference = F5D4D0CC167B194D4B1C35D0105DB71E /* Pods-HGCircularSlider_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -589,42 +561,12 @@
 			};
 			name = Release;
 		};
-		8308D0173A7CA200137C7DB710BE5B3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D18BC77130A0F952686F6640607DC850 /* HGCircularSlider.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider.modulemap";
-				PRODUCT_MODULE_NAME = HGCircularSlider;
-				PRODUCT_NAME = HGCircularSlider;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		911FF10A21E106BF4D9CA1776857B138 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA1EA90A0DC940741BB9510A83433F9E /* Pods-HGCircularSlider_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -654,11 +596,79 @@
 			};
 			name = Debug;
 		};
+		919800E3CF06A5D7BF3E98DF527D55F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACBB8020F3F5BB2CF879EBD387EB1DBB /* HGCircularSlider.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider.modulemap";
+				PRODUCT_MODULE_NAME = HGCircularSlider;
+				PRODUCT_NAME = HGCircularSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BE632A39FE92FC64A25D29B6856C1B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88FD2A1BA35BF4A2E041E114D95CA887 /* HGCircularSlider.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider.modulemap";
+				PRODUCT_MODULE_NAME = HGCircularSlider;
+				PRODUCT_NAME = HGCircularSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E473C5FC4D48AC894627CADF422CC1B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40A9E1BF9BD7E69EC9050CD12524CA6A /* Pods-HGCircularSlider_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -742,7 +752,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -751,6 +762,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		217B62640B85FC9B2902CE2337FD3DB1 /* Build configuration list for PBXNativeTarget "HGCircularSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				919800E3CF06A5D7BF3E98DF527D55F6 /* Debug */,
+				BE632A39FE92FC64A25D29B6856C1B98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -765,15 +785,6 @@
 			buildConfigurations = (
 				911FF10A21E106BF4D9CA1776857B138 /* Debug */,
 				80BB2B991ED74EE4BB20A3FAE7A6CED6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		830DCB0A097257D0F9E1D557676CFDE1 /* Build configuration list for PBXNativeTarget "HGCircularSlider" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8308D0173A7CA200137C7DB710BE5B3A /* Debug */,
-				524A721E382C0B078D2BD85C67078D57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -272,4 +272,12 @@ extension CGPoint {
         let y = center.y + radius * sin(newAzimuth)
         return CGPoint(x: x, y: y)
     }
+    
+    func distanceSquared(to: CGPoint) -> CGFloat {
+        return (self.x - to.x) * (self.x - to.x) + (self.y - to.y) * (self.y - to.y)
+    }
+        
+    func distance(to: CGPoint) -> CGFloat {
+        return sqrt(distanceSquared(to: to))
+    }
 }

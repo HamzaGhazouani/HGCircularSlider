@@ -363,8 +363,17 @@ open class CircularSlider: UIControl {
      See superclass documentation
      */
     override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        sendActions(for: .editingDidBegin)
         
+        /// When the touch position is further inside the actual slider, we don't want to begin tracking touches.
+        let touchPosition = touch.location(in: self)
+        let center = bounds.center
+        let distance = center.distance(to: touchPosition)
+        
+        if distance < radius - lineWidth {
+            return false
+        }
+        
+        sendActions(for: .editingDidBegin)
         return true
     }
     

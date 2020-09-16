@@ -1,5 +1,5 @@
 PODS:
-  - HGCircularSlider (2.2.0)
+  - HGCircularSlider (2.3.2)
 
 DEPENDENCIES:
   - HGCircularSlider (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HGCircularSlider: afb1942743a2df156dcc7a3500216e523e14266b
+  HGCircularSlider: b75f38b1534f30978912412377ef41c83a5e6627
 
 PODFILE CHECKSUM: 5935efe45bed5ee625cec9162a170ce99849ca5c
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1
