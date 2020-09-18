@@ -33,6 +33,7 @@ extension CircularSlider {
                 colors: colors,
                 locations: locations.map { Float($0) },
                 scale: 0.25)
+            
             cachedGradientImage = createMatchingBackingDataWithImage(imageRef: cachedGradientImage, customRotation: 92.0, customMirrored: true, customSwapWidthHeight: true)
         }
         

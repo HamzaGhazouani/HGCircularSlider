@@ -98,101 +98,101 @@ extension CircularSlider {
         customSwapWidthHeight: Bool = false) -> CGImage? {
         var orientedImage: CGImage?
 
-        if let imageRef = imageRef {
-            let originalWidth = imageRef.width
-            let originalHeight = imageRef.height
-            let bitsPerComponent = imageRef.bitsPerComponent
-            let bytesPerRow = imageRef.bytesPerRow
+        guard let imageRef = imageRef else { return nil }
+        
+        let originalWidth = imageRef.width
+        let originalHeight = imageRef.height
+        let bitsPerComponent = imageRef.bitsPerComponent
+        let bytesPerRow = imageRef.bytesPerRow
 
-            let colorSpace = imageRef.colorSpace
-            let bitmapInfo = imageRef.bitmapInfo
+        let colorSpace = imageRef.colorSpace
+        let bitmapInfo = imageRef.bitmapInfo
 
-            var degreesToRotate: Double
-            var swapWidthHeight: Bool
-            var mirrored: Bool
-            
-            if let degrees = customRotation {
-                degreesToRotate = degrees
-                swapWidthHeight = customSwapWidthHeight
-                mirrored = customMirrored
-            } else {
-                switch orienation {
-                case .up:
-                    degreesToRotate = 0.0
-                    swapWidthHeight = false
-                    mirrored = false
-                    break
-                case .upMirrored:
-                    degreesToRotate = 0.0
-                    swapWidthHeight = false
-                    mirrored = true
-                    break
-                case .right:
-                    degreesToRotate = 90.0
-                    swapWidthHeight = true
-                    mirrored = false
-                    break
-                case .rightMirrored:
-                    degreesToRotate = 90.0
-                    swapWidthHeight = true
-                    mirrored = true
-                    break
-                case .down:
-                    degreesToRotate = 180.0
-                    swapWidthHeight = false
-                    mirrored = false
-                    break
-                case .downMirrored:
-                    degreesToRotate = 180.0
-                    swapWidthHeight = false
-                    mirrored = true
-                    break
-                case .left:
-                    degreesToRotate = -90.0
-                    swapWidthHeight = true
-                    mirrored = false
-                    break
-                case .leftMirrored:
-                    degreesToRotate = -90.0
-                    swapWidthHeight = true
-                    mirrored = true
-                    break
-                @unknown default:
-                    degreesToRotate = 0.0
-                    swapWidthHeight = false
-                    mirrored = false
-                    break
-                }
+        var degreesToRotate: Double
+        var swapWidthHeight: Bool
+        var mirrored: Bool
+        
+        if let degrees = customRotation {
+            degreesToRotate = degrees
+            swapWidthHeight = customSwapWidthHeight
+            mirrored = customMirrored
+        } else {
+            switch orienation {
+            case .up:
+                degreesToRotate = 0.0
+                swapWidthHeight = false
+                mirrored = false
+                break
+            case .upMirrored:
+                degreesToRotate = 0.0
+                swapWidthHeight = false
+                mirrored = true
+                break
+            case .right:
+                degreesToRotate = 90.0
+                swapWidthHeight = true
+                mirrored = false
+                break
+            case .rightMirrored:
+                degreesToRotate = 90.0
+                swapWidthHeight = true
+                mirrored = true
+                break
+            case .down:
+                degreesToRotate = 180.0
+                swapWidthHeight = false
+                mirrored = false
+                break
+            case .downMirrored:
+                degreesToRotate = 180.0
+                swapWidthHeight = false
+                mirrored = true
+                break
+            case .left:
+                degreesToRotate = -90.0
+                swapWidthHeight = true
+                mirrored = false
+                break
+            case .leftMirrored:
+                degreesToRotate = -90.0
+                swapWidthHeight = true
+                mirrored = true
+                break
+            @unknown default:
+                degreesToRotate = 0.0
+                swapWidthHeight = false
+                mirrored = false
+                break
             }
-            
-            let radians = degreesToRotate * Double.pi / 180
+        }
+        
+        let radians = degreesToRotate * Double.pi / 180
 
-            var width: Int
-            var height: Int
+        var width: Int
+        var height: Int
+        if swapWidthHeight {
+            width = originalHeight
+            height = originalWidth
+        } else {
+            width = originalWidth
+            height = originalHeight
+        }
+
+        if let contextRef = CGContext(data: nil, width: width, height: height, bitsPerComponent: bitsPerComponent, bytesPerRow: bytesPerRow, space: colorSpace!, bitmapInfo: bitmapInfo.rawValue) {
+
+            contextRef.translateBy(x: CGFloat(width) / 2.0, y: CGFloat(height) / 2.0)
+            if mirrored {
+                contextRef.scaleBy(x: -1.0, y: 1.0)
+            }
+            contextRef.rotate(by: CGFloat(radians))
             if swapWidthHeight {
-                width = originalHeight
-                height = originalWidth
+                contextRef.translateBy(x: -CGFloat(height) / 2.0, y: -CGFloat(width) / 2.0)
             } else {
-                width = originalWidth
-                height = originalHeight
+                contextRef.translateBy(x: -CGFloat(width) / 2.0, y: -CGFloat(height) / 2.0)
             }
+            contextRef.draw(imageRef, in: CGRect(x: 0, y: 0, width: originalWidth, height: originalHeight))
 
-            if let contextRef = CGContext(data: nil, width: width, height: height, bitsPerComponent: bitsPerComponent, bytesPerRow: bytesPerRow, space: colorSpace!, bitmapInfo: bitmapInfo.rawValue) {
-
-                contextRef.translateBy(x: CGFloat(width) / 2.0, y: CGFloat(height) / 2.0)
-                if mirrored {
-                    contextRef.scaleBy(x: -1.0, y: 1.0)
-                }
-                contextRef.rotate(by: CGFloat(radians))
-                if swapWidthHeight {
-                    contextRef.translateBy(x: -CGFloat(height) / 2.0, y: -CGFloat(width) / 2.0)
-                } else {
-                    contextRef.translateBy(x: -CGFloat(width) / 2.0, y: -CGFloat(height) / 2.0)
-                }
-                contextRef.draw(imageRef, in: CGRect(x: 0, y: 0, width: originalWidth, height: originalHeight))
-
-                orientedImage = contextRef.makeImage()
-            }
+            orientedImage = contextRef.makeImage()
         }
 
         return orientedImage
@@ -209,7 +209,7 @@ extension CircularSlider {
         endPoint: CGPoint? = nil,
         startPoint2: CGPoint? = nil,
         endPoint2: CGPoint? = nil,
-        scale: CGFloat? = nil) -> CGImage {
+        scale: CGFloat? = nil) -> CGImage? {
         
         let w = Int(size.width * (scale ?? UIScreen.main.scale))
         let h = Int(size.height * (scale ?? UIScreen.main.scale))
@@ -236,8 +236,8 @@ extension CircularSlider {
         
         let ctx = CGContext(data: &data, width: w, height: h, bitsPerComponent: bitsPerComponent, bytesPerRow: w * bytesPerPixel, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
         
-        let img = ctx?.makeImage()!
-        return img!
+        let img = ctx?.makeImage()
+        return img
     }
         
     private static func pixelDataForGradient(
