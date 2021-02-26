@@ -234,10 +234,23 @@ extension CircularSlider {
             }
         }
         
-        let ctx = CGContext(data: &data, width: w, height: h, bitsPerComponent: bitsPerComponent, bytesPerRow: w * bytesPerPixel, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
-        
-        let img = ctx?.makeImage()
-        return img
+        let image: CGImage? = withExtendedLifetime(&data) { (data: UnsafeMutableRawPointer) -> CGImage? in
+                     guard let ctx = CGContext(
+                         data: data,
+                         width: w,
+                         height: h,
+                         bitsPerComponent: bitsPerComponent,
+                         bytesPerRow: w * bytesPerPixel,
+                         space: colorSpace,
+                         bitmapInfo: bitmapInfo.rawValue
+                     ) else {
+                         return nil
+                     }
+
+                      return ctx.makeImage()
+                 }
+
+        return image
     }
         
     private static func pixelDataForGradient(
