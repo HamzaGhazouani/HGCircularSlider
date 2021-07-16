@@ -291,6 +291,10 @@ open class CircularSlider: UIControl {
     }
     
     // MARK: User interaction methods
+   
+    open override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return false
+    }
     
     /**
      See superclass documentation
