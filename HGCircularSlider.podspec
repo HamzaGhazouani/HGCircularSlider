@@ -28,7 +28,7 @@ s.author           = { 'Hamza Ghazouani' => 'hamza.ghazouani@gmail.com' }
 s.source           = { :git => 'https://github.com/HamzaGhazouani/HGCircularSlider.git', :tag => s.version.to_s }
 s.social_media_url = 'https://twitter.com/GhazouaniHamza'
 
-s.ios.deployment_target = '9.0'
+s.ios.deployment_target = '12.0'
 
 s.source_files = 'HGCircularSlider/Classes/**/*'
 
